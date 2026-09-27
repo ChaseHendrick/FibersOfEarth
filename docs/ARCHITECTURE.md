@@ -1,6 +1,6 @@
 # Architecture
 
-FibersOfEarth is a static application. `scripts/build.mjs` bundles the ES modules with esbuild into one content-hashed script and copies the stylesheet as a content-hashed asset, both referenced from a small `index.html`; hashed names let hosts cache them indefinitely. The same build writes JavaScript-free reading editions for materials, glossary terms, field notes and brand-directory entries, plus the sitemap, on-demand map geometry and `offline.html`, a single-file copy with the app, data, styles and base map inlined. Build output lives in `dist/` and is not committed. No runtime CDN, font, tracking, geocoding or API dependency is required.
+FibersOfEarth is a static application. `scripts/build.mjs` bundles the ES modules with esbuild into one content-hashed script and copies the stylesheet as a content-hashed asset, both referenced from a small `index.html`; hashed names let hosts cache them indefinitely. The same build writes JavaScript-free reading editions for materials, glossary terms, field notes, brand-directory entries and weave-guide entries, plus the sitemap, on-demand map geometry and `offline.html`, a single-file copy with the app, data, styles and base map inlined. Build output lives in `dist/` and is not committed. No runtime CDN, font, tracking, geocoding or API dependency is required.
 
 ## Modules
 
@@ -19,7 +19,10 @@ FibersOfEarth is a static application. `scripts/build.mjs` bundles the ES module
 | src/brand-directory.js, src/brand-render.js, src/brand-shortlist.js | Directory search and filters, shared detail rendering, pagination and saved-brand storage. |
 | src/data/brand-directory.json | The separate 2,241-entry directory snapshot with source-linked facts, research depth, producer notes and profile links. |
 | src/content-articles.js, src/content-sources.js | Ten field notes and the shared source registry. |
-| scripts/*-build.mjs | Static reading editions for materials, glossary terms, field notes and brands. |
+| src/weaves.js | Merges the three weave datasets, indexes names and aliases, filters categories, validates comparison IDs and clamps pagination. |
+| src/weaves-view.js, src/weaves-render.js | Interactive guide and URL comparison state, shared detail HTML, schematic SVGs and visual-scope captions. |
+| src/data/weaves-woven.json, src/data/weaves-patterns.json, src/data/weaves-knits.json | 114 sourced entries spanning seven construction, pattern and technique categories. |
+| scripts/*-build.mjs | Static reading editions for materials, glossary terms, field notes, brands and weaves. |
 | scripts/babysit.mjs, scripts/validate-directory.mjs | On-demand check sequence and directory integrity validation. |
 | src/science.js | Educational science topics, chemistry categories, dimensional calculations and unit converters. |
 | src/legacy.json | Reduced original map data: nodes, edges, geographic labels and initial views. Original app code and review pages are excluded. |
@@ -30,6 +33,7 @@ FibersOfEarth is a static application. `scripts/build.mjs` bundles the ES module
 - `#/atlas/:material?journey=:id`
 - `#/materials?q=&family=&sort=&page=`
 - `#/brands?q=&category=&country=&depth=&history=&saved=&page=` and `#/brand/:id`
+- `#/weaves?q=&category=&sort=&page=&compare=herringbone,houndstooth` and `#/weaves/:id`
 - `#/saved` for saved materials
 - `#/fiber/:id/:tab`, with overview, history, science, journeys and care tabs
 - `#/compare?ids=wool,linen,polyester`
@@ -38,17 +42,23 @@ FibersOfEarth is a static application. `scripts/build.mjs` bundles the ES module
 - `#/learn`, `#/article/:id`, `#/science`, `#/history`, `#/glossary`
 - `#/sources`, `#/about`, `#/privacy`
 
-Unknown paths show a recovery page. Hash routing works without server rewrite rules, including on GitHub Pages and file URLs. The interactive app is client-rendered. Its complementary reading editions have normal paths and page-specific metadata: `materials/`, `glossary/`, `learn/` and `brands/`, each with an index and one page per record. They share the built stylesheet and appear in `sitemap.xml` (2,470 URLs in this snapshot). The build also copies the directory dataset to `brands/directory.json`.
+Unknown paths show a recovery page. Hash routing works without server rewrite rules, including on GitHub Pages and file URLs. The interactive app is client-rendered. Its complementary reading editions have normal paths and page-specific metadata: `materials/`, `glossary/`, `learn/`, `brands/` and `weaves/`, each with an index and one page per record. They share the built stylesheet and appear in `sitemap.xml` (2,585 URLs in this snapshot). The build also publishes datasets at `brands/directory.json` and `weaves/directory.json`.
 
 ## State and data flow
 
-Filters and shareable choices live in URL fragments. Material bookmarks use `fibersOfEarth.saved.v2`, brand shortlists use `fibersOfEarth.brands.v1`, and display settings use `fibersOfEarth.display.v1` in local storage. If storage fails, changes remain available for the current session. Brand shortlists export as JSON and compare the first four saved entries by documented fields, without quality or sustainability rankings. Downloads are generated locally; nothing is sent to a project backend.
+Filters and shareable choices live in URL fragments. Material bookmarks use `fibersOfEarth.saved.v2`, brand shortlists use `fibersOfEarth.brands.v1`, and display settings use `fibersOfEarth.display.v1` in local storage. If storage fails, changes remain available for the current session. Brand shortlists export as JSON and compare the first four saved entries by documented fields, without quality or sustainability rankings. The weave guide displays 18 cards per page and accepts up to three known comparison IDs in its URL. Removing filters preserves the current comparison; clearing comparison is a separate control. It adds no storage key. The atlas JSON export includes a `weaves` array alongside the material and glossary collections. Downloads are generated locally; nothing is sent to a project backend.
 
-Views escape interpolated strings before placing them in HTML. Search inputs do not generate executable HTML. Detail routes resolve known material, journey and brand IDs. No original archive scripts are executed.
+Views escape interpolated strings before placing them in HTML. Search inputs do not generate executable HTML. Detail routes resolve known material, journey, brand and weave-guide IDs. No original archive scripts are executed.
 
 ## Search
 
-`src/search.js` builds an in-memory inverted index. Material and glossary indexes initialize on first use; the directory index initializes when its module loads. Documents and queries share one normalizer: accent folding, British to American spelling (fibre, colour, woollen, -isation), light plural stemming and stop words. Scoring is field-weighted BM25 (k1 1.2, b 0.75): each field saturates separately and is then weighted, so a name or alias match outranks many mentions deep in long research paragraphs. The last query term also matches as a prefix while typing. A term missing from the vocabulary expands to vocabulary words within Damerau-Levenshtein distance 1 (4 to 7 letters) or 2 (8 or more) at reduced weight. Every positive term must match. Quoted phrases must match contiguously, `-term` excludes, and `field:term` restricts a term to one field (for example `law:cites`, `chemistry:keratin`, `history:dupont`, `family:plant`). Results carry the fields they matched, which drive the highlighted snippets. With no results, the engine suggests the closest vocabulary correction.
+`src/search.js` builds an in-memory inverted index. Material, glossary and weave-guide indexes initialize on first use; the directory index initializes when its module loads. Documents and queries share one normalizer: accent folding, British to American spelling (fibre, colour, woollen, -isation), light plural stemming and stop words. Scoring is field-weighted BM25 (k1 1.2, b 0.75): each field saturates separately and is then weighted, so a name or alias match outranks many mentions deep in long research paragraphs. The last query term also matches as a prefix while typing. A term missing from the vocabulary expands to vocabulary words within Damerau-Levenshtein distance 1 (4 to 7 letters) or 2 (8 or more) at reduced weight. Every positive term must match. Quoted phrases must match contiguously, `-term` excludes, and `field:term` restricts a term to one field (for example `law:cites`, `chemistry:keratin`, `history:dupont`, `family:plant`). Results carry the fields they matched, which drive the highlighted snippets. With no results, the engine suggests the closest vocabulary correction.
+
+## Weave and pattern rendering
+
+`src/weaves-render.js` produces local inline SVGs from structured data. A `draft` visual repeats a binary interlacing grid, optionally using example warp and weft colors; the detail view can replace those colors with contrasting warp and weft colors. A `motif` visual depicts a symbolic pattern family or texture. Knit and surface illustrations are not stitch charts or physical fabric simulations. Captions state each visual type's limitations.
+
+`src/weaves-view.js` manages search, category filters, best-match or category ordering, pagination and comparison. `scripts/weaves-build.mjs` reuses the same detail renderer for 114 JavaScript-free pages and an index, adds metadata and citations, and writes the JSON guide download. The application bundles the data for offline reading and search. See [WEAVES.md](WEAVES.md) for taxonomy and editorial rules.
 
 ## Geometry and calculations
 

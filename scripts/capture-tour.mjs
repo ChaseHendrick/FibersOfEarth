@@ -141,18 +141,23 @@ try {
   await page.mouse.move(1270, 875);
   await still('brand-research-desktop.png');
   await record('research', 2);
+  await go('weaves', 'Weaves & patterns.');
+  await still('weaves-tour-desktop.png');
+  await record('weave-guide', .8);
+  await go('weaves?compare=herringbone,houndstooth', 'Weaves & patterns.');
+  await page.locator('.pattern-compare-card').nth(1).waitFor();
+  await page.locator('#pattern-comparison').scrollIntoViewIfNeeded();
+  await still('weave-comparison-desktop.png');
+  await record('weave-comparison', 1.2);
+  await go('weaves/houndstooth', 'Houndstooth');
+  await still('houndstooth-tour-desktop.png');
+  await record('houndstooth-colors', 1.5);
+  await page.getByLabel('Warp and weft contrast', {exact:true}).check();
+  await page.mouse.move(1270,875);
+  await record('houndstooth-structure', 1);
+  // Keep a current still of the lab alongside the tour's new pattern scenes.
   await go('science', 'A closer look at the thread.');
-  await record('plain-weave', 1);
-  await page.getByRole('button', {name: '2/2 twill', exact: true}).click();
-  await page.mouse.move(1270, 875);
-  await record('twill-weave', 1);
-  await page.getByRole('button', {name: '5-end satin', exact: true}).click();
-  await page.mouse.move(1270, 875);
   await still('science-tour-desktop.png');
-  await record('satin-weave', 1);
-  await go('atlas/wool', 'Every thread has a world.');
-  await page.locator('.map-node').first().waitFor();
-  await record('atlas-return', 1.5);
   if (errors.length) throw Error(errors.join('\n'));
   await fs.writeFile(path.join(framesDir, 'frames.json'), JSON.stringify({
     width: 1024, height: 704, fps, frames, scenes

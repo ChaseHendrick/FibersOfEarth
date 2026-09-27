@@ -20,7 +20,7 @@ export async function buildArticles(cssFile, base) {
 <a class="skip" href="#main">Skip to content</a><header><nav class="glossary-static-nav" aria-label="Main navigation">
 <a href="${home}index.html">Fibers of Earth</a><a href="${detail ? '../' : './'}index.html">Field notes</a>
 <a href="${home}materials/index.html">Materials</a><a href="${home}glossary/index.html">Textile glossary</a>
-</nav></header><main id="main" class="page ${detail ? 'glossary-article' : ''}">${body}</main>
+<a href="${home}weaves/index.html">Weaves &amp; patterns</a></nav></header><main id="main" class="page ${detail ? 'glossary-article' : ''}">${body}</main>
 <footer class="site-footer"><p>Fibers of Earth · An independent field guide by Chaos.</p>
 <a href="${home}index.html#/sources">Sources &amp; method</a></footer></body></html>`;
     await fs.mkdir('dist/' + path, {recursive: true});

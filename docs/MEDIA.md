@@ -2,14 +2,15 @@
 
 The README animation is captured from the actual local build with Playwright.
 It shows the wool atlas, searching the brand directory for Fox Brothers, the
-company research page, and switching weave structures in the science lab.
+company research page, the weave and pattern guide, a herringbone/houndstooth comparison, and the houndstooth color-versus-interlacing view.
 The media reflects repository content, which can be ahead of the hosted
 deployment.
 
 The capture uses a fresh browser context with no saved user data. It captures
-at 1,280 × 880 pixels and encodes at 1,024 × 704 pixels. Playwright's clock and
-CSS animation times advance in 1/60-second steps so moving scenes contain fresh
-browser screenshots, even when capturing them takes longer than real time.
+at 1,280 × 880 pixels and encodes at 1,024 × 704 pixels. Playwright's clock
+controls timers; a capture-only animation-frame queue and the CSS timeline
+advance in 1/60-second steps. Moving scenes contain fresh browser screenshots,
+even when capturing them takes longer than real time.
 Reading scenes pause deliberately. The static poster provides an overview for
 readers who prefer no motion; animated images do not offer a pause control in
 every Markdown renderer.
@@ -69,6 +70,9 @@ is not part of CI, and does not publish, deploy or schedule work.
 | [readme-poster.png](screenshots/readme-poster.png) | Fresh atlas screenshot and motion-free README alternative. |
 | [brand-directory-desktop.png](screenshots/brand-directory-desktop.png) | Current directory filters and result cards. |
 | [brand-research-desktop.png](screenshots/brand-research-desktop.png) | Research notes and evidence labels for Fox Brothers. |
+| [weaves-tour-desktop.png](screenshots/weaves-tour-desktop.png) | Weave and pattern browsing with labeled schematic studies. |
+| [weave-comparison-desktop.png](screenshots/weave-comparison-desktop.png) | Herringbone and houndstooth compared side by side. |
+| [houndstooth-tour-desktop.png](screenshots/houndstooth-tour-desktop.png) | Houndstooth research and its colored weave diagram. |
 | [science-tour-desktop.png](screenshots/science-tour-desktop.png) | The interactive weave and filament tools. |
 
 Browser-test screenshots in the same directory are separate verification

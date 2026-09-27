@@ -1,0 +1,1883 @@
+[
+  {
+    "id": "houndstooth",
+    "name": "Houndstooth",
+    "category": "Color pattern",
+    "aliases": [
+      "dogtooth",
+      "dogstooth",
+      "pied-de-poule",
+      "puppytooth"
+    ],
+    "summary": "A broken check whose pointed corners come from color order interacting with twill.",
+    "construction": "Classic woven houndstooth combines a 2/2 twill with four light then four dark yarns in both warp and weft. Printed versions reproduce the outline without that interlacement.",
+    "recognize": "Look for interlocking jagged checks rather than continuous zigzag bands.",
+    "uses": [
+      "Tailored jackets",
+      "Coats",
+      "Skirts"
+    ],
+    "distinguish": "Puppytooth is a small-scale version; herringbone describes a reversal of twill direction. A houndstooth image alone does not establish the fiber or construction.",
+    "related": [
+      "twill",
+      "herringbone",
+      "glen-check",
+      "gun-club-check"
+    ],
+    "references": [
+      {
+        "title": "Cally Booker: Houndstooth color-and-weave draft",
+        "url": "https://weavingspace.co.uk/houndstooth/"
+      },
+      {
+        "title": "Charles Tyrwhitt: Puppytooth weave",
+        "url": "https://www.charlestyrwhitt.com/intl/pdp-shirtweaves-puppytooth-weave.html"
+      },
+      {
+        "title": "Vitale Barberis Canonico: Printed flannel in the Vintage range",
+        "url": "https://vitalebarberiscanonico.com/collection/the-vintage-range/"
+      }
+    ],
+    "visual": {
+      "kind": "draft",
+      "draft": [
+        "11001100",
+        "01100110",
+        "00110011",
+        "10011001",
+        "11001100",
+        "01100110",
+        "00110011",
+        "10011001"
+      ],
+      "warp": [
+        "#243c34",
+        "#243c34",
+        "#243c34",
+        "#243c34",
+        "#eee5cf",
+        "#eee5cf",
+        "#eee5cf",
+        "#eee5cf"
+      ],
+      "weft": [
+        "#243c34",
+        "#243c34",
+        "#243c34",
+        "#243c34",
+        "#eee5cf",
+        "#eee5cf",
+        "#eee5cf",
+        "#eee5cf"
+      ]
+    }
+  },
+  {
+    "id": "gingham",
+    "name": "Gingham",
+    "category": "Color pattern",
+    "aliases": [
+      "Vichy check"
+    ],
+    "summary": "An even check formed by overlapping equal-width light and colored bands.",
+    "construction": "Traditional gingham is plain-woven from colored yarns with matching band widths in warp and weft. Crossings make pale, dark and mixed-color squares.",
+    "recognize": "The check repeats regularly in both directions, with intermediate tones at unlike-color intersections.",
+    "uses": [
+      "Shirts",
+      "Dresses",
+      "Table linens"
+    ],
+    "distinguish": "Gingham names both a familiar check and a cloth tradition; a printed gingham look need not be yarn-dyed. It lacks houndstooth’s pointed outline.",
+    "related": [
+      "houndstooth",
+      "buffalo-check",
+      "tartan"
+    ],
+    "references": [
+      {
+        "title": "Museum of Fine Arts Boston CAMEO: Gingham",
+        "url": "https://cameo.mfa.org/wiki/Gingham"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "gingham",
+      "colors": [
+        "#eee7d9",
+        "#557b96",
+        "#aec1c6"
+      ]
+    }
+  },
+  {
+    "id": "windowpane",
+    "name": "Windowpane",
+    "category": "Color pattern",
+    "aliases": [
+      "windowpane check",
+      "overcheck"
+    ],
+    "summary": "Widely spaced crossing lines frame open squares or rectangles.",
+    "construction": "Contrasting yarn bands can create the grid in woven cloth. A windowpane may also overlay another pattern as an overcheck.",
+    "recognize": "Most of each box remains open ground, unlike a solid checkerboard.",
+    "uses": [
+      "Suiting",
+      "Jackets",
+      "Scarves"
+    ],
+    "distinguish": "Windowpane describes the visible grid, not a weave or fiber. An overcheck is any check added over a base pattern, so the terms overlap rather than match exactly.",
+    "related": [
+      "glen-check",
+      "tattersall",
+      "gun-club-check"
+    ],
+    "references": [
+      {
+        "title": "Indochino: What is a Windowpane fabric?",
+        "url": "https://support.indochino.com/hc/en-us/articles/360043119373-What-is-a-Windowpane-fabric"
+      },
+      {
+        "title": "Holland & Sherry: HS2644 gun club and windowpane examples",
+        "url": "https://apparel.hollandandsherry.com/en/scanurl?bunch=HS2644"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "windowpane",
+      "colors": [
+        "#ece2cb",
+        "#30483d",
+        "#ad734e"
+      ]
+    }
+  },
+  {
+    "id": "glen-check",
+    "name": "Glen check",
+    "category": "Color pattern",
+    "aliases": [
+      "glen plaid",
+      "Glenurquhart check",
+      "Prince of Wales check"
+    ],
+    "summary": "A compound check that combines smaller checks and striped areas into a larger repeat.",
+    "construction": "Traditional woven versions arrange contrasting yarn groups over a twill base. The illustration combines blocks of four-and-four and two-and-two colors in warp and weft over 2/2 twill. Houndstooth-like sections meet finer areas, sometimes beneath a colored overcheck.",
+    "recognize": "Look for several scales of checking within one large square.",
+    "uses": [
+      "Suits",
+      "Jackets",
+      "Trousers"
+    ],
+    "distinguish": "Prince of Wales and glen check are often used interchangeably, while some sellers reserve Prince of Wales for an overchecked version. Compare the actual cloth instead of treating that naming rule as universal.",
+    "related": [
+      "houndstooth",
+      "windowpane",
+      "tartan"
+    ],
+    "references": [
+      {
+        "title": "Indochino: What is Prince of Wales fabric?",
+        "url": "https://support.indochino.com/hc/en-us/articles/360038167814-What-is-Prince-of-Wales-fabric"
+      },
+      {
+        "title": "Première Vision: Textile glossary, suiting motifs",
+        "url": "https://www.premierevision.com/en/articles/094df59a-75fa-ef11-90cb-00224888722c/textile-glossary-suiting-motifs"
+      },
+      {
+        "title": "Harriet C. Douglas: Twills, Tweeds and All-Wool Fabrics, glen check color order",
+        "url": "https://www2.cs.arizona.edu/patterns/weaving/monographs/dhc_wool.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "draft",
+      "draft": [
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001",
+        "11001100110011001100110011001100",
+        "01100110011001100110011001100110",
+        "00110011001100110011001100110011",
+        "10011001100110011001100110011001"
+      ],
+      "warp": [
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950"
+      ],
+      "weft": [
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950",
+        "#ece7d9",
+        "#ece7d9",
+        "#485950",
+        "#485950"
+      ]
+    }
+  },
+  {
+    "id": "gun-club-check",
+    "name": "Gun club check",
+    "category": "Color pattern",
+    "aliases": [
+      "gunclub check"
+    ],
+    "summary": "A multicolored small check closely related to houndstooth.",
+    "construction": "Classic examples combine a light ground with two or more darker yarn colors in a twill-based check. The illustration uses four light, four dark, four light and four accent yarns in both directions over 2/2 twill. Manufacturers also add larger windowpanes or vary the scale.",
+    "recognize": "Look for alternating colored broken checks within a regular repeat.",
+    "uses": [
+      "Sports jackets",
+      "Coats",
+      "Caps"
+    ],
+    "distinguish": "A large overcheck is optional, not the defining feature. The multicolor arrangement distinguishes a typical gun club from simple two-color houndstooth.",
+    "related": [
+      "houndstooth",
+      "glen-check",
+      "windowpane"
+    ],
+    "references": [
+      {
+        "title": "Première Vision: Textile glossary, suiting motifs",
+        "url": "https://www.premierevision.com/en/articles/094df59a-75fa-ef11-90cb-00224888722c/textile-glossary-suiting-motifs"
+      },
+      {
+        "title": "Holland & Sherry: HS2644 gun club and windowpane examples",
+        "url": "https://apparel.hollandandsherry.com/en/scanurl?bunch=HS2644"
+      }
+    ],
+    "visual": {
+      "kind": "draft",
+      "draft": [
+        "1100110011001100",
+        "0110011001100110",
+        "0011001100110011",
+        "1001100110011001",
+        "1100110011001100",
+        "0110011001100110",
+        "0011001100110011",
+        "1001100110011001",
+        "1100110011001100",
+        "0110011001100110",
+        "0011001100110011",
+        "1001100110011001",
+        "1100110011001100",
+        "0110011001100110",
+        "0011001100110011",
+        "1001100110011001"
+      ],
+      "warp": [
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#3d5148",
+        "#3d5148",
+        "#3d5148",
+        "#3d5148",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#865840",
+        "#865840",
+        "#865840",
+        "#865840"
+      ],
+      "weft": [
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#3d5148",
+        "#3d5148",
+        "#3d5148",
+        "#3d5148",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#e3d7bd",
+        "#865840",
+        "#865840",
+        "#865840",
+        "#865840"
+      ]
+    }
+  },
+  {
+    "id": "tattersall",
+    "name": "Tattersall",
+    "category": "Color pattern",
+    "aliases": [
+      "tattersall check"
+    ],
+    "summary": "A light-ground check made with alternating fine colored lines.",
+    "construction": "Two contrasting sets of narrow stripes cross in warp and weft. Makers produce the pattern on different grounds, including plain-woven shirting.",
+    "recognize": "Look for open pale squares bounded by a repeating sequence of differently colored lines.",
+    "uses": [
+      "Shirts",
+      "Waistcoats",
+      "Jacket linings"
+    ],
+    "distinguish": "Tattersall is more specific than a generic grid but does not require one fiber or weave. Gingham generally uses broad equal bands rather than these fine outlines.",
+    "related": [
+      "windowpane",
+      "gingham",
+      "tartan"
+    ],
+    "references": [
+      {
+        "title": "Proper Cloth: Waverly light blue and navy tattersall",
+        "url": "https://propercloth.com/dress-shirts/waverly-light-blue-and-navy-120s-tattersall-437681.html"
+      },
+      {
+        "title": "Barbour: Belleview tattersall shirt construction",
+        "url": "https://www.barbour.com/row/belleview-tattersall-tailored-shirt-MSH5762BL32.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "tattersall",
+      "colors": [
+        "#eee7d8",
+        "#587589",
+        "#a16b49"
+      ]
+    }
+  },
+  {
+    "id": "buffalo-check",
+    "name": "Buffalo check",
+    "category": "Color pattern",
+    "aliases": [
+      "buffalo plaid"
+    ],
+    "summary": "A bold, large check commonly associated with alternating red and black blocks.",
+    "construction": "Matching bands cross in both directions to make the check. Woolrich’s familiar version uses wool flannel, while the design now appears in many materials and colorways.",
+    "recognize": "Read the big blocks first, then the mixed-color areas where the bands overlap.",
+    "uses": [
+      "Overshirts",
+      "Outerwear",
+      "Blankets"
+    ],
+    "distinguish": "The check does not make a fabric flannel: flannel refers to the cloth and its finish. Red and black is characteristic, but not the only color combination.",
+    "related": [
+      "gingham",
+      "tartan",
+      "windowpane"
+    ],
+    "references": [
+      {
+        "title": "Woolrich: The birth of Buffalo Check",
+        "url": "https://www.woolrich.com/gb/en/the-birth-of-an-icon.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "buffalo-check",
+      "colors": [
+        "#aa4937",
+        "#263b34",
+        "#713d32"
+      ]
+    }
+  },
+  {
+    "id": "tartan",
+    "name": "Tartan and plaid",
+    "category": "Color pattern",
+    "aliases": [
+      "tartan",
+      "plaid",
+      "sett"
+    ],
+    "summary": "Crossing bands repeat in a defined color sequence called a sett.",
+    "construction": "Traditional tartan repeats a threadcount in warp and weft, usually on 2/2 twill. Equal-color crossings read solid; unlike colors visually mix.",
+    "recognize": "Follow the sequence of stripe colors and widths through a full repeat.",
+    "uses": [
+      "Kilts",
+      "Scarves",
+      "Blankets"
+    ],
+    "distinguish": "Plaid often means a checked pattern in North American usage; in Highland dress it also means a length of cloth. A tartan design does not by itself prove clan association, age or registration.",
+    "related": [
+      "twill",
+      "glen-check",
+      "madras",
+      "buffalo-check"
+    ],
+    "references": [
+      {
+        "title": "Scottish Register of Tartans: Pattern, sett and threadcount guidance",
+        "url": "https://www.tartanregister.gov.uk/FAQ"
+      },
+      {
+        "title": "Scottish Tartans Museum: What is tartan?",
+        "url": "https://scottishtartansmuseum.org/education/what-is-tartan/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "tartan",
+      "colors": [
+        "#a75242",
+        "#284b3d",
+        "#d5b966"
+      ]
+    }
+  },
+  {
+    "id": "madras",
+    "name": "Madras check",
+    "category": "Color pattern",
+    "aliases": [
+      "madras plaid",
+      "bleeding madras",
+      "patchwork madras"
+    ],
+    "summary": "A colorful checked cotton cloth tradition associated with Chennai, formerly Madras.",
+    "construction": "Colored yarn bands create checks with varied widths and color combinations. Patchwork madras joins pieces of checked cloth, while bleeding madras identifies a dye behavior rather than every modern example.",
+    "recognize": "Look for lively multicolor crossings and an airy shirting appearance; patchwork versions have actual seams.",
+    "uses": [
+      "Summer shirts",
+      "Shorts",
+      "Casual jackets"
+    ],
+    "distinguish": "A madras-looking print does not establish Indian manufacture or handweaving. Not every madras cloth is designed to release dye.",
+    "related": [
+      "tartan",
+      "gingham",
+      "windowpane"
+    ],
+    "references": [
+      {
+        "title": "Orvis: The madras plaid shirt",
+        "url": "https://news.orvis.com/products-we-love/checkered-past-a-brief-history-of-the-madras-plaid-shirt"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "check",
+      "variant": "madras",
+      "colors": [
+        "#e9d39e",
+        "#b36c62",
+        "#6f9a93",
+        "#d9ad54"
+      ]
+    }
+  },
+  {
+    "id": "argyle",
+    "name": "Argyle",
+    "category": "Color pattern",
+    "aliases": [
+      "argyll",
+      "argyle diamond"
+    ],
+    "summary": "Colored diamonds combine with crossing diagonal lines to make a layered geometric repeat.",
+    "construction": "The motif is strongly associated with knitted garments. Its colored diamonds and fine overlaid lines can also be reproduced by other textile methods.",
+    "recognize": "Look for the thin diagonal lattice crossing through the solid diamonds.",
+    "uses": [
+      "Sweaters",
+      "Socks",
+      "Vests"
+    ],
+    "distinguish": "Harlequin is usually a field of contrasting diamonds without argyle’s characteristic crossing lines. Argyle is a design, not a single knitting stitch.",
+    "related": [
+      "harlequin",
+      "tartan",
+      "trellis"
+    ],
+    "references": [
+      {
+        "title": "Pringle of Scotland: Brand history and argyle",
+        "url": "https://pringlescotland.com/pages/our-story"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "diamond",
+      "variant": "argyle",
+      "colors": [
+        "#d8cfb5",
+        "#365a4d",
+        "#ae784f"
+      ]
+    }
+  },
+  {
+    "id": "harlequin",
+    "name": "Harlequin",
+    "category": "Motif",
+    "aliases": [
+      "harlequin diamond"
+    ],
+    "summary": "A repeating field of elongated diamonds arranged edge to edge.",
+    "construction": "Contrasting fills emphasize the diamond grid. The layout can be printed or constructed with colored textile elements.",
+    "recognize": "The units are tall lozenges rather than upright squares.",
+    "uses": [
+      "Costume",
+      "Decorative cushions",
+      "Fashion prints"
+    ],
+    "distinguish": "Argyle adds a fine crossing-line layer; a simple harlequin repeat need not include one. The motif does not specify fabric weight or weave.",
+    "related": [
+      "argyle",
+      "trellis",
+      "chevron"
+    ],
+    "references": [
+      {
+        "title": "Artlandia: Glossary of pattern design",
+        "url": "https://artlandia.com/wonderland/glossary/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "diamond",
+      "variant": "harlequin",
+      "colors": [
+        "#f0e5d0",
+        "#536958"
+      ]
+    }
+  },
+  {
+    "id": "pinstripe",
+    "name": "Pinstripe",
+    "category": "Color pattern",
+    "aliases": [
+      "pin stripe"
+    ],
+    "summary": "Fine parallel lines repeat across a contrasting ground.",
+    "construction": "A narrow group of contrasting warp yarns can produce the stripes in woven suiting. The same visual layout can also be printed.",
+    "recognize": "The stripe is much narrower than the space between stripes.",
+    "uses": [
+      "Suits",
+      "Trousers",
+      "Shirts"
+    ],
+    "distinguish": "Pinstripe describes a visible color pattern. Chalk stripes usually look wider and softer, while a twill diagonal is part of the underlying weave.",
+    "related": [
+      "chalk-stripe",
+      "pencil-stripe",
+      "twill"
+    ],
+    "references": [
+      {
+        "title": "Indochino: What is a Pinstripe fabric?",
+        "url": "https://support.indochino.com/hc/en-us/articles/360041828594-What-is-a-Pinstripe-fabric"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "pinstripe",
+      "colors": [
+        "#294337",
+        "#e3dbc8"
+      ]
+    }
+  },
+  {
+    "id": "chalk-stripe",
+    "name": "Chalk stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "chalkstripe"
+    ],
+    "summary": "A suiting stripe with a broader, softer-edged appearance than a typical pinstripe.",
+    "construction": "Contrasting yarns form repeated lines through the cloth. A soft finish can make their edges resemble drawn chalk.",
+    "recognize": "Look for a pale line with visual width and some softness against the ground.",
+    "uses": [
+      "Suits",
+      "Jackets",
+      "Trousers"
+    ],
+    "distinguish": "Names overlap between suppliers, so compare stripe width, spacing and edge definition. A chalk stripe is not proof that the fabric is flannel.",
+    "related": [
+      "pinstripe",
+      "pencil-stripe"
+    ],
+    "references": [
+      {
+        "title": "Indochino: What is a Chalk Stripe fabric?",
+        "url": "https://support.indochino.com/hc/en-us/articles/360042641054-What-is-a-Chalk-Stripe-fabric"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "chalk-stripe",
+      "colors": [
+        "#324238",
+        "#dad2bd"
+      ]
+    }
+  },
+  {
+    "id": "pencil-stripe",
+    "name": "Pencil stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "pencil line stripe"
+    ],
+    "summary": "A narrow, clearly drawn stripe that resembles a fine pencil line.",
+    "construction": "The line is a color repeat laid over the fabric’s underlying construction. In shirting, fine colored stripes commonly sit on a lighter ground.",
+    "recognize": "Look for crisp narrow lines with more ground visible between them.",
+    "uses": [
+      "Dress shirts",
+      "Blouses",
+      "Ties"
+    ],
+    "distinguish": "Pencil stripe is a trade description, not a standardized measurement. Its boundary with pinstripe varies by maker.",
+    "related": [
+      "pinstripe",
+      "candy-stripe",
+      "bengal-stripe"
+    ],
+    "references": [
+      {
+        "title": "Brooks Brothers: Pencil stripe dress shirts",
+        "url": "https://www.brooksbrothers.com/l/pencil-stripe-dress-shirt-0agz00a.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "pencil-stripe",
+      "colors": [
+        "#ece5d5",
+        "#697d83"
+      ]
+    }
+  },
+  {
+    "id": "candy-stripe",
+    "name": "Candy stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "candystripe"
+    ],
+    "summary": "A fine repeated stripe usually made with light and colored bands.",
+    "construction": "Shirting makers use the term for close stripes and multicolor variations. Yarn color placement produces woven examples; the name alone does not identify the weave.",
+    "recognize": "The repeated light and colored lines tend to read as an even, lively rhythm.",
+    "uses": [
+      "Shirts",
+      "Summer dresses",
+      "Pajamas"
+    ],
+    "distinguish": "Candy and Bengal are overlapping trade terms with no universal size boundary. Check a swatch or stated stripe width instead of assuming one fixed dimension.",
+    "related": [
+      "bengal-stripe",
+      "pencil-stripe",
+      "awning-stripe"
+    ],
+    "references": [
+      {
+        "title": "Turnbull & Asser: Multi candy stripe shirt",
+        "url": "https://turnbullandasser.co.uk/products/sky-blue-multi-candy-stripe-mayfair-shirt"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "candy-stripe",
+      "colors": [
+        "#eee5cf",
+        "#a56a65"
+      ]
+    }
+  },
+  {
+    "id": "bengal-stripe",
+    "name": "Bengal stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "Regency stripe"
+    ],
+    "summary": "Alternating light and colored stripes of approximately equal width.",
+    "construction": "In woven shirting, repeated warp color bands create the design. Thomas Pink describes its Bengal stripe as quarter-inch alternations, an example rather than a universal rule.",
+    "recognize": "The light and dark bands have similar visual weight.",
+    "uses": [
+      "Dress shirts",
+      "Blouses",
+      "Summer clothing"
+    ],
+    "distinguish": "Bengal is generally bolder than fine shirting stripes and narrower than an awning stripe, but names and widths vary across manufacturers.",
+    "related": [
+      "candy-stripe",
+      "awning-stripe",
+      "pencil-stripe"
+    ],
+    "references": [
+      {
+        "title": "Thomas Pink: Stripe types and Bengal stripe proportions",
+        "url": "https://my.thomaspink.com/collections/mens-stripe-shirts"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "bengal-stripe",
+      "colors": [
+        "#eee6d4",
+        "#66829b"
+      ]
+    }
+  },
+  {
+    "id": "awning-stripe",
+    "name": "Awning stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "deckchair stripe"
+    ],
+    "summary": "Broad, regular bands create a bold alternating stripe.",
+    "construction": "Wide areas of contrasting color repeat across the surface. The design appears in both shirting and furnishing textiles.",
+    "recognize": "Look for bands wide enough to remain distinct from a distance.",
+    "uses": [
+      "Shirts",
+      "Cushions",
+      "Awning covers"
+    ],
+    "distinguish": "The name describes the scale of the pattern. It does not mean a dress fabric has the weather resistance or strength needed for an actual awning.",
+    "related": [
+      "bengal-stripe",
+      "candy-stripe",
+      "breton-stripe"
+    ],
+    "references": [
+      {
+        "title": "Thomas Pink: Stripe types and Bengal stripe proportions",
+        "url": "https://my.thomaspink.com/collections/mens-stripe-shirts"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "awning-stripe",
+      "colors": [
+        "#f0e5cf",
+        "#678575"
+      ]
+    }
+  },
+  {
+    "id": "breton-stripe",
+    "name": "Breton stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "marinière stripe",
+      "sailor stripe"
+    ],
+    "summary": "Horizontal stripes associated with the French marinière and nautical knitwear.",
+    "construction": "Classic marinières use contrasting stripes knitted into the garment cloth. Modern versions vary the palette, spacing and position of the bands.",
+    "recognize": "Look for horizontal color bands, often with a larger unstriped area near the neckline.",
+    "uses": [
+      "Jersey tops",
+      "Sweaters",
+      "Children’s clothing"
+    ],
+    "distinguish": "Historic uniform proportions describe a particular garment standard, not every contemporary Breton top. Horizontal stripes are a pattern choice, not a weave.",
+    "related": [
+      "awning-stripe",
+      "candy-stripe"
+    ],
+    "references": [
+      {
+        "title": "Saint James: La marinière, histoire d’une légende",
+        "url": "https://fr.saint-james.com/blogs/nos-actualites/lhistoire-dune-legende"
+      },
+      {
+        "title": "Saint James: Breton shirts and knitwear history",
+        "url": "https://us.saint-james.com/pages/our-history"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "breton-stripe",
+      "colors": [
+        "#ede7d8",
+        "#304b5b"
+      ]
+    }
+  },
+  {
+    "id": "ticking-stripe",
+    "name": "Ticking stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "mattress stripe"
+    ],
+    "summary": "A repeated narrow stripe associated with traditional mattress ticking.",
+    "construction": "Typical versions group darker lines against a pale ground. Contemporary decorative textiles use the stripe on varied fabrics.",
+    "recognize": "Look for restrained parallel bands, often with finer companion lines.",
+    "uses": [
+      "Cushions",
+      "Curtains",
+      "Bedding"
+    ],
+    "distinguish": "A ticking-style stripe is not evidence of feather-proof construction. The visual pattern and a tightly woven mattress casing are separate properties.",
+    "related": [
+      "pencil-stripe",
+      "awning-stripe"
+    ],
+    "references": [
+      {
+        "title": "Ralph Lauren: Ticking stripe and patterned textile swatches",
+        "url": "https://www.ralphlauren.com/home-swatches-fabric/r/patterns"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "ticking-stripe",
+      "colors": [
+        "#e6decc",
+        "#627887"
+      ]
+    }
+  },
+  {
+    "id": "regimental-stripe",
+    "name": "Regimental stripe",
+    "category": "Color pattern",
+    "aliases": [
+      "repp stripe",
+      "rep stripe"
+    ],
+    "summary": "Diagonal bands are arranged in repeated color groups, especially on neckties.",
+    "construction": "A tie’s cut and construction present the stripes diagonally when worn. Color order and direction can be significant in specific institutional designs.",
+    "recognize": "Look for a consistent diagonal sequence rather than a woven twill rib alone.",
+    "uses": [
+      "Neckties",
+      "Bow ties",
+      "Scarves"
+    ],
+    "distinguish": "Repp describes a ribbed fabric and regimental describes a design tradition; neither is a universal synonym for every striped tie. Commercial stripes need not indicate an affiliation.",
+    "related": [
+      "pinstripe",
+      "bengal-stripe"
+    ],
+    "references": [
+      {
+        "title": "Brooks Brothers: Regimental ties",
+        "url": "https://www.brooksbrothers.com/l/regimental-tie-0agz01b.html"
+      },
+      {
+        "title": "Brooks Brothers: Reverse stripe rep ties",
+        "url": "https://www.brooksbrothers.com/200th-Anniversary.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "regimental-stripe",
+      "colors": [
+        "#314837",
+        "#c1a467",
+        "#a65142"
+      ]
+    }
+  },
+  {
+    "id": "chevron",
+    "name": "Chevron",
+    "category": "Motif",
+    "aliases": [
+      "zigzag stripe"
+    ],
+    "summary": "Continuous angled bands meet in repeated V-shaped points.",
+    "construction": "The visible zigzag can be printed, knitted or woven. Its geometry describes the design independently of the fabrication method.",
+    "recognize": "Follow an unbroken band through successive peaks and valleys.",
+    "uses": [
+      "Knitwear",
+      "Cushions",
+      "Drapery"
+    ],
+    "distinguish": "A woven herringbone typically has a break at each twill reversal. Chevron is the broader zigzag motif and does not by itself establish that structure.",
+    "related": [
+      "herringbone",
+      "harlequin"
+    ],
+    "references": [
+      {
+        "title": "Sailrite: Glossary of fabric pattern names",
+        "url": "https://www.sailrite.com/A-Glossary-of-Fabric-Pattern-Names"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "chevron",
+      "variant": "chevron",
+      "colors": [
+        "#e7dec8",
+        "#708873"
+      ]
+    }
+  },
+  {
+    "id": "polka-dot",
+    "name": "Polka dot",
+    "category": "Motif",
+    "aliases": [
+      "polka dots",
+      "spot pattern"
+    ],
+    "summary": "Regularly repeated round spots contrast with a surrounding ground.",
+    "construction": "Dots can be printed, woven or embroidered. Their scale, spacing and arrangement determine how dense the pattern appears.",
+    "recognize": "Look for clearly round, repeated units rather than irregular animal-like spots.",
+    "uses": [
+      "Dresses",
+      "Neckties",
+      "Scarves"
+    ],
+    "distinguish": "Polka dot identifies the shape, not a particular weave. Small pin dots and textured dotted Swiss deserve closer inspection because their construction may differ.",
+    "related": [
+      "pin-dot",
+      "dotted-swiss",
+      "leopard"
+    ],
+    "references": [
+      {
+        "title": "Brooks Brothers: Large polka dot silk tie",
+        "url": "https://www.brooksbrothers.com/large-polka-dot-tie/MA02764.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "dot",
+      "variant": "polka-dot",
+      "colors": [
+        "#324f46",
+        "#eadfcb"
+      ]
+    }
+  },
+  {
+    "id": "pin-dot",
+    "name": "Pin dot",
+    "category": "Motif",
+    "aliases": [
+      "pindot",
+      "micro dot"
+    ],
+    "summary": "Tiny repeated dots create a subtle spotted surface.",
+    "construction": "The dots may be woven into the ground or applied as a print. Eton’s woven pin-dot shirting is one example of the structural version.",
+    "recognize": "The pattern can look nearly solid at a distance and separate into points close up.",
+    "uses": [
+      "Shirts",
+      "Ties",
+      "Suiting"
+    ],
+    "distinguish": "Pin dot indicates small scale rather than a standardized dot diameter. Do not infer a raised surface from the name alone.",
+    "related": [
+      "polka-dot",
+      "dotted-swiss"
+    ],
+    "references": [
+      {
+        "title": "Eton: Woven pin-dot shirt",
+        "url": "https://www.etonshirts.com/us/en/product/woven-pin-dot-shirt"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "dot",
+      "variant": "pin-dot",
+      "colors": [
+        "#e7e0d2",
+        "#496863"
+      ]
+    }
+  },
+  {
+    "id": "dotted-swiss",
+    "name": "Dotted Swiss",
+    "category": "Textile technique",
+    "aliases": [
+      "Swiss dot",
+      "Swiss dots"
+    ],
+    "summary": "A light cloth decorated with small spaced dots, often visibly raised.",
+    "construction": "Traditional examples use fine plain-woven cotton with additional woven dots. Later versions use embroidery, flocking or printing, so inspect the reverse and the dot surface.",
+    "recognize": "A light ground separates small isolated spots; textured dots may stand above it.",
+    "uses": [
+      "Blouses",
+      "Dresses",
+      "Curtains"
+    ],
+    "distinguish": "A flat polka-dot print is not the same construction as a woven clip-spot or embroidered dotted Swiss. The name covers several manufacturing routes.",
+    "related": [
+      "polka-dot",
+      "pin-dot"
+    ],
+    "references": [
+      {
+        "title": "Vintage Fashion Guild: Dotted Swiss fabric examples",
+        "url": "https://vintagefashionguild.org/resources/item/fabric/dotted-swiss/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "dot",
+      "variant": "dotted-swiss",
+      "colors": [
+        "#ece7da",
+        "#c8c2ac"
+      ]
+    }
+  },
+  {
+    "id": "foulard",
+    "name": "Foulard motif",
+    "category": "Motif",
+    "aliases": [
+      "neat print",
+      "foulard pattern"
+    ],
+    "summary": "Small, orderly motifs repeat in a regular spaced layout.",
+    "construction": "Classic designs arrange compact geometric figures in rows or offset rows. The name also refers to a lightweight silk cloth and, in French, a scarf.",
+    "recognize": "Look for tiny individual shapes separated by a consistent ground.",
+    "uses": [
+      "Neckties",
+      "Scarves",
+      "Dress prints"
+    ],
+    "distinguish": "Foulard is not one fixed symbol or one printing method. A dot repeat is only one possible member of this broader family.",
+    "related": [
+      "polka-dot",
+      "medallion",
+      "paisley"
+    ],
+    "references": [
+      {
+        "title": "Artlandia: Glossary of pattern design",
+        "url": "https://artlandia.com/wonderland/glossary/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "foulard",
+      "colors": [
+        "#365348",
+        "#d6b876",
+        "#e9decb"
+      ]
+    }
+  },
+  {
+    "id": "paisley",
+    "name": "Paisley",
+    "category": "Motif",
+    "aliases": [
+      "boteh",
+      "buta"
+    ],
+    "summary": "Curved teardrop forms with bent tips build an ornamental repeat.",
+    "construction": "The motif appears in woven shawls, embroidery and printed textiles. Interiors may contain smaller flowers, leaves or geometric details.",
+    "recognize": "Look for the hooked tip rather than a simple straight-pointed droplet.",
+    "uses": [
+      "Shawls",
+      "Neckties",
+      "Dress prints"
+    ],
+    "distinguish": "The English name reflects the Scottish manufacturing center, not a claim that the motif originated there. Kashmir and Persian textile histories are central to its development.",
+    "related": [
+      "floral",
+      "foulard",
+      "arabesque"
+    ],
+    "references": [
+      {
+        "title": "RISD Museum: The paisley pattern in Kashmir shawls",
+        "url": "https://risdmuseum.org/exhibitions-events/exhibitions/whats-name-paisley-pattern-kashmir-shawls"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "paisley",
+      "variant": "paisley",
+      "colors": [
+        "#e7d7b9",
+        "#49675c",
+        "#a26646"
+      ]
+    }
+  },
+  {
+    "id": "floral",
+    "name": "Floral",
+    "category": "Motif",
+    "aliases": [
+      "flower pattern",
+      "floral print"
+    ],
+    "summary": "Flowers organize a design ranging from scattered sprigs to dense trailing repeats.",
+    "construction": "The flowers may be naturalistic or highly stylized. Printing, weaving and embroidery can each carry the motif.",
+    "recognize": "Look for petals, flower heads and stems, then note their spacing and direction.",
+    "uses": [
+      "Dresses",
+      "Curtains",
+      "Upholstery"
+    ],
+    "distinguish": "Floral is a subject category rather than a fiber, finish or repeat size. A floral pattern is not automatically glazed chintz.",
+    "related": [
+      "ditsy-floral",
+      "botanical",
+      "paisley",
+      "arabesque"
+    ],
+    "references": [
+      {
+        "title": "V&A: William Morris textiles",
+        "url": "https://www.vam.ac.uk/articles/willam-morris-textiles"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "floral",
+      "colors": [
+        "#e9dfca",
+        "#668268",
+        "#b7786c"
+      ]
+    }
+  },
+  {
+    "id": "ditsy-floral",
+    "name": "Ditsy floral",
+    "category": "Motif",
+    "aliases": [
+      "ditzy floral",
+      "small floral",
+      "ditsie"
+    ],
+    "summary": "Small, closely repeated flowers make an all-over pattern.",
+    "construction": "Tiny blossoms or sprigs are distributed across the ground. The effect can be produced as a print on many different cloths.",
+    "recognize": "Individual flowers remain small while the overall surface reads as a fine texture.",
+    "uses": [
+      "Blouses",
+      "Dresses",
+      "Quilting"
+    ],
+    "distinguish": "Ditsy describes small, scattered patterning and is not exclusive to flowers or any one brand. Liberty’s Small Betsy is one specific floral example.",
+    "related": [
+      "floral",
+      "botanical",
+      "foulard"
+    ],
+    "references": [
+      {
+        "title": "Liberty: Small Betsy ditsy floral design",
+        "url": "https://www.libertylondon.com/uk/little-ditsy-small-betsy-camera-bag-000745647.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "ditsy-floral",
+      "colors": [
+        "#e7ddc7",
+        "#719083",
+        "#b77677"
+      ]
+    }
+  },
+  {
+    "id": "botanical",
+    "name": "Botanical",
+    "category": "Motif",
+    "aliases": [
+      "foliage pattern",
+      "leaf print"
+    ],
+    "summary": "Plants, leaves, branches and other botanical forms provide the subject of a repeat.",
+    "construction": "Designs may closely study specimens or stylize their outlines. Printed fabric can imitate drawn or woven effects without sharing those manufacturing methods.",
+    "recognize": "Look for leaf shapes, branching stems, fruit or identifiable plant forms.",
+    "uses": [
+      "Shirts",
+      "Curtains",
+      "Cushions"
+    ],
+    "distinguish": "Botanical overlaps floral but can emphasize foliage without blossoms. The depicted plant does not identify the textile fiber.",
+    "related": [
+      "floral",
+      "arabesque",
+      "trellis"
+    ],
+    "references": [
+      {
+        "title": "Liberty: Botanical Atlas design sources",
+        "url": "https://www.libertylondon.com/uk/features/home/about-the-botanical-atlas-wallpaper-collection.html"
+      },
+      {
+        "title": "Liberty Fabrics: Tapestry Leaves printed cotton",
+        "url": "https://www.libertylondon.com/uk/tapestry-leaves-tana-lawn%E2%84%A2-cotton-000871856.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "botanical",
+      "colors": [
+        "#e6dfca",
+        "#52785d",
+        "#939c68"
+      ]
+    }
+  },
+  {
+    "id": "toile-de-jouy",
+    "name": "Toile de Jouy",
+    "category": "Motif",
+    "aliases": [
+      "toile print",
+      "pastoral toile"
+    ],
+    "summary": "Detailed scenic vignettes repeat across a textile ground.",
+    "construction": "Historic toiles used printed scenes, often pastoral or narrative, distributed across the cloth. Contemporary designers retain that format while changing the subjects.",
+    "recognize": "Look for groups of people, buildings, trees or landscapes treated as little scenes.",
+    "uses": [
+      "Curtains",
+      "Upholstery",
+      "Clothing"
+    ],
+    "distinguish": "Toile can also mean a plain cloth or a garment fitting mock-up. A modern toile-style print need not have been made in Jouy-en-Josas.",
+    "related": [
+      "botanical",
+      "floral",
+      "medallion"
+    ],
+    "references": [
+      {
+        "title": "Cooper Hewitt: A new twist on toiles",
+        "url": "https://www.cooperhewitt.org/2014/08/20/a-new-twist-on-toiles/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "toile-de-jouy",
+      "colors": [
+        "#eee4cd",
+        "#5b7688"
+      ]
+    }
+  },
+  {
+    "id": "medallion",
+    "name": "Medallion",
+    "category": "Motif",
+    "aliases": [
+      "medallion repeat"
+    ],
+    "summary": "A self-contained ornamental unit repeats as a rounded, oval or shaped centerpiece.",
+    "construction": "Designers build the unit from smaller lines, petals, dots or other elements. It may stand alone or repeat with open space around each figure.",
+    "recognize": "Look for an enclosed central focus inside each repeated motif.",
+    "uses": [
+      "Cushions",
+      "Curtains",
+      "Upholstery"
+    ],
+    "distinguish": "Medallion describes the motif’s organization, not damask construction. A printed medallion can resemble one woven into the cloth.",
+    "related": [
+      "quatrefoil",
+      "paisley",
+      "floral"
+    ],
+    "references": [
+      {
+        "title": "Thibaut: Province Medallion printed fabric",
+        "url": "https://www.thibautdesign.com/products/fabrics/F981323"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "medallion",
+      "colors": [
+        "#ede1c8",
+        "#4d7066",
+        "#a1794c"
+      ]
+    }
+  },
+  {
+    "id": "arabesque",
+    "name": "Arabesque",
+    "category": "Motif",
+    "aliases": [
+      "scrolling foliage"
+    ],
+    "summary": "Interlacing curved stems and stylized plant forms create an ornamental network.",
+    "construction": "Textile examples combine tendrils, leaves and palmettes in repeated arrangements. The Met records printed cotton examples that echo the ornament of woven luxury textiles.",
+    "recognize": "Follow the connected curving stems through the repeat.",
+    "uses": [
+      "Decorative textiles",
+      "Dress fabrics",
+      "Furnishings"
+    ],
+    "distinguish": "Arabesque is an ornamental vocabulary rather than one exact repeat or weave. Use a specific object’s record for its cultural attribution.",
+    "related": [
+      "botanical",
+      "floral",
+      "paisley"
+    ],
+    "references": [
+      {
+        "title": "The Met: Textile with arabesque and palmette design",
+        "url": "https://www.metmuseum.org/art/collection/search/448522"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "arabesque",
+      "colors": [
+        "#e8ddc5",
+        "#587461",
+        "#a98555"
+      ]
+    }
+  },
+  {
+    "id": "ogee",
+    "name": "Ogee",
+    "category": "Motif",
+    "aliases": [
+      "ogee lattice"
+    ],
+    "summary": "Opposing S-shaped curves meet to form an undulating pointed repeat.",
+    "construction": "Mirrored curves create arch-like or stretched diamond shapes. The outline can be printed or built into a textured weave.",
+    "recognize": "Look for a curve that bends first one way and then the other.",
+    "uses": [
+      "Upholstery",
+      "Cushions",
+      "Drapery"
+    ],
+    "distinguish": "Ogee names the curve geometry. It may form a trellis, but many trellises use straight lines or other shapes.",
+    "related": [
+      "trellis",
+      "quatrefoil",
+      "medallion"
+    ],
+    "references": [
+      {
+        "title": "Regal Fabrics: Ogee and pattern glossary",
+        "url": "https://www.regalfabrics.com/fabrics-101/glossary/"
+      },
+      {
+        "title": "Thibaut: Chandler ogee weave in Companions",
+        "url": "https://www.thibautdesign.com/collections/companions"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "ogee",
+      "colors": [
+        "#e9dfc9",
+        "#6c836a"
+      ]
+    }
+  },
+  {
+    "id": "trellis",
+    "name": "Trellis",
+    "category": "Motif",
+    "aliases": [
+      "lattice pattern",
+      "treillage"
+    ],
+    "summary": "A connected lattice divides the surface into repeated open cells.",
+    "construction": "Crossing or linked lines establish the grid. Leaves, flowers or small motifs may sit within or over that framework.",
+    "recognize": "Look for a continuous network with open spaces between its lines.",
+    "uses": [
+      "Curtains",
+      "Cushions",
+      "Upholstery"
+    ],
+    "distinguish": "Trellis describes a layout rather than one cell shape. A design may be both botanical and trellis, or both ogee and trellis.",
+    "related": [
+      "ogee",
+      "quatrefoil",
+      "botanical",
+      "windowpane"
+    ],
+    "references": [
+      {
+        "title": "Sanderson: Trellis fabrics",
+        "url": "https://www.sanderson.design/fabric/style/trellis"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "trellis",
+      "colors": [
+        "#e8dfca",
+        "#5f806e"
+      ]
+    }
+  },
+  {
+    "id": "quatrefoil",
+    "name": "Quatrefoil",
+    "category": "Motif",
+    "aliases": [
+      "four-lobed motif"
+    ],
+    "summary": "Four rounded lobes surround a center to make a clover-like outline.",
+    "construction": "The motif can repeat separately or connect into a lattice. Its outline, rather than a specific textile process, defines the design.",
+    "recognize": "Count four lobes around each unit; pointed additions occur in some variants.",
+    "uses": [
+      "Cushions",
+      "Window treatments",
+      "Decorative fabrics"
+    ],
+    "distinguish": "Quatrefoil names a four-lobed figure, while trellis names a network layout. A fabric can exhibit both.",
+    "related": [
+      "trellis",
+      "ogee",
+      "medallion"
+    ],
+    "references": [
+      {
+        "title": "Sailrite: Glossary of fabric pattern names",
+        "url": "https://www.sailrite.com/A-Glossary-of-Fabric-Pattern-Names"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "quatrefoil",
+      "colors": [
+        "#e8dfca",
+        "#607b69"
+      ]
+    }
+  },
+  {
+    "id": "greek-key",
+    "name": "Greek key",
+    "category": "Motif",
+    "aliases": [
+      "meander",
+      "fret pattern"
+    ],
+    "summary": "A continuous angular line turns repeatedly at right angles.",
+    "construction": "The meandering line often forms a border. Textile makers can print it, weave it or embroider it onto a separate ground.",
+    "recognize": "Follow squared turns and repeated inward folds rather than curved loops.",
+    "uses": [
+      "Borders",
+      "Cushions",
+      "Curtain trims"
+    ],
+    "distinguish": "Greek key identifies an ornamental line pattern. Schumacher’s embroidered border illustrates one method, not a required construction.",
+    "related": [
+      "trellis",
+      "medallion"
+    ],
+    "references": [
+      {
+        "title": "Schumacher: Greek Key Embroidery II fabric specification",
+        "url": "https://apiv2.fschumacher.com/products/65252/digital-memo"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "greek-key",
+      "colors": [
+        "#eae1cf",
+        "#5f7867"
+      ]
+    }
+  },
+  {
+    "id": "ikat",
+    "name": "Ikat",
+    "category": "Textile technique",
+    "aliases": [
+      "warp ikat",
+      "weft ikat",
+      "double ikat",
+      "kasuri"
+    ],
+    "summary": "A resist-dyeing method patterns yarn before it is woven into cloth.",
+    "construction": "Selected areas of yarn bundles resist dye, then the yarns are positioned during weaving. Warp, weft or both sets can carry the design.",
+    "recognize": "Slight alignment variation can give motif edges a feathered appearance.",
+    "uses": [
+      "Robes",
+      "Scarves",
+      "Furnishing cloth"
+    ],
+    "distinguish": "An ikat-style print imitates the appearance without yarn-resist dyeing. The Japanese term kasuri identifies yarn-resist textiles in that tradition.",
+    "related": [
+      "batik",
+      "shibori",
+      "tie-dye"
+    ],
+    "references": [
+      {
+        "title": "V&A: Africa fashion, ikat and printed cloth",
+        "url": "https://www.vam.ac.uk/articles/cloth-of-a-continent-africa-fashion"
+      },
+      {
+        "title": "MFA Boston: Japanese kasuri textiles in the 2015 acquisitions list",
+        "url": "https://www.mfa.org/annual-report-2015/downloads/2015_Acquisitions_TFA.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "ikat",
+      "colors": [
+        "#e9e0cf",
+        "#4b6a80",
+        "#aa705b"
+      ]
+    }
+  },
+  {
+    "id": "batik",
+    "name": "Batik",
+    "category": "Textile technique",
+    "aliases": [
+      "wax-resist dyeing"
+    ],
+    "summary": "Wax protects selected cloth areas from dye to create a patterned textile.",
+    "construction": "Artisans apply the wax design, dye the cloth and remove the resist. Repeated stages allow additional colors and detail.",
+    "recognize": "Look for reserved lines and areas, sometimes with fine dye veins where wax cracked.",
+    "uses": [
+      "Garments",
+      "Scarves",
+      "Decorative cloth"
+    ],
+    "distinguish": "Batik is a process with important cultural traditions, especially in Indonesia, not one flower or geometric motif. A batik-style print need not use wax resist.",
+    "related": [
+      "ikat",
+      "shibori",
+      "tie-dye"
+    ],
+    "references": [
+      {
+        "title": "UNESCO: Indonesian batik techniques and cultural context",
+        "url": "https://ich.unesco.org/en/RL/batik-masterpiece-of-oral-and-intangible-heritage-of-humanity-00170"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "batik",
+      "colors": [
+        "#e1d2ad",
+        "#3f5664",
+        "#977148"
+      ]
+    }
+  },
+  {
+    "id": "shibori",
+    "name": "Shibori",
+    "category": "Textile technique",
+    "aliases": [
+      "shaped resist dyeing",
+      "kanoko",
+      "itajime",
+      "kumo"
+    ],
+    "summary": "Japanese shaped-resist techniques pattern cloth by controlling which areas take dye.",
+    "construction": "Binding, stitching, folding or clamping protects portions of the fabric. Different manipulations create dots, grids, lines or ring-like forms.",
+    "recognize": "Look for repeat relationships that reflect how the cloth was compressed or folded.",
+    "uses": [
+      "Kimono",
+      "Scarves",
+      "Decorative textiles"
+    ],
+    "distinguish": "Shibori includes more than tie-dye, and blue-and-white color alone cannot identify it. A printed shibori effect does not establish the technique.",
+    "related": [
+      "tie-dye",
+      "ikat",
+      "batik"
+    ],
+    "references": [
+      {
+        "title": "Museum of Fine Arts Boston: Shibori methods",
+        "url": "https://www.mfa.org/programs/community-programs/art-making-at-home/shibori"
+      },
+      {
+        "title": "The Met: Recent acquisitions, shibori kimono, page 77",
+        "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Recent_Acquisitions_A_Selection_1997_1998_The_Metropolitan_Museum_of_Art_Bulletin_v_56_no2_Fall_1998.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "shibori",
+      "colors": [
+        "#e9e4d6",
+        "#47627c"
+      ]
+    }
+  },
+  {
+    "id": "tie-dye",
+    "name": "Tie-dye",
+    "category": "Textile technique",
+    "aliases": [
+      "tie and dye",
+      "tied resist"
+    ],
+    "summary": "Bound or gathered cloth resists dye in selected areas to create a pattern.",
+    "construction": "The cloth is compressed and secured before color is applied. Opening it reveals rings, stripes, radiating forms or irregular areas determined by the preparation.",
+    "recognize": "Look for protected pale zones and color transitions associated with folds or ties.",
+    "uses": [
+      "Shirts",
+      "Dresses",
+      "Scarves"
+    ],
+    "distinguish": "Tie-dye is not limited to rainbow spirals or one country. Shibori and other named traditions have specific histories that should be credited when identifiable.",
+    "related": [
+      "shibori",
+      "batik",
+      "ikat"
+    ],
+    "references": [
+      {
+        "title": "V&A: Tie-dyed clothing in the Lalage Bown collection",
+        "url": "https://www.vam.ac.uk/articles/a-life-through-clothes-professor-lalage-bown-obe"
+      },
+      {
+        "title": "Museum of Fine Arts Boston: Shibori methods",
+        "url": "https://www.mfa.org/programs/community-programs/art-making-at-home/shibori"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "tie-dye",
+      "colors": [
+        "#dfd9c5",
+        "#6c92a0",
+        "#ab6b6d",
+        "#cdad68"
+      ]
+    }
+  },
+  {
+    "id": "camouflage",
+    "name": "Camouflage",
+    "category": "Motif",
+    "aliases": [
+      "camo",
+      "disruptive pattern",
+      "digital camouflage"
+    ],
+    "summary": "Contrasting patches, marks or pixels disrupt a recognizable outline.",
+    "construction": "Textile patterns arrange color areas at different scales. Their effect depends on the environment and viewing conditions as well as the design.",
+    "recognize": "Look for irregular interlocking areas or pixel groups rather than a simple regular spot repeat.",
+    "uses": [
+      "Uniforms",
+      "Outdoor clothing",
+      "Fashion prints"
+    ],
+    "distinguish": "A fashion camouflage print does not establish tested concealment or suitability for a particular terrain. Digital describes one visual approach, not every camouflage.",
+    "related": [
+      "leopard",
+      "zebra"
+    ],
+    "references": [
+      {
+        "title": "National Army Museum: Camouflage through time transcript",
+        "url": "https://www.nam.ac.uk/sites/default/files/learning-resource-files/2020-08/20200608_Transcript-CamouflageThroughTime_FINAL.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "animal",
+      "variant": "camouflage",
+      "colors": [
+        "#c4bd97",
+        "#60724f",
+        "#394d3d",
+        "#877455"
+      ]
+    }
+  },
+  {
+    "id": "leopard",
+    "name": "Leopard motif",
+    "category": "Motif",
+    "aliases": [
+      "leopard print",
+      "leopard spot"
+    ],
+    "summary": "Irregular rosette-like spots evoke a leopard’s coat.",
+    "construction": "Textile designers repeat and stylize the markings in varied palettes. Printed cloth and woven textured versions can carry the same visual idea.",
+    "recognize": "Look for uneven clustered rings or rosettes rather than evenly spaced circles.",
+    "uses": [
+      "Dress prints",
+      "Upholstery",
+      "Accessories"
+    ],
+    "distinguish": "Leopard describes the image and does not imply animal-derived material. Cheetah-inspired motifs more often use solid spots, though commercial names can be loose.",
+    "related": [
+      "zebra",
+      "polka-dot",
+      "camouflage"
+    ],
+    "references": [
+      {
+        "title": "Thibaut: African Leopard printed textile",
+        "url": "https://www.thibautdesign.com/products/fabrics/AF72977"
+      },
+      {
+        "title": "Thibaut: Animal patterns in woven and printed fabrics",
+        "url": "https://www.thibautdesign.com/category/fabrics/theme-animal-skins"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "animal",
+      "variant": "leopard",
+      "colors": [
+        "#d7b47b",
+        "#66513c",
+        "#a17b4e"
+      ]
+    }
+  },
+  {
+    "id": "zebra",
+    "name": "Zebra motif",
+    "category": "Motif",
+    "aliases": [
+      "zebra print",
+      "zebra stripe"
+    ],
+    "summary": "Irregular branching stripes evoke the contrasting bands on a zebra’s coat.",
+    "construction": "Printed and woven versions vary the band width, direction and color. Designers often stylize the marks rather than reproduce a particular animal.",
+    "recognize": "Look for tapered, curving bands that fork or end unevenly.",
+    "uses": [
+      "Upholstery",
+      "Fashion prints",
+      "Accessories"
+    ],
+    "distinguish": "Zebra is an animal-inspired motif, not a fiber or hide claim. A simple even stripe lacks its characteristic irregular branching.",
+    "related": [
+      "leopard",
+      "camouflage",
+      "breton-stripe"
+    ],
+    "references": [
+      {
+        "title": "Thibaut: Greenwood collection and zebra stripe",
+        "url": "https://www.thibautdesign.com/collections/greenwood"
+      },
+      {
+        "title": "Thibaut: Animal patterns in woven and printed fabrics",
+        "url": "https://www.thibautdesign.com/category/fabrics/theme-animal-skins"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "animal",
+      "variant": "zebra",
+      "colors": [
+        "#e8dfcb",
+        "#3f4b3d"
+      ]
+    }
+  }
+]

@@ -92,3 +92,48 @@ test('brand shortlists recover from malformed or blocked storage',async()=>{
  assert.deepEqual(readBrandShortlist({getItem:()=> '{"id":"zegna"}'},valid),[]);
  assert.equal(writeBrandShortlist({setItem:()=>{throw Error('blocked');}},['zegna']),false);
 });
+
+import {weaveEntries,weaveById,weaveCategories,findWeaves,parseWeaveSelection,weavePageNumber} from '../src/weaves.js';
+import {weaveSwatch,weaveBody} from '../src/weaves-render.js';
+test('weave and pattern research has distinct categories, source links and coherent cross-references',()=>{
+ assert.ok(weaveEntries.length>=100);
+ assert.equal(new Set(weaveEntries.map(entry=>entry.id)).size,weaveEntries.length);
+ assert.ok(weaveCategories.includes('Weave structure')&&weaveCategories.includes('Color pattern')&&weaveCategories.includes('Knit structure'));
+ for(const entry of weaveEntries){
+  assert.match(entry.id,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+  for(const key of ['name','category','summary','construction','recognize','distinguish'])assert.ok(typeof entry[key]==='string'&&entry[key].trim(),entry.id+': '+key);
+  assert.ok(entry.aliases.every(alias=>typeof alias==='string'));
+  assert.ok(entry.uses.length>=2&&entry.references.length>=1,entry.id);
+  for(const ref of entry.references){assert.ok(ref.title);assert.equal(new URL(ref.url).protocol,'https:');}
+  for(const id of entry.related)assert.ok(Object.hasOwn(weaveById,id)&&id!==entry.id,entry.id+': related '+id);
+  assert.ok(!/\u2014/.test(JSON.stringify(entry)),entry.id);
+  if(entry.visual.kind==='draft'){
+   const rows=entry.visual.draft,width=rows[0].length;
+   assert.ok(rows.length>=2&&width>=2&&rows.length<=48&&width<=48,entry.id);
+   assert.ok(rows.every(row=>row.length===width&&/^[01]+$/.test(row)&&row.includes('0')&&row.includes('1')),entry.id);
+   for(let x=0;x<width;x++)assert.equal(new Set(rows.map(row=>row[x])).size,2,entry.id+': unbound warp');
+   for(const colors of [entry.visual.warp,entry.visual.weft].filter(Boolean))assert.ok(colors.length&&colors.every(color=>/^#[0-9a-f]{6}$/i.test(color)),entry.id);
+  }else assert.ok(['stripe','check','dot','chevron','diamond','floral','paisley','animal','geometric','texture','loops'].includes(entry.visual.motif),entry.id);
+ }
+});
+test('weave search combines aliases and category filters, and comparisons reject unknown identifiers',()=>{
+ assert.equal(findWeaves({q:'houndstooth'})[0].id,'houndstooth');
+ assert.equal(findWeaves({q:'puppytooth'})[0].id,'houndstooth');
+ assert.ok(findWeaves({q:'herringbone'}).some(entry=>entry.id==='herringbone'));
+ assert.ok(findWeaves({category:'Knit structure'}).every(entry=>entry.category==='Knit structure'));
+ assert.equal(findWeaves({q:'houndstooth',category:'Knit structure'}).length,0);
+ assert.equal(findWeaves({q:'no-such-pattern-zzzz'}).length,0);
+ assert.deepEqual(parseWeaveSelection('houndstooth,constructor,herringbone,houndstooth,__proto__,twill,plain-weave'),['houndstooth','herringbone','twill']);
+ assert.equal(weavePageNumber('NaN',100),1);assert.equal(weavePageNumber('-9',100),1);assert.equal(weavePageNumber('999',100),6);assert.equal(weavePageNumber('3',0),1);
+});
+test('pattern diagrams distinguish a woven color repeat from its interlacing structure',()=>{
+ const entry=weaveById.houndstooth;
+ assert.equal(entry.category,'Color pattern');assert.equal(entry.visual.kind,'draft');
+ assert.ok(new Set(entry.visual.warp).size>=2&&new Set(entry.visual.weft).size>=2);
+ assert.notEqual(weaveSwatch(entry),weaveSwatch(entry,{structure:true}));
+ assert.match(weaveSwatch(entry),/role="img"/);
+ assert.match(weaveSwatch(entry,{decorative:true}),/aria-hidden="true"/);
+ const escaped=weaveSwatch({...entry,name:'<img src=x onerror=alert(1)>'});
+ assert.ok(!escaped.includes('<img'));assert.ok(escaped.includes('&lt;img'));
+ assert.match(weaveBody(entry),/What to distinguish/);assert.match(weaveBody(entry),/Sources &amp; further reading/);
+});

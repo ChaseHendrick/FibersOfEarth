@@ -2,6 +2,10 @@
 
 ## 2.5.0 - Unreleased
 
+- Added a 114-entry weave and pattern guide across seven categories, including herringbone, houndstooth, woven cloth families, knits, motifs and surface techniques. Each entry has original construction and recognition notes, common uses, distinctions and references. Coverage and visual limits are explicit.
+- Added alias search, category filters, 18-card pagination, shareable comparisons of up to three entries, global search results and a warp/weft contrast control for interlacing diagrams. The guide works in the standalone offline application without adding local-storage keys.
+- Added 115 JavaScript-free guide pages, a guide JSON download and sitemap coverage for 2,585 URLs. Expanded unit, mobile, offline, accessibility and reading-page checks, and documented the guide's taxonomy and maintenance.
+
 - Refreshed the README with a 60 fps animated WebP tour, a 60 fps H.264 video, a 50 fps GIF fallback, a motion-free screenshot, current feature and research counts, and a documentation index. Added reproducible media capture tooling with fresh browser frames throughout moving scenes.
 - Updated architecture, privacy, contribution, deployment and testing guidance for the brand directory and on-demand repository checks.
 - Corrected project links and generated canonical URLs to the current GitHub Pages address after the old address stopped resolving.
