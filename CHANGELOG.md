@@ -2,7 +2,7 @@
 
 ## 2.5.0 - Unreleased
 
-- Refreshed the README with a recorded site-tour GIF, a motion-free screenshot, current feature and research counts, and a documentation index. Added reproducible media capture tooling.
+- Refreshed the README with a 60 fps animated WebP tour, a 60 fps H.264 video, a 50 fps GIF fallback, a motion-free screenshot, current feature and research counts, and a documentation index. Added reproducible media capture tooling with fresh browser frames throughout moving scenes.
 - Updated architecture, privacy, contribution, deployment and testing guidance for the brand directory and on-demand repository checks.
 - Corrected project links and generated canonical URLs to the current GitHub Pages address after the old address stopped resolving.
 

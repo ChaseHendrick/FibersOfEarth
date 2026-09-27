@@ -11,9 +11,9 @@ Explore what clothes are made of, the names behind their labels, and the places 
 
 [Open the atlas](https://chasehendrick.github.io/FibersOfEarth/) · [Build it locally](#run-locally) · [Research coverage](docs/BRAND_RESEARCH.md)
 
-![Animated tour of Fibers of Earth: the wool atlas, searching the brand directory, Fox Brothers research notes, and interactive weave diagrams.](docs/screenshots/site-tour.gif)
+![60 fps animated tour of Fibers of Earth: the wool atlas, searching the brand directory, Fox Brothers research notes, and interactive weave diagrams.](docs/screenshots/site-tour.webp)
 
-*Recorded from the repository build. [View the still image](docs/screenshots/readme-poster.png) for a motion-free overview. The hosted site is updated separately through the Deploy site workflow.*
+*Recorded from the repository build. [60 fps video](docs/screenshots/site-tour.mp4) · [GIF version](docs/screenshots/site-tour.gif) · [Motion-free overview](docs/screenshots/readme-poster.png). The hosted site is updated separately through the Deploy site workflow.*
 
 ## Explore the site
 
@@ -71,7 +71,7 @@ npm run babysit
 
 For a smaller check, use `npm test`, `npm run check:directory`, `npm run build` or `npm run test:browser`. The browser command starts its own preview server. Set `BROWSER_CHANNEL=chrome` to use installed Chrome, or `BROWSER_EXECUTABLE` for a particular Chromium executable.
 
-See [testing and recorded evidence](docs/TESTING.md) and [deployment instructions](docs/DEPLOYMENT.md). To regenerate the GIF and still images, see the [media capture guide](docs/MEDIA.md).
+See [testing and recorded evidence](docs/TESTING.md) and [deployment instructions](docs/DEPLOYMENT.md). To regenerate the animated tour, video and still images, see the [media capture guide](docs/MEDIA.md).
 
 ## Privacy
 
