@@ -117,3 +117,17 @@ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 
 ```
+
+## Wikidata brand and textile-company records
+
+The structured catalog statements in `src/data/brand-directory.json` were retrieved
+from Wikidata on September 27, 2026. Wikidata structured data is released under
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/); see
+[Wikidata licensing](https://www.wikidata.org/wiki/Wikidata:Licensing).
+Each imported statement retains a link to its source entity. Source descriptions,
+founding dates, locations, founders and products are catalog statements, not
+independently verified findings. This reuse does not include Wikipedia articles,
+Wikimedia images, brand logos or trademarks licensed for reuse.
+
+Company research notes are original, attributed summaries. Linked company pages
+and brand names remain the property of their respective publishers and owners.

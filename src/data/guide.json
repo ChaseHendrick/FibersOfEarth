@@ -6130,5 +6130,279 @@
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R1007"
    }
   ]
+ },
+ "zegna": {
+  "types": "Read ZEGNA as a company or mill identity, then identify the cloth separately. A collection name, Super S designation and fiber composition each answer different questions. Compare like constructions and stated weights rather than treating the name on the selvedge as a complete material grade.",
+  "fabrics": "Compare a woven suiting sample, a knitted sweater and a finished jacket as separate textile constructions. Even when all carry related branding, they can use different yarns, fibers and manufacturing routes. Read the exact product composition and collection reference before applying any description from another Zegna product.",
+  "quality": "Ask for the cloth article number, composition, weight unit and construction, then inspect the finished garment’s seams, lining and internal support. The same fabric can be made into quite different garments. A named mill helps you identify the cloth, but does not certify the tailor’s workmanship or a permanent supplier relationship.",
+  "pros": [
+   "A cloth label and garment label can identify different makers.",
+   "A manufacturing group can contain several specialized operations.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Does a Zegna cloth label mean ZEGNA made the suit?",
+    "No. It can identify the cloth supplier while another tailor or garment company made the suit. Confirm the garment maker separately."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "Is this a ZEGNA garment, or a garment made by another house using Zegna cloth? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "A cloth label and garment label can identify different makers.",
+   "A manufacturing group can contain several specialized operations."
+  ],
+  "refs": [
+   {
+    "title": "Ermenegildo Zegna Group: overview",
+    "url": "https://www.zegnagroup.com/en/overview/"
+   },
+   {
+    "title": "Ermenegildo Zegna Group: history",
+    "url": "https://www.zegnagroup.com/en/overview/history/"
+   }
+  ]
+ },
+ "brunello-cucinelli": {
+  "types": "Read Brunello Cucinelli as a maker identity before considering the fiber, yarn and knit structure of an individual item. Separate pure-fiber products from blends, and do not confuse machine gauge with fiber diameter. A collection name describes a commercial range; the composition label describes what the garment contains.",
+  "fabrics": "Use cashmere knitwear as the central reading example, then distinguish it from woven jackets, shirts and other apparel in a broader wardrobe. A smooth lightweight knit and a lofty bulky knit need different yarn and stitch choices. Similar softness at first touch does not establish equal fabric density or service life.",
+  "quality": "Inspect the neckline, cuffs and seams for consistency, then compare the body’s stitch density and weight with its intended use. Ask whether a soft surface is the result of a particular finish. Keep the product reference and fiber percentages so that future care and repair advice can be matched to the actual item.",
+  "pros": [
+   "Solomeo identifies a company and craft setting, not the origin of every goat fiber.",
+   "Colored cashmere is a design and dyeing story, not a new fiber class.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Does the name mean every garment is cashmere?",
+    "No. Read the sewn-in composition for the specific garment. A house associated with cashmere can also design products in other fibers and blends."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "What are the exact composition, knit structure and care instructions for this item? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "Solomeo identifies a company and craft setting, not the origin of every goat fiber.",
+   "Colored cashmere is a design and dyeing story, not a new fiber class."
+  ],
+  "refs": [
+   {
+    "title": "Brunello Cucinelli: cashmere",
+    "url": "https://www.brunellocucinelli.com/en/company/cashmere.html"
+   },
+   {
+    "title": "Brunello Cucinelli: origins of the company",
+    "url": "https://www.brunellocucinelli.com/en/company/the-origins-of-the-company.html"
+   }
+  ]
+ },
+ "john-smedley": {
+  "types": "Read John Smedley as a maker identity before considering the fiber, yarn and knit structure of an individual item. Separate pure-fiber products from blends, and do not confuse machine gauge with fiber diameter. A collection name describes a commercial range; the composition label describes what the garment contains.",
+  "fabrics": "Fine knitted pullovers, cardigans and collared styles provide examples for comparing cotton and wool in similar garment forms. Intermeshed loops can give stretch without an added elastic fiber. Check whether a product is pure cotton, wool or a blend, and compare thickness and stitch density before assigning it a season.",
+  "quality": "Inspect the neckline, cuffs and seams for consistency, then compare the body’s stitch density and weight with its intended use. Ask whether a soft surface is the result of a particular finish. Keep the product reference and fiber percentages so that future care and repair advice can be matched to the actual item.",
+  "pros": [
+   "Lea Mills dates to 1784 in the producer’s history.",
+   "Machine gauge, yarn count and fiber diameter are different measurements.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Is Sea Island Cotton the same thing as merino?",
+    "No. Cotton is a plant cellulose fiber, while merino is sheep wool. A maker offering both does not make them interchangeable material names."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "Is this cotton, merino or a blend, and what do its knit gauge and care label describe? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "Lea Mills dates to 1784 in the producer’s history.",
+   "Machine gauge, yarn count and fiber diameter are different measurements."
+  ],
+  "refs": [
+   {
+    "title": "John Smedley: company history",
+    "url": "https://beta.johnsmedley.com/uk/discover/company-history/"
+   },
+   {
+    "title": "John Smedley: fibers (official Japanese site)",
+    "url": "https://www.johnsmedley.jp/about/fibre"
+   }
+  ]
+ },
+ "johnstons-of-elgin": {
+  "types": "Read Johnstons of Elgin as a maker identity before considering the fiber, yarn and knit structure of an individual item. Separate pure-fiber products from blends, and do not confuse machine gauge with fiber diameter. A collection name describes a commercial range; the composition label describes what the garment contains.",
+  "fabrics": "Scarves, stoles and knitwear are useful examples for learning how cashmere and wool appear in different structures. Inspect the reverse and edges as well as the face: fringe, hems, linking and seams reveal different construction choices. Confirm the specific fiber percentages rather than assuming every soft Scottish textile is pure cashmere.",
+  "quality": "Inspect the neckline, cuffs and seams for consistency, then compare the body’s stitch density and weight with its intended use. Ask whether a soft surface is the result of a particular finish. Keep the product reference and fiber percentages so that future care and repair advice can be matched to the actual item.",
+  "pros": [
+   "The house history separates Elgin weaving from Hawick knitwear.",
+   "A Scottish manufacturing statement does not itself establish raw-fiber origin.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Does made in Scotland mean Scottish cashmere goats?",
+    "No. It describes manufacture in a place. The origin of the fiber is a separate claim that requires its own sourcing information."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "Is this piece woven or knitted, and which fiber percentages and care instructions apply? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "The house history separates Elgin weaving from Hawick knitwear.",
+   "A Scottish manufacturing statement does not itself establish raw-fiber origin."
+  ],
+  "refs": [
+   {
+    "title": "Johnstons of Elgin: heritage, chapter one",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-1"
+   },
+   {
+    "title": "Johnstons of Elgin: heritage, chapter two",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-2"
+   }
+  ]
+ },
+ "vitale-barberis-canonico": {
+  "types": "Read Vitale Barberis Canonico as a company or mill identity, then identify the cloth separately. A collection name, Super S designation and fiber composition each answer different questions. Compare like constructions and stated weights rather than treating the name on the selvedge as a complete material grade.",
+  "fabrics": "VBC cloth is a useful case for learning to read a swatch book. Record the article number, composition, weave, finish and weight with its unit before comparing samples. A seasonal collection title organizes fabrics commercially; it does not replace these specifications or describe the quality of every garment later made from them.",
+  "quality": "Ask for the cloth article number, composition, weight unit and construction, then inspect the finished garment’s seams, lining and internal support. The same fabric can be made into quite different garments. A named mill helps you identify the cloth, but does not certify the tailor’s workmanship or a permanent supplier relationship.",
+  "pros": [
+   "VBC is a common abbreviation for Vitale Barberis Canonico.",
+   "The producer distinguishes 1663 family textile evidence from the company named in 1936.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Is a suit with VBC cloth made by VBC?",
+    "The label can identify the cloth mill. A separate tailor or garment house may have cut and assembled the suit, so check both identities."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "What is the exact VBC article number, and who made the finished garment? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "VBC is a common abbreviation for Vitale Barberis Canonico.",
+   "The producer distinguishes 1663 family textile evidence from the company named in 1936."
+  ],
+  "refs": [
+   {
+    "title": "Vitale Barberis Canonico: our history",
+    "url": "https://vitalebarberiscanonico.com/who-we-are/our-history/"
+   },
+   {
+    "title": "Vitale Barberis Canonico: official fabric and archive portal",
+    "url": "https://vitalebarberiscanonico.com/"
+   }
+  ]
+ },
+ "reda": {
+  "types": "Read Reda as a company or mill identity, then identify the cloth separately. A collection name, Super S designation and fiber composition each answer different questions. Compare like constructions and stated weights rather than treating the name on the selvedge as a complete material grade.",
+  "fabrics": "The producer catalog separates suiting, jacket cloths, flannels, blends and named functional ranges. That variety makes the mill a useful example of why a supplier name alone does not specify a fabric. Compare the article’s weave, weight, blend and finish, then check whether the finished garment preserves the claimed care conditions.",
+  "quality": "Ask for the cloth article number, composition, weight unit and construction, then inspect the finished garment’s seams, lining and internal support. The same fabric can be made into quite different garments. A named mill helps you identify the cloth, but does not certify the tailor’s workmanship or a permanent supplier relationship.",
+  "pros": [
+   "Reda is a mill identity; named ranges need their own specifications.",
+   "A cloth’s claimed washability does not override a finished suit’s care label.",
+   "Specific product references make material descriptions easier to compare."
+  ],
+  "cons": [
+   "A house name does not specify every product’s fiber content.",
+   "Heritage does not supply a laboratory performance score.",
+   "Product ranges and sourcing can change between collections."
+  ],
+  "impact": "Ask separately about raw-fiber sourcing, wet processing, energy use and the expected life of the finished item. A heritage date or prestigious address cannot summarize those impacts. Product-specific sourcing evidence is more useful than a company-wide adjective, and durability depends on construction and care as well as the fiber.",
+  "care": "Follow the complete item’s care label, including instructions for its lining, trims and finish. Support delicate knitwear when wet and avoid storing it under tension; tailored garments need care suited to their internal construction. Keep pieces clean and dry before storage, and seek repairs while damage is still limited.",
+  "faq": [
+   [
+    "Are all Reda fabrics stretchy and machine washable?",
+    "No universal conclusion follows from the mill name. Read the exact cloth specification and the finished garment care label, especially for lined tailoring."
+   ],
+   [
+    "What should I ask before comparing products?",
+    "Which Reda range and article is specified, and does the garment label support its care claims? Keep the answer tied to the item you are actually examining rather than another product from the same maker."
+   ],
+   [
+    "Does this profile verify a supply chain?",
+    "No. It records sourced brand context and reading guidance. Supplier relationships and product-level provenance require separate records for the specific item."
+   ]
+  ],
+  "notable": [
+   "Reda is a mill identity; named ranges need their own specifications.",
+   "A cloth’s claimed washability does not override a finished suit’s care label."
+  ],
+  "refs": [
+   {
+    "title": "Reda: heritage",
+    "url": "https://www.reda1865.com/us/heritage"
+   },
+   {
+    "title": "Reda: cloth collections",
+    "url": "https://www.reda1865.com/us/"
+   },
+   {
+    "title": "Rete Archivi Biellesi: Lanificio Successori Reda",
+    "url": "https://www.retearchivibiellesi.it/entita/13-lanificio-successori-reda"
+   }
+  ]
  }
 }

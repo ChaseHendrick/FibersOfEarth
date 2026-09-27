@@ -1,6 +1,6 @@
 # Content and evidence
 
-The catalog contains 106 entries: 80 fiber/material references and 20 proprietary materials or technologies and six reference apparel or mill houses. These counts include named silk variants, fillings and historical materials. They are not 106 distinct chemical fiber classes.
+The catalog contains 112 entries: 80 fiber/material references and 20 proprietary materials or technologies and twelve reference apparel or mill houses. These counts include named silk variants, fillings and historical materials. They are not 112 distinct chemical fiber classes.
 
 Thirty material networks yield 115 named illustrative paths. Networks retain approximate geographic concepts from an earlier standalone atlas, with five added educational models. Routes are derived from connected origin-to-destination paths and curated for origin variation. They do not represent recorded transactions or actual transport itineraries.
 
@@ -42,8 +42,14 @@ Research took place on September 22, 2026. Web searches verified the first part 
 
 ## September 26 editorial follow-up
 
-The current catalog has 106 profiles: 80 material references, 20 proprietary materials or technologies, and six reference apparel or mill houses. The glossary has 102 terms; Learn has ten field notes. Source review in this follow-up covers the revised Canali and Loro Piana geography, district references, the new summer-cloth guide, and selected Fresco, gabardine and high-twist claims. It is not a fresh verification of every older profile.
+The current catalog has 112 profiles: 80 material references, 20 proprietary materials or technologies, and twelve reference apparel or mill houses. The glossary has 102 terms; Learn has ten field notes. Source review in this follow-up covers the revised Canali and Loro Piana geography, district references, the new summer-cloth guide, and selected Fresco, gabardine and high-twist claims. It is not a fresh verification of every older profile.
 
 Canali’s producer history identifies Triuggio and distinguishes the earlier workshop from company formation in 1934. LVMH locates the present Loro Piana company’s founding in Quarona in 1924. The Italian districts note cites national tourism and municipal accounts for Biella, Prato and Como. Producer performance statements remain attributed; illustrative comparisons are not laboratory results.
 
 Edit research data directly in `src/data/details.json`, `guide.json`, `datasheet.json` and `glossary-extended.json`. The temporary upload shards and duplicate loaders have been removed. Field notes and their source registry are in `src/content-articles.js` and `src/content-sources.js`. `scripts/articles-build.mjs` creates JavaScript-free pages from the same note records; a note can supply its own `reviewed` date.
+
+The additional house profiles cover ZEGNA, Brunello Cucinelli, John Smedley, Johnstons of Elgin, Vitale Barberis Canonico and Reda. Each has a cited history and an editorial reading guide, not a laboratory assessment of the brand. VBC’s family-textile record in 1663 is distinguished from the named company in 1936; Johnstons’ Hawick knitting milestone is distinguished from its earlier house history. New profiles add no mapped supply routes or property scores.
+
+## Brand directory
+
+The separate 2,241-entry research directory is documented in [BRAND_RESEARCH.md](BRAND_RESEARCH.md). Its imported catalog records are not counted as complete material profiles. Facts preserve source links and visible evidence limits, while original producer notes are separately attributed.

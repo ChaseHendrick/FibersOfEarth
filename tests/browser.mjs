@@ -1,3 +1,5 @@
+import {brandDirectory} from '../src/brand-directory.js';
+import {escapeHTML} from '../src/glossary-render.js';
 import {chromium} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
@@ -59,7 +61,30 @@ try{
  await page.setViewportSize({width:390,height:844});await page.screenshot({path:'docs/screenshots/field-note-mobile.png',fullPage:true});await page.setViewportSize({width:1440,height:1000});
  await page.goto(base+'learn/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
  results.push(`Field notes: ${articles.length} JavaScript-free guides, index, glossary and material links, citations, metadata, mobile layout and accessibility`);
- const sitemap=await page.request.get(base+'sitemap.xml');assert.equal(sitemap.status(),200);assert.equal((await sitemap.text()).match(/<loc>/g).length,glossaryEntries.length+materials.length+articles.length+4);assert.equal((await page.request.get(base+'glossary/missing/')).status(),404);
+ // Directory searches, saved brands and exports must work without a server dependency.
+ await go('brands');assert.equal(await page.locator('.brand-card').count(),24);
+ await page.getByRole('button',{name:'Next',exact:true}).click();assert.match(page.url(),/page=2/);
+ await page.getByRole('searchbox',{name:'Search brands',exact:true}).fill('Ermenegildo Zegna');assert.equal(await page.locator('.brand-card').count(),1);
+ await page.getByRole('button',{name:'Save brand ZEGNA',exact:true}).click();await page.reload();await page.getByRole('button',{name:'Unsave brand ZEGNA',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Reset',exact:true}).click();await page.getByLabel('My saved brands on this device').check();assert.equal(await page.locator('.brand-card').count(),1);
+ await page.getByRole('button',{name:'Compare saved brands',exact:true}).click();assert.ok((await page.locator('#brand-comparison').textContent()).includes('ZEGNA'));
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export saved brands',exact:true}).click();const download=await downloadPromise;const exported=JSON.parse(await fs.readFile(await download.path(),'utf8'));assert.deepEqual(exported.entries.map(b=>b.id),['zegna']);
+ await page.getByRole('button',{name:'Reset',exact:true}).click();await page.locator('#brand-country').selectOption('Italy');await page.locator('#brand-depth').selectOption('catalog');assert.ok(await page.locator('.brand-card').count());
+ await go('brands?page=NaN');assert.match(await page.locator('#brand-count').textContent(),/Page 1 of/);
+ await go('brands?q=%3Cimg%20src=x%20onerror=alert(1)%3E');assert.equal(await page.locator('#brand-results img').count(),0);
+ await go('brand/fox-brothers');assert.ok((await page.locator('main').textContent()).includes('1772'));assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ await go('brands');await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:'docs/screenshots/brand-directory-mobile.png',fullPage:true});await page.setViewportSize({width:1440,height:1000});
+ const brandReaderContext=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const brandReader=await brandReaderContext.newPage();
+ await brandReader.goto(base+'brands/');assert.equal(await brandReader.locator('.directory-index a').count(),brandDirectory.length);assert.equal(await brandReader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+ for(const b of [brandDirectory.find(b=>b.id==='fox-brothers'),brandDirectory.find(b=>b.id==='zegna'),brandDirectory.find(b=>b.depth==='catalog'),[...brandDirectory].sort((a,b)=>b.name.length-a.name.length)[0]]){await brandReader.goto(base+'brands/'+b.id+'/');assert.equal(await brandReader.locator('h1').textContent(),b.name);assert.equal(await brandReader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,b.name);}
+ await brandReaderContext.close();
+ // Check every generated record and canonical path directly, then browser-test representative pages.
+ for(const b of brandDirectory){const html=await fs.readFile('dist/brands/'+b.id+'/index.html','utf8');assert.ok(html.includes(`<h1>${escapeHTML(b.name)}</h1>`),b.id);assert.ok(html.includes('https://sharpmeow.github.io/FibersOfEarth/brands/'+b.id+'/'),b.id);assert.ok(html.includes('Open research questions'));}
+ await page.goto(base+'brands/fox-brothers/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ const exportedDirectory=await page.request.get(base+'brands/directory.json');assert.equal((await exportedDirectory.json()).entries.length,brandDirectory.length);
+ results.push(`Brand directory: ${brandDirectory.length} generated pages audited; search, filters, pagination, saved-brand persistence, comparison, JSON exports, representative JavaScript-free pages, mobile layouts and accessibility passed`);
+
+ const sitemap=await page.request.get(base+'sitemap.xml');assert.equal(sitemap.status(),200);assert.equal((await sitemap.text()).match(/<loc>/g).length,glossaryEntries.length+materials.length+articles.length+brandDirectory.length+5);assert.equal((await page.request.get(base+'glossary/missing/')).status(),404);
  await page.goto(base+'glossary/denier/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);results.push(`Glossary: aliases, topic/letter filters, ${glossaryEntries.length} detail routes, ${glossaryEntries.length+1} JavaScript-free pages, related links, metadata, structured data, sitemap and accessibility`);
  await context.setOffline(false);await go('fiber/wool/science');assert.ok(await page.getByRole('heading',{name:'Structure & chemistry',exact:true}).count());assert.ok(await page.locator('.key-figures .fact-row').count()>=2);assert.ok(await page.locator('.term-link').count()>0);assert.ok((await page.locator('.cite-text').textContent()).includes('Fibers of Earth'));
  await go('materials');await page.getByLabel('Search material library').fill('cashmer');assert.equal(await page.locator('.material-card h3').first().textContent(),'Cashmere');await page.getByLabel('Search material library').fill('law:cites');assert.ok(await page.locator('.match-snippet mark').count()>0);
@@ -81,6 +106,7 @@ try{
  results.push('Globe scroll zoom, keyboard control with live status, full screen control, and persistent display settings');
  results.push('Research layer: detail sections, key figures, glossary links, citations, ranked typo-tolerant search, converters, raised routes and spin control');
  await context.setOffline(true);await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/materials');await page.locator('h1').waitFor();assert.ok(await page.locator('.material-card').count()>0);results.push('Standalone HTML opens offline with populated library');await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/article/summer-cloth');await page.getByRole('heading',{name:'Summer cloth: read beyond the fiber label.',exact:true}).waitFor();assert.ok((await page.locator('.reading').textContent()).includes('running meter'));results.push('New field note reads offline with glossary links');
+ await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/brands');await page.getByRole('searchbox',{name:'Search brands',exact:true}).fill('fox brothers');await page.locator('.brand-card h2 a').first().click();assert.ok((await page.locator('main').textContent()).includes('1772'));results.push('Brand directory search and research notes work fully offline');
  assert.deepEqual(errors,[]);results.push('No browser JavaScript errors');
  await fs.writeFile('docs/browser-results.json',JSON.stringify({date:new Date().toISOString().slice(0,10),browser:'Chromium',results},null,2));console.log(JSON.stringify(results,null,2));assert.equal(results.filter(x=>x.violations?.length).length,0,'Accessibility violations');
 }catch(e){await page.screenshot({path:'docs/screenshots/failure.png',fullPage:true});console.error(e);console.log(JSON.stringify(results,null,2));process.exitCode=1;}finally{await browser.close();}

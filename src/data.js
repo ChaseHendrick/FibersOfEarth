@@ -9,7 +9,7 @@ import datasheet from './data/datasheet.json' with {type:'json'};
 import {createIndex,fold} from './search.js';
 export {articles,glossary,regions};
 export const sources=[...coreSources,...extraSources,...brandSources];
-export const materials=Object.values({...profiles,...extended,...brands}).map((m,i)=>({...m,index:i+1,history:m.history||histories[m.id],aliases:aliases[m.id]||'',detail:details[m.id]||null,guide:guide[m.id]||null,data:datasheet[m.id]||null,color:['#a6b49e','#c8b89d','#b6c0ae','#aeacb1','#c0a18d','#a4b6b3'][i%6]}));
+export const materials=Object.values({...profiles,...extended,...brands}).map((m,i)=>({...m,index:i+1,history:m.history||histories[m.id],aliases:aliases[m.id]||m.aliases||'',detail:details[m.id]||null,guide:guide[m.id]||null,data:datasheet[m.id]||null,color:['#a6b49e','#c8b89d','#b6c0ae','#aeacb1','#c0a18d','#a4b6b3'][i%6]}));
 export const byId=Object.fromEntries(materials.map(m=>[m.id,m]));
 export const families=['All materials','Plant','Animal','Cellulosic','Synthetic','Recycled','Technical','Mineral & metal','Bio-based','Regenerated protein','Specialty','Brands & technologies'];
 export const networks=Object.fromEntries(Object.entries(legacy.FIBRES).map(([id,f])=>[id,{nodes:Object.fromEntries(Object.entries({...f.nodes,...legacy.RETAIL}).map(([k,n])=>[k,{...n,id:k,country:legacy.GEO[n.name]||'China',role:n.src?'Origin':n.hub?'Processing':'Destination'}])),flows:f.flows.map(x=>x.slice(0,3)),camera:f.camera}]));

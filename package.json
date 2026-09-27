@@ -7,7 +7,9 @@
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test tests/data.test.mjs",
-    "test:browser": "node scripts/test-browser.mjs"
+    "test:browser": "node scripts/test-browser.mjs",
+    "check:directory": "node scripts/validate-directory.mjs",
+    "babysit": "node scripts/babysit.mjs"
   },
   "dependencies": {
     "d3-geo": "3.1.1",

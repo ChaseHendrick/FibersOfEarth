@@ -2,11 +2,16 @@
 
 ## 2.5.0 - Unreleased
 
+- Added a 2,241-entry brand, mill and textile-business directory with 10,597 attributed catalog statements and 64 producer-research notes. Evidence depth and historical uncertainty are explicit.
+- Added directory search, country/category/history filters, shareable views, local saved brands, comparison, JSON exports and JavaScript-free reading pages.
+- Added on-demand repository babysitting and manual CI dispatch, with directory provenance validation and expanded offline/mobile/browser coverage. No schedule.
+
 - Glossary: first-class **Fresco**, **Gabardine**, and **High-twist** terms; Gabardine removed from Twill aliases and cross-linked.
 - Wool guide: clearer split between farm micron / superfine classing and IWTO Super S **cloth** numbers; fresco called out as open high-twist tropical suiting language (trademark vs generic).
 - Learn: field note on Italian textile districts (Biella worsted wool, Prato regenerated cardato wool, Como silk), stressing mill name ≠ fiber origin.
-- Six reference houses: Wolf vs Goat, Canali, Loro Piana, Piacenza 1733, Paul Smith and Yves Salomon. These profiles add no supplier relationships to the atlas.
-- README: positioning line, micron-scale and Italy-districts SVGs, wider screenshot gallery; catalog counts 106 / 26 brands / 102 glossary terms / ten field notes.
+- Initial six reference houses: Wolf vs Goat, Canali, Loro Piana, Piacenza 1733, Paul Smith and Yves Salomon. These profiles add no supplier relationships to the atlas.
+- Added ZEGNA, Brunello Cucinelli, John Smedley, Johnstons of Elgin, Vitale Barberis Canonico and Reda with full editorial profiles, reader guides, cited heritage timelines and search aliases.
+- README: positioning line, micron-scale and Italy-districts SVGs, wider screenshot gallery; catalog counts 112 profiles / 32 linked brand profiles / 102 glossary terms / ten field notes.
 
 - Added a practical summer-cloth field note and JavaScript-free reading pages for all ten notes, with an index, glossary links, source citations and sitemap entries.
 - Corrected Canali and Loro Piana geography using producer histories; added district-specific sources and improved Fresco, gabardine and high-twist references.

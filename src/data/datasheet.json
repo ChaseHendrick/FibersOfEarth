@@ -6644,5 +6644,150 @@
     "url": "https://www.yves-salomon.com/"
    }
   ]
+ },
+ "zegna": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1910",
+    "event": "The group dates its foundation in Trivero to 1910. Its history describes a progression from wool-textile manufacture to a broader apparel and manufacturing business. The mill, garment brand and corporate group should remain distinct when interpreting product descriptions.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Ermenegildo Zegna Group: overview",
+    "url": "https://www.zegnagroup.com/en/overview/"
+   },
+   {
+    "title": "Ermenegildo Zegna Group: history",
+    "url": "https://www.zegnagroup.com/en/overview/history/"
+   }
+  ]
+ },
+ "brunello-cucinelli": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1978",
+    "event": "The company connects its beginnings in 1978 with colored cashmere knitwear. Its founder’s account describes experimenting with dyed women’s sweaters before expanding the business. That history concerns product design and commerce, rather than the discovery of cashmere as a fiber.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Brunello Cucinelli: cashmere",
+    "url": "https://www.brunellocucinelli.com/en/company/cashmere.html"
+   },
+   {
+    "title": "Brunello Cucinelli: origins of the company",
+    "url": "https://www.brunellocucinelli.com/en/company/the-origins-of-the-company.html"
+   }
+  ]
+ },
+ "john-smedley": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1784",
+    "event": "The producer history traces Lea Mills to 1784, initially making muslin and spinning cotton. The later knitwear story is a change in manufacturing activity. An old mill date should therefore be read as industrial heritage, not proof that every present product has been made unchanged since that year.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "John Smedley: company history",
+    "url": "https://beta.johnsmedley.com/uk/discover/company-history/"
+   },
+   {
+    "title": "John Smedley: fibers (official Japanese site)",
+    "url": "https://www.johnsmedley.jp/about/fibre"
+   }
+  ]
+ },
+ "johnstons-of-elgin": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1797",
+    "event": "The house dates its beginnings to 1797.",
+    "ref": 0
+   },
+   {
+    "year": "1980",
+    "event": "The producer dates its Hawick knitting mill to 1980.",
+    "ref": 1
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Johnstons of Elgin: heritage, chapter one",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-1"
+   },
+   {
+    "title": "Johnstons of Elgin: heritage, chapter two",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-2"
+   }
+  ]
+ },
+ "vitale-barberis-canonico": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1663",
+    "event": "The producer chronology cites a document recording family textile activity.",
+    "ref": 0
+   },
+   {
+    "year": "1910",
+    "event": "A complete-cycle factory opened in Pratrivero, according to the producer history.",
+    "ref": 0
+   },
+   {
+    "year": "1936",
+    "event": "The producer dates the named Vitale Barberis Canonico company to this year.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Vitale Barberis Canonico: our history",
+    "url": "https://vitalebarberiscanonico.com/who-we-are/our-history/"
+   },
+   {
+    "title": "Vitale Barberis Canonico: official fabric and archive portal",
+    "url": "https://vitalebarberiscanonico.com/"
+   }
+  ]
+ },
+ "reda": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1865",
+    "event": "The Biella archive network dates the wool mill founded by Carlo Reda in Valle Mosso to 1865. Reda’s own heritage account describes later manufacturing developments and acquisitions. The year in its branding is a heritage reference, not a fabric weight, wool grade or current production volume.",
+    "ref": 2
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Reda: heritage",
+    "url": "https://www.reda1865.com/us/heritage"
+   },
+   {
+    "title": "Reda: cloth collections",
+    "url": "https://www.reda1865.com/us/"
+   },
+   {
+    "title": "Rete Archivi Biellesi: Lanificio Successori Reda",
+    "url": "https://www.retearchivibiellesi.it/entita/13-lanificio-successori-reda"
+   }
+  ]
  }
 }

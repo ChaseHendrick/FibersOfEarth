@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {materials,byId,networks,journeys,sources,getMaterials,distance,articles} from '../src/data.js';
 import {diameterFromDenier} from '../src/science.js';
-test('catalog has unique, complete entries with source references and histories',()=>{assert.equal(materials.length,106);assert.equal(new Set(materials.map(m=>m.id)).size,106);for(const m of materials){for(const f of ['name','family','composition','feel','uses','care','tradeoff','question','history'])assert.ok(m[f]?.length>0,`${m.id}: ${f}`);for(const s of m.sources)assert.ok(sources.some(x=>x.id===s),`${m.id}: ${s}`);if(m.brand)assert.ok(byId[m.base]);}});
+test('catalog has unique, complete entries with source references and histories',()=>{assert.equal(materials.length,112);assert.equal(new Set(materials.map(m=>m.id)).size,112);for(const m of materials){for(const f of ['name','family','composition','feel','uses','care','tradeoff','question','history'])assert.ok(m[f]?.length>0,`${m.id}: ${f}`);for(const s of m.sources)assert.ok(sources.some(x=>x.id===s),`${m.id}: ${s}`);if(m.brand)assert.ok(byId[m.base]);}});
 test('every route follows its network, has valid coordinates and an origin and destination',()=>{assert.equal(journeys.length,115);assert.equal(new Set(journeys.map(j=>j.id)).size,journeys.length);for(const j of journeys){const n=networks[j.fiber];assert.equal(j.stops[0].role,'Origin');assert.equal(j.stops.at(-1).role,'Destination');assert.ok(j.km>0);for(const s of j.stops){assert.ok(Number.isFinite(s.lat)&&Math.abs(s.lat)<=90);assert.ok(Number.isFinite(s.lon)&&Math.abs(s.lon)<=180);assert.ok(s.country);}for(let i=1;i<j.keys.length;i++)assert.ok(n.flows.some(([a,b])=>a===j.keys[i-1]&&b===j.keys[i]));}});
 test('search is accent-insensitive and aliases, filters and sorting compose',()=>{assert.ok(getMaterials({q:'vicuna'}).some(m=>m.id==='vicuna'));assert.ok(getMaterials({q:'pashmina'}).some(m=>m.id==='cashmere'));assert.ok(getMaterials({family:'Plant',q:'fiber'}).every(m=>m.family==='Plant'));const xs=getMaterials({sort:'az'});assert.deepEqual(xs.map(x=>x.name),[...xs].sort((a,b)=>a.name.localeCompare(b.name)).map(x=>x.name));assert.equal(getMaterials({q:'no-such-material-123'}).length,0);});
 test('distance and filament dimensional model have independent reference values',()=>{assert.ok(Math.abs(distance({lat:0,lon:0},{lat:0,lon:90})-10007.543)<.01);assert.equal(distance({lat:20,lon:40},{lat:20,lon:40}),0);assert.ok(Math.abs(diameterFromDenier(5,1.38)-22.640)<.01);assert.ok(Math.abs(diameterFromDenier(20,1.38)/diameterFromDenier(5,1.38)-2)<1e-10);});
@@ -55,6 +55,8 @@ test('ranked search tolerates typos and spelling variants and supports phrases, 
  const phrase=searchMaterials('"artificial silk"');assert.ok(phrase.length>0);
  const top=searchMaterials('wool')[0];assert.ok(top.matched.name||top.matched.aliases);
  assert.equal(suggestMaterials('polyestr'),'polyester');
+ for(const [query,id] of [['Ermenegildo Zegna','zegna'],['VBC','vitale-barberis-canonico'],['Reda 1865','reda']])assert.equal(searchMaterials(query)[0].material.id,id);
+ for(const id of ['zegna','brunello-cucinelli','john-smedley','johnstons-of-elgin','vitale-barberis-canonico','reda']){assert.ok(byId[id].referenceOnly);assert.ok(!networks[id]);}
  assert.ok(searchMaterials('law:cites').every(r=>/cites/i.test(r.material.detail.labeling)));
  assert.ok(getMaterials({q:'fibre'}).length===getMaterials({q:'fiber'}).length);
 });
@@ -69,4 +71,24 @@ test('unit converters match exact reference conversions',()=>{
 test('glossary auto-links escape safely and link each term once',()=>{
  assert.ok(!linkTerms('keratin intermediate filaments').includes('glossary/filament'));assert.ok(linkTerms('a continuous filament').includes('term-link'));
  const html=linkTerms('Carding &amp; carding precede combing.');assert.equal((html.match(/term-link/g)||[]).length,2);assert.ok(html.includes('&amp;'));
+});
+
+test('brand directory search composes filters and clamps malformed pagination',async()=>{
+ const {brandDirectory,directoryById,searchBrands,directoryPage,factValues}=await import('../src/brand-directory.js');
+ assert.ok(brandDirectory.length>2000);assert.equal(Object.keys(directoryById).length,brandDirectory.length);
+ assert.ok(searchBrands({q:'Ermenegildo Zegna'}).some(b=>b.id==='zegna'));
+ assert.ok(searchBrands({q:'John Smedly'}).some(b=>b.id==='john-smedley'));
+ const result=searchBrands({country:'Italy',depth:'catalog'});assert.ok(result.length>0);assert.ok(result.every(b=>b.depth==='catalog'&&factValues(b,'country').includes('Italy')));
+ const ended=searchBrands({history:'ended'});assert.ok(ended.length>0);assert.ok(ended.every(b=>factValues(b,'dissolved').length));
+ assert.deepEqual(searchBrands({savedIds:['zegna']}).map(b=>b.id),['zegna']);assert.equal(searchBrands({savedIds:[]}).length,0);
+ for(const page of ['NaN','Infinity','-4','0'])assert.equal(directoryPage({},page).page,1);
+ assert.equal(directoryPage({},'999999').page,directoryPage().pages);assert.equal(directoryPage({},2).entries.length,24);
+ assert.equal(directoryPage({q:'zzzznonexistentbrandzzzz'},10).page,1);assert.equal(directoryPage({q:'zzzznonexistentbrandzzzz'}).total,0);
+});
+test('brand shortlists recover from malformed or blocked storage',async()=>{
+ const {readBrandShortlist,writeBrandShortlist}=await import('../src/brand-shortlist.js');const valid=new Set(['zegna','reda']);
+ assert.deepEqual(readBrandShortlist({getItem:()=> '["zegna","zegna","missing",12]'},valid),['zegna']);
+ assert.deepEqual(readBrandShortlist({getItem:()=> '{broken'},valid),[]);
+ assert.deepEqual(readBrandShortlist({getItem:()=> '{"id":"zegna"}'},valid),[]);
+ assert.equal(writeBrandShortlist({setItem:()=>{throw Error('blocked');}},['zegna']),false);
 });
