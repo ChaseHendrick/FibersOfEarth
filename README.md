@@ -54,15 +54,19 @@ The build also writes `dist/offline.html`, a single-file copy that opens without
 | --- | --- |
 | Atlas | Choose from 30 mapped materials. Each globe opens centered on its trade route; raised arcs animate the direction of travel. Zoom with the wheel, pinch, buttons, or keyboard (0.6× to 16×) for finer coastlines, country names, and grids; go full screen; switch to a flat map. |
 | Materials | 106 profiles with a reader guide (types and grades, fabrics, buying cues, pros and cons, footprint, care, FAQ, notable facts) and a research layer (structure and chemistry, processing, performance, identification, labeling law, deeper history, key figures, references). Ranked, typo-tolerant search covers every section. Cite in APA or BibTeX, or print the full profile. |
-| Brands & technologies | Distinguish 26 proprietary offerings from their underlying fiber, feedstock, or yarn process. |
+| Brands & technologies | Explore 20 proprietary materials and technologies plus six reference apparel and mill houses; distinguish names from underlying fibers. |
 | Compare | Put three materials side by side across composition, history, care, uses, and sourcing questions. |
 | Journeys | Search 115 illustrative routes by place or material; sort by estimated distance or stage count; export a route. |
-| Learn | Read nine field notes, 100 historical summaries, and a 102-term glossary with the science, numbers, and origins behind each term. |
+| Learn | Read ten field notes, 106 historical summaries, and a 102-term glossary with the science, numbers, and origins behind each term. |
 | Science lab | Change weave diagrams, calculate ideal filament diameter, and convert yarn counts (tex, dtex, denier, Nm, Ne) and fabric weights (g/m², oz/yd², momme). |
 | Saved | Keep a local collection of materials in your browser. |
 | Display settings | Reduce motion, enlarge text, raise contrast, or underline links from the header; choices stay in your browser. |
 
 Press `/` to search the atlas. Links preserve views using URL fragments. Browser Back and Forward navigate between sections. Saved items stay on your device.
+
+### Field notes without JavaScript
+
+The build includes a [reading edition of all ten field notes](https://sharpmeow.github.io/FibersOfEarth/learn/), with sources, glossary links and related material profiles. Start with [summer cloth specifications](https://sharpmeow.github.io/FibersOfEarth/learn/summer-cloth/) or [Italian textile districts](https://sharpmeow.github.io/FibersOfEarth/learn/italian-districts/). The interactive editions also remain bundled in `offline.html`.
 
 ### Detailed textile glossary
 
@@ -72,7 +76,7 @@ Press `/` to search the atlas. Links preserve views using URL fragments. Browser
 
 - **Materials catalog:** generic fibers, selected variants, fillings, historical materials, and proprietary technologies. It does not claim to cover every species, polymer grade, trademark, or experimental formulation.
 - **Mapped atlas routes:** educational models, **not live shipments or verified supplier relationships**. Markers are approximate cities and regions.
-- **Distance figures:** the sum of great-circle segments — not road or shipping distance, and not an emissions calculation.
+- **Distance figures:** the sum of great-circle segments, not road or shipping distance, and not an emissions calculation.
 - **Legacy specialty connections:** inherited from an earlier atlas and labeled as unverified legacy concepts.
 - **Producer statements:** attributed in profiles; not independently certified.
 

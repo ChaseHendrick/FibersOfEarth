@@ -1,13 +1,16 @@
 # Changelog
 
-## 2.5.0 - 2026-09-23
+## 2.5.0 - Unreleased
 
 - Glossary: first-class **Fresco**, **Gabardine**, and **High-twist** terms; Gabardine removed from Twill aliases and cross-linked.
 - Wool guide: clearer split between farm micron / superfine classing and IWTO Super S **cloth** numbers; fresco called out as open high-twist tropical suiting language (trademark vs generic).
 - Learn: field note on Italian textile districts (Biella worsted wool, Prato regenerated cardato wool, Como silk), stressing mill name ≠ fiber origin.
-- Brands: **Wolf vs Goat** (`wolf-vs-goat`) plus favorites **Canali**, **Loro Piana** (cashmere base; Storm System only where producer-documented) and **Piacenza 1733**, **Paul Smith**, and **Yves Salomon** (producer spelling; user shorthand Solomon) (historic Biella mill house) as referenceOnly teaching entries; producer-attributed mill-yarn examples on Wolf vs Goat only; no new map edges.
-- README: positioning line, micron-scale and Italy-districts SVGs, wider screenshot gallery; catalog counts 106 / 26 brands / 102 glossary terms / nine field notes.
+- Six reference houses: Wolf vs Goat, Canali, Loro Piana, Piacenza 1733, Paul Smith and Yves Salomon. These profiles add no supplier relationships to the atlas.
+- README: positioning line, micron-scale and Italy-districts SVGs, wider screenshot gallery; catalog counts 106 / 26 brands / 102 glossary terms / ten field notes.
 
+- Added a practical summer-cloth field note and JavaScript-free reading pages for all ten notes, with an index, glossary links, source citations and sitemap entries.
+- Corrected Canali and Loro Piana geography using producer histories; added district-specific sources and improved Fresco, gabardine and high-twist references.
+- Consolidated uploaded research fragments into the four canonical JSON datasets and removed temporary upload probes.
 
 ## 2.4.0 - 2026-09-22
 

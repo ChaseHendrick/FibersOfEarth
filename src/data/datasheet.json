@@ -1009,7 +1009,7 @@
   "refs": [
    {
     "title": "Journal of Animal Science: Fiber characteristics of qiviut and guard hair from wild muskoxen (Rowell et al., 2001)",
-    "url": "https://doi.org/10.2527/2001.7971670x"
+    "url": "https://doi.org/10.2527/jas.2001.7971670x"
    },
    {
     "title": "Musk Ox Farm: Qiviut",
@@ -6519,6 +6519,129 @@
    {
     "title": "Sourcing Journal (WWD): The Lycra Company Emerges from Chapter 11 with $1.2 Billion Debt Reduction",
     "url": "https://wwd.com/sourcing-journal/industry-news/the-lycra-company-emerges-from-chapter-11-1238975256/"
+   }
+  ]
+ },
+ "wolf-vs-goat": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public product stories",
+    "event": "Wolf vs Goat publishes garment essays that name mill yarns and fiber grades (for example Cashwool, Afromood, Pecora Nera) as attributed materials education rather than as a proprietary fiber launch.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Wolf vs Goat: official site",
+    "url": "https://www.wolfvsgoat.com/"
+   },
+   {
+    "title": "Zegna Baruffa: Cashwool (mill)",
+    "url": "https://www.baruffa.com/en/product/cashwool-30/"
+   }
+  ]
+ },
+ "canali": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1934",
+    "event": "Canali dates its company foundation to 1934, following the family tailoring workshop in Triuggio.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Canali: The Canali Family (producer history)",
+    "url": "https://anthology.canali.com/en/family/the-canali-family/"
+   }
+  ]
+ },
+ "loro-piana": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Producer finish documentation",
+    "event": "Loro Piana documents Storm System as a weather-resistant cloth finish on specified products; cited here as producer-attributed finish language, not as a generic fiber.",
+    "ref": 1
+   },
+   {
+    "year": "1924",
+    "event": "The present Loro Piana company was founded in Quarona, Piedmont, according to LVMH.",
+    "ref": 2
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Loro Piana: official site",
+    "url": "https://www.loropiana.com/"
+   },
+   {
+    "title": "Loro Piana: Storm System (producer)",
+    "url": "https://www.loropiana.com/en/us/loro-piana-fabrics/storm-system"
+   },
+   {
+    "title": "LVMH: Loro Piana (parent-company history)",
+    "url": "https://www.lvmh.com/our-maisons/fashion-leather-good/loro-piana"
+   }
+  ]
+ },
+ "piacenza-1733": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1733 (producer story)",
+    "event": "Fratelli Piacenza / Piacenza 1733 publicly dates its founding in Pollone in the Biella district; cited as producer heritage narrative for a mill-house reference entry.",
+    "ref": 1
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Piacenza 1733: official site",
+    "url": "https://www.piacenza1733.com/"
+   },
+   {
+    "title": "Piacenza 1733: Our story (producer)",
+    "url": "https://www.piacenza1733.com/en/our-story/"
+   }
+  ]
+ },
+ "paul-smith": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public brand materials",
+    "event": "Paul Smith presents itself as a British designer house with cloth-aware menswear storytelling in public brand materials.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Paul Smith: official site",
+    "url": "https://www.paulsmith.com/"
+   }
+  ]
+ },
+ "yves-salomon": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public brand materials",
+    "event": "Yves Salomon presents itself as a French outerwear and furrier house with contemporary collections in public brand materials.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Yves Salomon: official site",
+    "url": "https://www.yves-salomon.com/"
    }
   ]
  }

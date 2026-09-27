@@ -29,7 +29,11 @@ const base=new URL(process.env.SITE_URL||'https://sharpmeow.github.io/FibersOfEa
 if(!['http:','https:'].includes(base.protocol)||base.search||base.hash)throw Error('SITE_URL must be an HTTP(S) site URL without a query or fragment');
 if(!base.pathname.endsWith('/'))base.pathname+='/';
 const {buildGlossary}=await import('./glossary-build.mjs'),{buildMaterials}=await import('./materials-build.mjs'),{reviewed}=await import('../src/glossary.js');
-const paths=['',...await buildMaterials(cssFile,base),...await buildGlossary(cssFile,base)];
+const {buildArticles}=await import('./articles-build.mjs');
+const paths=['',...await buildMaterials(cssFile,base),...await buildGlossary(cssFile,base),...await buildArticles(cssFile,base)];
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-await fs.writeFile('dist/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(p=>`<url><loc>${esc(new URL(p,base).href)}</loc><lastmod>${reviewed}</lastmod></url>`).join('')}</urlset>`);
+const {articles}=await import('../src/data.js');
+const noteDates=new Map(articles.map(a=>['learn/'+a.id+'/',a.reviewed||reviewed]));
+noteDates.set('learn/',[...noteDates.values()].sort().at(-1)||reviewed);
+await fs.writeFile('dist/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(p=>`<url><loc>${esc(new URL(p,base).href)}</loc><lastmod>${noteDates.get(p)||reviewed}</lastmod></url>`).join('')}</urlset>`);
 console.log(`Sitemap: ${paths.length} URLs for ${base.href}`);
