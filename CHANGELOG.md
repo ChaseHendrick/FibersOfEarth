@@ -2,6 +2,10 @@
 
 ## 2.5.0 - Unreleased
 
+- Refreshed the README with a recorded site-tour GIF, a motion-free screenshot, current feature and research counts, and a documentation index. Added reproducible media capture tooling.
+- Updated architecture, privacy, contribution, deployment and testing guidance for the brand directory and on-demand repository checks.
+- Corrected project links and generated canonical URLs to the current GitHub Pages address after the old address stopped resolving.
+
 - Added a 2,241-entry brand, mill and textile-business directory with 10,597 attributed catalog statements and 64 producer-research notes. Evidence depth and historical uncertainty are explicit.
 - Added directory search, country/category/history filters, shareable views, local saved brands, comparison, JSON exports and JavaScript-free reading pages.
 - Added on-demand repository babysitting and manual CI dispatch, with directory provenance validation and expanded offline/mobile/browser coverage. No schedule.

@@ -5,10 +5,10 @@ export function brandCard(b,link){
  return `<article class="source-card brand-card"><div class="eyebrow">${e(b.category)}</div><h2><a href="${e(link)}">${e(b.name)}</a></h2><p>${e(b.summary)}</p><p class="muted">${e(countries.slice(0,3).join(' · ')||'Country not recorded')}${ended.length?' · End date reported: '+e(ended.join(', ')):''}</p><small>${e(depthLabels[b.depth])}</small></article>`;
 }
 export function brandBody(b,{profileLink,readingLink}={}){
- const groups=[['History & people',['inception','dissolved','founder']],['Places & products',['country','headquarters','products','type']]];
+ const groups=[['Catalog history & people',['inception','dissolved','founder']],['Catalog places & products',['country','headquarters','products','type']]];
  const labels={inception:'Inception year reported',dissolved:'Dissolution year reported',founder:'Founder',country:'Country association',headquarters:'Headquarters reported',products:'Products reported',type:'Entity classification'};
  const facts=groups.map(([title,fields])=>`<section><h2>${title}</h2>${fields.map(field=>{
-  const list=b.facts.filter(f=>f.field===field);return `<h3>${labels[field]}</h3>${list.length?`<ul>${list.map(f=>`<li>${e(f.value)} <a href="${e(f.source)}" rel="noopener noreferrer">[Wikidata]</a></li>`).join('')}</ul>`:'<p class="muted">Not recorded in this research snapshot.</p>'}`;
+  const list=b.facts.filter(f=>f.field===field);return `<h3>${labels[field]}</h3>${list.length?`<ul>${list.map(f=>`<li>${e(f.value)} <a href="${e(f.source)}" rel="noopener noreferrer">[Wikidata]</a></li>`).join('')}</ul>`:'<p class="muted">No imported catalog statement.</p>'}`;
  }).join('')}</section>`).join('');
  const websites=b.facts.filter(f=>f.field==='website');
  return `<div class="eyebrow">${e(b.category)}</div><h1>${e(b.name)}</h1><p class="definition-lead">${e(b.summary)}</p>

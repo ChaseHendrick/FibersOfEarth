@@ -2,118 +2,96 @@
 <h1 align="center">Every thread has a world.</h1>
 <p align="center">An independent textile atlas by Chaos.</p>
 
-[![Checks](https://github.com/SharpMeow/FibersOfEarth/actions/workflows/check.yml/badge.svg)](https://github.com/SharpMeow/FibersOfEarth/actions/workflows/check.yml)
+[![Checks](https://github.com/ChaseHendrick/FibersOfEarth/actions/workflows/check.yml/badge.svg)](https://github.com/ChaseHendrick/FibersOfEarth/actions/workflows/check.yml)
 ![Static site](https://img.shields.io/badge/site-static-294e3c)
 ![Node 22+](https://img.shields.io/badge/node-22%2B-294e3c)
 [![License: MIT](https://img.shields.io/badge/license-MIT-294e3c)](LICENSE)
 
-Fibers of Earth is an independent textile atlas: 112 material, fiber, and technology profiles, 115 illustrative supply-chain journeys, and the science and history of textiles. It is a static site with no account, API key, or application server.
+Explore what clothes are made of, the names behind their labels, and the places and processes that connect them. Fibers of Earth brings together **112 material and technology profiles**, a **2,241-entry brand directory**, **115 illustrative journeys**, **102 glossary terms**, and **10 field notes**.
 
-Fibers of Earth is the independent atlas for what clothes are actually made of: fiber, yarn, cloth, and the words mills and labels use.
+[Open the atlas](https://chasehendrick.github.io/FibersOfEarth/) · [Build it locally](#run-locally) · [Research coverage](docs/BRAND_RESEARCH.md)
 
-It is not a live logistics tracker or certification body. Routes are educational models. Producer statements are attributed, not independently certified.
+![Animated tour of Fibers of Earth: the wool atlas, searching the brand directory, Fox Brothers research notes, and interactive weave diagrams.](docs/screenshots/site-tour.gif)
 
-The brand directory adds **2,241 brands, mills and textile businesses**, including historical records, with source links, research-depth labels, search, country/category filters, saved brands, comparison and exports. See [research coverage and limits](docs/BRAND_RESEARCH.md).
+*Recorded from the repository build. [View the still image](docs/screenshots/readme-poster.png) for a motion-free overview. The hosted site is updated separately through the Deploy site workflow.*
 
-Run `npm run babysit` to check the repository on demand. The same checks run on pushes and pull requests, with no scheduled automation.
+## Explore the site
 
-Visit the [hosted atlas](https://sharpmeow.github.io/FibersOfEarth/), or build and preview it locally.
-
-![Fibers of Earth desktop atlas](docs/screenshots/atlas-desktop.png)
-
-<p align="center">
-  <img src="docs/graphics/micron-scale.svg" alt="Illustrative fiber diameter bands from cashmere and Super S cloth grades through coarser wool" width="720"/>
-</p>
-
-<p align="center">
-  <img src="docs/graphics/italy-districts.svg" alt="Educational sketch of Biella worsted wool, Prato regenerated wool, and Como silk districts" width="720"/>
-</p>
-
-### Screenshots
-
-| Library | Glossary | Science lab |
-| --- | --- | --- |
-| ![Materials library](docs/screenshots/library-desktop.png) | ![Glossary definition](docs/screenshots/glossary-definition.png) | ![Science lab](docs/screenshots/science-desktop.png) |
-
-| Atlas (mobile) | Library (mobile) | Glossary (mobile) |
-| --- | --- | --- |
-| ![Atlas mobile](docs/screenshots/atlas-mobile.png) | ![Library mobile](docs/screenshots/library-mobile.png) | ![Glossary mobile](docs/screenshots/glossary-mobile.png) |
-
-## Open the atlas
-
-1. Open [sharpmeow.github.io/FibersOfEarth](https://sharpmeow.github.io/FibersOfEarth/) in a modern browser.
-2. Or clone this repository, then run:
-
-```sh
-npm ci && npm run build && npm run dev
-```
-
-3. Open http://127.0.0.1:4173.
-
-The build also writes `dist/offline.html`, a single-file copy that opens without a server (base world map only). External references require a network connection when you choose to open them.
-
-## How it works
-
-| Section | What you can do |
+| Area | What you can do |
 | --- | --- |
-| Atlas | Choose from 30 mapped materials. Each globe opens centered on its trade route; raised arcs animate the direction of travel. Zoom with the wheel, pinch, buttons, or keyboard (0.6× to 16×) for finer coastlines, country names, and grids; go full screen; switch to a flat map. |
-| Materials | 112 profiles with a reader guide (types and grades, fabrics, buying cues, pros and cons, footprint, care, FAQ, notable facts) and a research layer (structure and chemistry, processing, performance, identification, labeling law, deeper history, key figures, references). Ranked, typo-tolerant search covers every section. Cite in APA or BibTeX, or print the full profile. |
-| Brands & technologies | Explore 20 proprietary materials and technologies plus twelve reference apparel and mill houses; distinguish names from underlying fibers. |
-| Compare | Put three materials side by side across composition, history, care, uses, and sourcing questions. |
-| Journeys | Search 115 illustrative routes by place or material; sort by estimated distance or stage count; export a route. |
-| Learn | Read ten field notes, 112 historical summaries, and a 102-term glossary with the science, numbers, and origins behind each term. |
-| Science lab | Change weave diagrams, calculate ideal filament diameter, and convert yarn counts (tex, dtex, denier, Nm, Ne) and fabric weights (g/m², oz/yd², momme). |
-| Saved | Keep a local collection of materials in your browser. |
-| Display settings | Reduce motion, enlarge text, raise contrast, or underline links from the header; choices stay in your browser. |
+| Atlas | Follow 30 mapped materials on a globe or flat map. Explore route stops, zoom, rotate, and open related profiles. |
+| Material library | Search 112 profiles by name, aliases or technical terms. Read composition, processing, history, care, buying cues, research references and FAQs. |
+| Brands, mills & makers | Search 2,241 entries and filter by category, country association, research depth or reported end date. Follow company sources and see open research questions. |
+| Saved brands | Keep a shortlist on your device, compare the first four saved entries, and export it as JSON. Filtered directory views can be shared by URL. |
+| Material comparison | Compare three materials across composition, history, care, uses and sourcing questions. Save materials separately from brands. |
+| Journeys | Browse 115 educational routes by material or place. Sort by modeled distance or stage count, and export route data. |
+| Field notes & glossary | Read 10 practical guides and 102 detailed terms, including Fresco, gabardine and high-twist yarn. Follow related materials and source references. |
+| Science lab | Switch weave structures, estimate ideal filament diameter, and convert yarn counts and fabric weights. |
+| Reading & display | Open pages without JavaScript, print profiles, copy citations, reduce motion, enlarge text, increase contrast or underline links. |
 
-Press `/` to search the atlas. Links preserve views using URL fragments. Browser Back and Forward navigate between sections. Saved items stay on your device.
+Press `/` to search across materials, brands, glossary terms, journeys and field notes. The core application, directory and base map work offline without an account or API key.
 
-### Field notes without JavaScript
+## Research you can inspect
 
-The build includes a [reading edition of all ten field notes](https://sharpmeow.github.io/FibersOfEarth/learn/), with sources, glossary links and related material profiles. Start with [summer cloth specifications](https://sharpmeow.github.io/FibersOfEarth/learn/summer-cloth/) or [Italian textile districts](https://sharpmeow.github.io/FibersOfEarth/learn/italian-districts/). The interactive editions also remain bundled in `offline.html`.
+The directory separates **32 linked textile profiles**, **227 additional producer-reference entries**, and **1,982 catalog records**. Its research snapshot includes 10,597 source-linked catalog statements and 64 original company-research notes across 62 brands. The 32 linked profiles are also part of the material library; these counts are not separate brand totals.
 
-### Detailed textile glossary
+Catalog statements are attributed to Wikidata and have not all been independently checked. Company sources describe their own products and history. Historical businesses are included, an absent closure date does not establish current trading, and headquarters do not establish manufacturing or fiber origin. Each entry makes its research depth and gaps visible.
 
-[Read the glossary](https://sharpmeow.github.io/FibersOfEarth/glossary/) or use the interactive glossary to search by aliases and filter by topic or letter. All 102 terms include explanations, the science and numbers, practical examples, distinctions, origins, related terms, and sources. The build creates 103 JavaScript-free glossary pages plus a sitemap for static hosting. [Research and SEO notes](docs/GLOSSARY-RESEARCH.md) explain the source methodology and deployment requirements.
+The atlas routes are illustrative models, not verified supplier relationships or live shipments. Distances sum great-circle segments and do not estimate transport emissions. Inclusion is not a certification or endorsement.
 
-## Coverage and limits
+Read the [brand research method](docs/BRAND_RESEARCH.md), [content and evidence guide](docs/CONTENT.md), and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-- **Materials catalog:** generic fibers, selected variants, fillings, historical materials, and proprietary technologies. It does not claim to cover every species, polymer grade, trademark, or experimental formulation.
-- **Mapped atlas routes:** educational models, **not live shipments or verified supplier relationships**. Markers are approximate cities and regions.
-- **Distance figures:** the sum of great-circle segments, not road or shipping distance, and not an emissions calculation.
-- **Legacy specialty connections:** inherited from an earlier atlas and labeled as unverified legacy concepts.
-- **Producer statements:** attributed in profiles; not independently certified.
-
-See [content methodology](docs/CONTENT.md) and the in-site reference shelf for editorial evidence.
-
-## Privacy
-
-All atlas content and the base map ship with the site. Saved materials and display preferences stay in your browser. There is no account, analytics, advertising, or application backend. Opening the hosted site sends ordinary requests to the host; external reference links visit independent sites under their own policies. See [PRIVACY.md](PRIVACY.md) for storage keys, network behavior, and what never leaves your device.
-
-## Development
+## Run locally
 
 Requires Node.js 22 or newer.
 
 ```sh
+git clone https://github.com/ChaseHendrick/FibersOfEarth.git
+cd FibersOfEarth
 npm ci
-npm test
 npm run build
 npm run dev
 ```
 
-Open http://127.0.0.1:4173. Rebuild after source changes and restart the preview server. `npm run build` writes the site to `dist/`: a small `index.html`, content-hashed `assets/app-*.js` and `assets/styles-*.css`, the glossary reading edition, the sitemap, on-demand map geometry in `geo/`, and `offline.html`. Build output is not committed; CI builds and deploys it.
+Open [http://127.0.0.1:4173](http://127.0.0.1:4173). Rebuild after editing source files. The preview server reads the generated files from `dist/`.
 
-For browser and accessibility checks:
+To read without a server, open **`dist/offline.html`**. It bundles the interactive application, brand directory, search and base map. Detailed coastlines load only when hosted; following external sources requires a network connection.
+
+The build also creates JavaScript-free reading editions in `dist/materials/`, `dist/brands/`, `dist/glossary/` and `dist/learn/`, plus a 2,470-URL sitemap and the brand-directory JSON download. Deploy the whole `dist/` folder. Build output is not committed.
+
+## Check and maintain
 
 ```sh
+# Install the browser once, then run the full check sequence.
 npx playwright install chromium
-npm run test:browser
+npm run babysit
 ```
 
-The browser command starts its own preview server. To use an installed Chrome instead, set `BROWSER_CHANNEL=chrome`. Test screenshots and a machine-readable report are written to `docs/`.
+`babysit` runs unit tests, directory provenance validation, the production build and browser checks. It stops at the first failure. The same sequence runs on pushes and pull requests; the Checks workflow also supports manual dispatch. **There is no schedule or automatic deployment.**
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [architecture](docs/ARCHITECTURE.md), [testing notes](docs/TESTING.md), [deployment](docs/DEPLOYMENT.md), [changelog](CHANGELOG.md), and [security policy](SECURITY.md).
+For a smaller check, use `npm test`, `npm run check:directory`, `npm run build` or `npm run test:browser`. The browser command starts its own preview server. Set `BROWSER_CHANNEL=chrome` to use installed Chrome, or `BROWSER_EXECUTABLE` for a particular Chromium executable.
+
+See [testing and recorded evidence](docs/TESTING.md) and [deployment instructions](docs/DEPLOYMENT.md). To regenerate the GIF and still images, see the [media capture guide](docs/MEDIA.md).
+
+## Privacy
+
+Saved material IDs, saved brand IDs and display preferences stay in your browser. Exports are generated locally. There is no account, analytics, advertising or application backend. The host receives normal page requests; external references open under their own sites’ policies. [Privacy details and storage keys](PRIVACY.md).
+
+## Documentation
+
+| Guide | What it covers |
+| --- | --- |
+| [Contributing](CONTRIBUTING.md) | Content corrections, development and review expectations. |
+| [Architecture](docs/ARCHITECTURE.md) | Source datasets, search, rendering, storage and build outputs. |
+| [Brand research](docs/BRAND_RESEARCH.md) | Discovery, provenance, evidence levels and known gaps. |
+| [Content methodology](docs/CONTENT.md) | Material profiles, source standards and illustrative routes. |
+| [Glossary research](docs/GLOSSARY-RESEARCH.md) | Term definitions, research scope and reading editions. |
+| [Testing](docs/TESTING.md) | Unit, data, browser, accessibility and offline checks. |
+| [Deployment](docs/DEPLOYMENT.md) | GitHub Pages, canonical URLs, static hosting and offline use. |
+| [Media](docs/MEDIA.md) | Reproduce the README tour and screenshots. |
+
+The [micron-scale illustration](docs/graphics/micron-scale.svg) and [Italian textile districts sketch](docs/graphics/italy-districts.svg) accompany the learning material. See the [changelog](CHANGELOG.md) for releases and the [security policy](SECURITY.md) for reporting concerns.
 
 ## Credits and license
 
-Created by **Chaos**. Original application code and original editorial text are [MIT licensed](LICENSE). Material names and trademarks belong to their respective owners. Reference organizations and material producers are not affiliated with or endorsing this project. Map data and library licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The site is published through GitHub Pages at [sharpmeow.github.io/FibersOfEarth](https://sharpmeow.github.io/FibersOfEarth/). Search indexing is controlled by search engines.
+Created by **Chaos**. Original application code and editorial text are [MIT licensed](LICENSE). Wikidata structured records are CC0. Brand names and trademarks belong to their respective owners; inclusion does not imply affiliation. Map and library licenses are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
