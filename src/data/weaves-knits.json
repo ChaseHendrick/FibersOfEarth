@@ -1,0 +1,1149 @@
+[
+  {
+    "id": "single-jersey",
+    "name": "Single jersey",
+    "category": "Knit structure",
+    "aliases": [
+      "Jersey knit",
+      "Stockinette",
+      "Stocking stitch"
+    ],
+    "summary": "Single jersey is a plain knit with visibly different front and back surfaces.",
+    "construction": "One set of needles forms connected loops. The face shows the legs of the stitches; the reverse shows their rounded crowns.",
+    "recognize": "Look for small V shapes in vertical columns on the face and a more bumpy reverse.",
+    "uses": [
+      "T-shirts",
+      "Underwear",
+      "Lightweight dresses"
+    ],
+    "distinguish": "Jersey names a construction, not a fiber. Interlock has a different double-knit structure and more similar surfaces.",
+    "related": [
+      "interlock",
+      "rib-knit",
+      "garter-stitch"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Jersey",
+        "url": "https://cottonworks.com/encyclopedia-item/jersey/"
+      },
+      {
+        "title": "CottonWorks: Knit Basics",
+        "url": "https://cottonworks.com/learning-hub/knitting/knit-basics/"
+      },
+      {
+        "title": "Craft Yarn Council: How to Read a Knitting Pattern",
+        "url": "https://www.craftyarncouncil.com/node/56"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "single-jersey"
+    }
+  },
+  {
+    "id": "rib-knit",
+    "name": "Rib knit",
+    "category": "Knit structure",
+    "aliases": [
+      "Ribbing",
+      "1 × 1 rib",
+      "2 × 2 rib"
+    ],
+    "summary": "Rib knit alternates face and reverse stitch columns to form expandable lengthwise ribs.",
+    "construction": "In 1 × 1 rib, a face column alternates with a reverse column. Other arrangements, such as 2 × 2, group the columns into wider ribs.",
+    "recognize": "Gently stretch across the ribs to reveal the recessed columns between them.",
+    "uses": [
+      "Cuffs",
+      "Neckbands",
+      "Fitted knitwear"
+    ],
+    "distinguish": "A woven rib is an interlacing effect; rib knitting is built from loops.",
+    "related": [
+      "single-jersey",
+      "interlock",
+      "garter-stitch"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: 1 x 1 Rib",
+        "url": "https://cottonworks.com/encyclopedia-item/1-x-1-rib/"
+      },
+      {
+        "title": "CottonWorks: Digital Cotton Basics",
+        "url": "https://cottonworks.com/product-innovation/digital-cotton-basics/"
+      },
+      {
+        "title": "Craft Yarn Council: Certified Knitting Instructors Program",
+        "url": "https://www.craftyarncouncil.com/files/CIP/CYC_CIP_Knit_Program.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "rib-knit"
+    }
+  },
+  {
+    "id": "interlock",
+    "name": "Interlock",
+    "category": "Knit structure",
+    "aliases": [
+      "Interlock jersey"
+    ],
+    "summary": "Interlock is a double knit with a smooth, similar appearance on both sides.",
+    "construction": "Opposing needle sets work in alternating selections. Two yarn feeds complete one course of this interlocking structure.",
+    "recognize": "Both surfaces show fine knit columns rather than the contrasting face and back of single jersey.",
+    "uses": [
+      "Baby clothes",
+      "Close-fitting tops",
+      "Dresses"
+    ],
+    "distinguish": "Interlock is one specific double-knit construction; double knit does not always mean interlock.",
+    "related": [
+      "single-jersey",
+      "rib-knit",
+      "ponte-di-roma"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Interlock",
+        "url": "https://cottonworks.com/encyclopedia-item/interlock/"
+      },
+      {
+        "title": "CottonWorks: Digital Cotton Basics",
+        "url": "https://cottonworks.com/product-innovation/digital-cotton-basics/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "interlock"
+    }
+  },
+  {
+    "id": "ponte-di-roma",
+    "name": "Ponte di Roma",
+    "category": "Knit structure",
+    "aliases": [
+      "Ponte",
+      "Ponte Roma"
+    ],
+    "summary": "Ponte is a firm double knit with a subtle horizontal rib.",
+    "construction": "Its repeat combines interlock knitting with courses worked on each needle set separately. This produces a compact fabric with similar faces.",
+    "recognize": "Look for fine crosswise lines on a smooth, substantial knit.",
+    "uses": [
+      "Trousers",
+      "Jackets",
+      "Structured dresses"
+    ],
+    "distinguish": "Ponte is a knit, even when tailored like woven cloth.",
+    "related": [
+      "interlock",
+      "rib-knit"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Single & Double Knits",
+        "url": "https://cottonworks.com/learning-hub/knitting/single-and-double-knits/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "ponte-di-roma"
+    }
+  },
+  {
+    "id": "pique-knit",
+    "name": "Piqué knit",
+    "category": "Knit structure",
+    "aliases": [
+      "Pique knit",
+      "Single piqué",
+      "Cross-tuck piqué"
+    ],
+    "summary": "Piqué knit combines knit and tuck stitches to produce a small cellular surface.",
+    "construction": "Some needles hold loops while others knit, creating the texture. Single, double and six-feed piqués use different repeats, so their faces and thicknesses vary.",
+    "recognize": "Look for a fine dimpled or honeycomb-like texture, familiar from polo shirts.",
+    "uses": [
+      "Polo shirts",
+      "Casual tops",
+      "Sportswear"
+    ],
+    "distinguish": "Knitted piqué and woven piqué share a name but use different construction methods.",
+    "related": [
+      "single-jersey",
+      "interlock"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Piqué",
+        "url": "https://cottonworks.com/encyclopedia-item/pique-woven/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "pique-knit"
+    }
+  },
+  {
+    "id": "french-terry",
+    "name": "French terry",
+    "category": "Knit structure",
+    "aliases": [
+      "Loopback jersey"
+    ],
+    "summary": "French terry pairs a jersey face with an unbrushed looped back.",
+    "construction": "A backing yarn forms floats behind the face. These remain unnapped, preserving the looped surface.",
+    "recognize": "Turn it over to see distinct loops rather than a fuzzy nap.",
+    "uses": [
+      "Sweatshirts",
+      "Joggers",
+      "Casual layers"
+    ],
+    "distinguish": "Woven toweling terry uses a different loop-forming construction.",
+    "related": [
+      "sweatshirt-fleece",
+      "single-jersey"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Single & Double Knits",
+        "url": "https://cottonworks.com/learning-hub/knitting/single-and-double-knits/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "french-terry"
+    }
+  },
+  {
+    "id": "sweatshirt-fleece",
+    "name": "Sweatshirt fleece",
+    "category": "Surface & finish",
+    "aliases": [
+      "Fleece-back jersey",
+      "Napped sweatshirt knit"
+    ],
+    "summary": "Sweatshirt fleece has a smooth knit face and a raised, fuzzy backing.",
+    "construction": "Backing yarns are knitted into the cloth. Napping raises their fibers to form the soft interior.",
+    "recognize": "The reverse looks brushed rather than distinctly looped.",
+    "uses": [
+      "Hoodies",
+      "Sweatpants",
+      "Sweatshirts"
+    ],
+    "distinguish": "This entry describes sweatshirt construction; fleece also names other pile fabrics and raw sheep wool.",
+    "related": [
+      "french-terry",
+      "brushing"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Single & Double Knits",
+        "url": "https://cottonworks.com/learning-hub/knitting/single-and-double-knits/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "sweatshirt-fleece"
+    }
+  },
+  {
+    "id": "jacquard-knit",
+    "name": "Jacquard knit",
+    "category": "Knit structure",
+    "aliases": [
+      "Knitted jacquard"
+    ],
+    "summary": "Jacquard knitting uses selected stitches and yarns to build pattern into a knit.",
+    "construction": "Machine needle selection controls where colors or textures appear. Single-knit and double-knit versions manage the unused yarns differently.",
+    "recognize": "Inspect the reverse as well as the face: the design is made in the stitches, not simply printed over them.",
+    "uses": [
+      "Patterned sweaters",
+      "Knit dresses",
+      "Decorative blankets"
+    ],
+    "distinguish": "Jacquard is a patterning method, not one motif or fiber; knitted and woven jacquards are structurally different.",
+    "related": [
+      "intarsia",
+      "fair-isle",
+      "interlock"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Jacquard Knitting",
+        "url": "https://cottonworks.com/encyclopedia-item/jacquard-knitting/"
+      },
+      {
+        "title": "CottonWorks: Designing Knit Textiles",
+        "url": "https://cottonworks.com/learning-hub/knitting/designing-knit-textiles/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "jacquard-knit"
+    }
+  },
+  {
+    "id": "tricot",
+    "name": "Tricot",
+    "category": "Knit structure",
+    "aliases": [
+      "Tricot warp knit"
+    ],
+    "summary": "Tricot is a warp-knit family often made as fine, relatively flat fabric.",
+    "construction": "Many lengthwise yarns are guided into interconnected loops. Tricot machines commonly produce fine structures with relatively simple patterning.",
+    "recognize": "Look for fine loop columns and a different reverse texture; a close inspection is more useful than stretch alone.",
+    "uses": [
+      "Lingerie",
+      "Swimwear",
+      "Linings"
+    ],
+    "distinguish": "Warp knitting uses many lengthwise yarns; weft knitting builds courses from yarn fed across the fabric.",
+    "related": [
+      "raschel",
+      "single-jersey"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Knit Machinery",
+        "url": "https://cottonworks.com/learning-hub/knitting/knit-machinery/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "tricot"
+    }
+  },
+  {
+    "id": "raschel",
+    "name": "Raschel",
+    "category": "Knit structure",
+    "aliases": [
+      "Raschel warp knit"
+    ],
+    "summary": "Raschel is a versatile warp-knitting family used for meshes, lace and other textured fabrics.",
+    "construction": "Guide bars position lengthwise yarns around needles to make interlinked loops. Machine configuration and yarn selection allow both open and denser designs.",
+    "recognize": "An open net or lace-like surface may be raschel, but appearance alone cannot confirm the machine type.",
+    "uses": [
+      "Lace apparel",
+      "Netting",
+      "Spacer fabrics"
+    ],
+    "distinguish": "Raschel names a knitting family, not a single mesh pattern or all lace.",
+    "related": [
+      "tricot",
+      "bobbin-lace",
+      "needle-lace"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Knit Machinery",
+        "url": "https://cottonworks.com/learning-hub/knitting/knit-machinery/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "raschel"
+    }
+  },
+  {
+    "id": "garter-stitch",
+    "name": "Garter stitch",
+    "category": "Knit structure",
+    "aliases": [
+      "Garter knit"
+    ],
+    "summary": "Garter stitch makes a reversible knit with pronounced horizontal ridges.",
+    "construction": "When working flat, knitting every row forms garter stitch. The fabric alternates how the rows face the viewer, rather than presenting only knit faces on one side.",
+    "recognize": "Look for stacked horizontal ridges with a similar appearance on both surfaces.",
+    "uses": [
+      "Scarves",
+      "Blankets",
+      "Knit borders"
+    ],
+    "distinguish": "Knitting every round in circular work produces stockinette, so flat-row instructions cannot be transferred unchanged.",
+    "related": [
+      "single-jersey",
+      "rib-knit",
+      "seed-stitch"
+    ],
+    "references": [
+      {
+        "title": "Craft Yarn Council: How to Read a Knitting Pattern",
+        "url": "https://www.craftyarncouncil.com/node/56"
+      },
+      {
+        "title": "Craft Yarn Council: Learn Knit Stitch",
+        "url": "https://www.craftyarncouncil.com/?q=node%2F29"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "garter-stitch"
+    }
+  },
+  {
+    "id": "seed-stitch",
+    "name": "Seed stitch",
+    "category": "Knit structure",
+    "aliases": [
+      "Seed knit"
+    ],
+    "summary": "Seed stitch alternates knit and purl stitches into a small, pebbled texture.",
+    "construction": "Knit and purl stitches alternate across a row. On subsequent rows, their placement reverses rather than stacking into rib columns.",
+    "recognize": "Small raised bumps are distributed across both sides without long vertical ribs.",
+    "uses": [
+      "Sweater panels",
+      "Scarves",
+      "Blanket borders"
+    ],
+    "distinguish": "Moss stitch terminology varies by region; inspect the written repeat rather than assuming every moss pattern equals seed stitch.",
+    "related": [
+      "garter-stitch",
+      "rib-knit",
+      "cable-knit"
+    ],
+    "references": [
+      {
+        "title": "Craft Yarn Council: Certified Knitting Instructors Program",
+        "url": "https://www.craftyarncouncil.com/files/CIP/CYC_CIP_Knit_Program.pdf"
+      },
+      {
+        "title": "Yarnspirations: How to Seed Stitch Knitting",
+        "url": "https://www.yarnspirations.com/blogs/how-to/how-to-seed-stitch-in-knitting"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "seed-stitch"
+    }
+  },
+  {
+    "id": "cable-knit",
+    "name": "Cable knit",
+    "category": "Knit structure",
+    "aliases": [
+      "Cabled knitting"
+    ],
+    "summary": "Cable knitting crosses groups of stitches to make raised ropes, braids or traveling lines.",
+    "construction": "Some stitches are held in front or behind while neighboring stitches are worked. Working the held stitches afterward changes their order and creates a crossing.",
+    "recognize": "Follow the raised stitch columns through their repeated crossings.",
+    "uses": [
+      "Sweaters",
+      "Hats",
+      "Blankets"
+    ],
+    "distinguish": "An Aran-style sweater may combine cables with several other textures; cable knit does not describe the whole tradition.",
+    "related": [
+      "rib-knit",
+      "seed-stitch",
+      "single-jersey"
+    ],
+    "references": [
+      {
+        "title": "Craft Yarn Council: Cable Knit Turtleneck",
+        "url": "https://www.craftyarncouncil.com/node/491"
+      },
+      {
+        "title": "Craft Yarn Council: Teachers Handbook",
+        "url": "https://www.craftyarncouncil.com/files/CIP/CIPTeachersHandbook.pdf"
+      },
+      {
+        "title": "V&A: Knitting Traditions of the British Isles and Ireland",
+        "url": "https://www.vam.ac.uk/articles/british-knitting-traditions"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "cable-knit"
+    }
+  },
+  {
+    "id": "intarsia",
+    "name": "Intarsia knitting",
+    "category": "Knit structure",
+    "aliases": [
+      "Intarsia"
+    ],
+    "summary": "Intarsia forms separate color areas without carrying each unused yarn across the whole reverse.",
+    "construction": "Each color area has its own yarn supply. Neighboring areas connect where the yarns change, forming the image within the knitted fabric.",
+    "recognize": "Large color blocks have local joins at their boundaries rather than long backing floats.",
+    "uses": [
+      "Picture sweaters",
+      "Color-block knitwear",
+      "Decorative knit panels"
+    ],
+    "distinguish": "Stranded colorwork carries unused colors behind the active stitches; intarsia treats the color areas separately.",
+    "related": [
+      "fair-isle",
+      "jacquard-knit"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Designing Knit Textiles",
+        "url": "https://cottonworks.com/learning-hub/knitting/designing-knit-textiles/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "intarsia"
+    }
+  },
+  {
+    "id": "fair-isle",
+    "name": "Fair Isle knitting",
+    "category": "Knit structure",
+    "aliases": [
+      "Fair Isle colorwork",
+      "Fair Isle colourwork"
+    ],
+    "summary": "Fair Isle is a Shetland colorwork tradition using stranded yarns and repeating knitted motifs.",
+    "construction": "Typically two colors are worked within each row or round. The unused yarn travels behind the stitches as short floats, while colors can change between bands.",
+    "recognize": "Look for repeating bands of small motifs and colored floats on the reverse.",
+    "uses": [
+      "Sweaters",
+      "Hats",
+      "Gloves"
+    ],
+    "distinguish": "Not every stranded multicolor knit is Fair Isle; the name also carries a specific regional design tradition.",
+    "related": [
+      "intarsia",
+      "jacquard-knit"
+    ],
+    "references": [
+      {
+        "title": "Shetland Museum: Beginners Fair Isle Knitting",
+        "url": "https://www.shetlandmuseumandarchives.org.uk/events/smaa-archive/2018-09-28t16-52-08-01-00"
+      },
+      {
+        "title": "Shetland Heritage Shop: Fair Isle Knitting",
+        "url": "https://shop.shetlandwoolweek.com/products/fair-isle-knitting-a-practical-inspirational-guide-by-monica-russel"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "fair-isle"
+    }
+  },
+  {
+    "id": "pointelle",
+    "name": "Pointelle",
+    "category": "Knit structure",
+    "aliases": [
+      "Pointelle knit",
+      "Eyelet knit"
+    ],
+    "summary": "Pointelle uses small deliberate openings to pattern a knitted surface.",
+    "construction": "In machine pointelle, selected stitches move to neighboring needles. Knitting resumes at the emptied positions, leaving patterned holes.",
+    "recognize": "Repeated eyelets interrupt the knit, often arranged into lines or small geometric figures.",
+    "uses": [
+      "Lightweight sweaters",
+      "Knit tops",
+      "Decorative knit panels"
+    ],
+    "distinguish": "These openings are created during knitting; embroidered eyelet and cutwork use a different process on a ground fabric.",
+    "related": [
+      "single-jersey",
+      "embroidery",
+      "raschel"
+    ],
+    "references": [
+      {
+        "title": "STOLL: Training of Manual Flat Knitting Machine, Pointelle",
+        "url": "https://nfc.stoll.com/faq/223788_01_train_learner_en.pdf"
+      },
+      {
+        "title": "STOLL: Widening by Transferring Stitches",
+        "url": "https://nfc.stoll.com/faq/ekc_userguide/en-US/10505394827.html"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "dot",
+      "variant": "pointelle"
+    }
+  },
+  {
+    "id": "boucle",
+    "name": "Bouclé texture",
+    "category": "Surface & finish",
+    "aliases": [
+      "Boucle",
+      "Bouclé yarn"
+    ],
+    "summary": "Bouclé texture comes from a fancy yarn with loops or curls along its length.",
+    "construction": "An effect yarn is fed differently from the supporting yarns during twisting. Its extra length produces the irregular looped texture before the yarn becomes cloth.",
+    "recognize": "Look for curled yarn projections rather than a uniform cut pile.",
+    "uses": [
+      "Textured jackets",
+      "Knitwear",
+      "Upholstery"
+    ],
+    "distinguish": "Bouclé is a yarn effect used in both woven and knitted fabrics, not one weave or finishing operation.",
+    "related": [
+      "slub",
+      "cable-knit",
+      "sweatshirt-fleece"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Bouclé",
+        "url": "https://cottonworks.com/encyclopedia-item/boucle/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "boucle"
+    }
+  },
+  {
+    "id": "slub",
+    "name": "Slub texture",
+    "category": "Surface & finish",
+    "aliases": [
+      "Slub yarn",
+      "Slubby texture"
+    ],
+    "summary": "Slub texture uses thicker sections along a yarn to create an uneven surface.",
+    "construction": "A decorative slub yarn deliberately includes localized thick places. Their spacing and size influence the texture of the finished woven or knitted cloth.",
+    "recognize": "Look for short thick streaks that follow individual yarns.",
+    "uses": [
+      "Casual jerseys",
+      "Textured shirting",
+      "Denim"
+    ],
+    "distinguish": "An uneven appearance alone cannot establish fiber content or whether the variation was intentional.",
+    "related": [
+      "boucle",
+      "single-jersey"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Slub Yarn",
+        "url": "https://cottonworks.com/encyclopedia-item/slub-yarn/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "slub"
+    }
+  },
+  {
+    "id": "brushing",
+    "name": "Brushed surface",
+    "category": "Surface & finish",
+    "aliases": [
+      "Brushing",
+      "Brushed finish"
+    ],
+    "summary": "Brushing raises surface fibers to change a fabric's appearance and feel.",
+    "construction": "A formed fabric undergoes mechanical surface treatment. The raised fibers can soften the outline of the original weave or knit.",
+    "recognize": "Look for a light fibrous halo above the underlying structure.",
+    "uses": [
+      "Soft shirting",
+      "Casual knitwear",
+      "Blankets"
+    ],
+    "distinguish": "Brushing does not specify a fiber or weave. Technical finishing terminology distinguishes brushing from napping and abrasive sueding.",
+    "related": [
+      "sueding",
+      "sweatshirt-fleece"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Brushing",
+        "url": "https://cottonworks.com/encyclopedia-item/brushing/"
+      },
+      {
+        "title": "CottonWorks: Surface Finishing",
+        "url": "https://cottonworks.com/encyclopedia-item/surface-finishing/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "brushing"
+    }
+  },
+  {
+    "id": "sueding",
+    "name": "Sueded finish",
+    "category": "Surface & finish",
+    "aliases": [
+      "Sueding",
+      "Peached finish",
+      "Sanded finish"
+    ],
+    "summary": "Sueding gives fabric a fine, suede-like surface through controlled abrasion.",
+    "construction": "Fabric passes against abrasive rollers, commonly covered with a sandpaper-like surface. This modifies the exposed fibers rather than making a new woven or knitted structure.",
+    "recognize": "Look for a short, fine surface fuzz and muted luster.",
+    "uses": [
+      "Soft casual tops",
+      "Peached trousers",
+      "Bed linen"
+    ],
+    "distinguish": "Suede-like textile finishing does not make fabric into leather; commercial peach and suede finishes vary in intensity.",
+    "related": [
+      "brushing",
+      "embossing"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Sueding",
+        "url": "https://cottonworks.com/encyclopedia-item/sueding/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "sueding"
+    }
+  },
+  {
+    "id": "embossing",
+    "name": "Embossed texture",
+    "category": "Surface & finish",
+    "aliases": [
+      "Embossing",
+      "Embossed finish"
+    ],
+    "summary": "Embossing presses a relief pattern into an existing fabric surface.",
+    "construction": "Engraved rollers apply pressure and sometimes heat. How well the effect lasts depends on the fibers and the setting or finishing treatment.",
+    "recognize": "Raised and recessed areas repeat across an otherwise continuous base fabric.",
+    "uses": [
+      "Decorative apparel",
+      "Upholstery",
+      "Textured accessories"
+    ],
+    "distinguish": "An embossed texture can imitate a woven effect without using that weave; inspect the underlying yarn arrangement.",
+    "related": [
+      "moire",
+      "pleating",
+      "sueding"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Embossing",
+        "url": "https://cottonworks.com/encyclopedia-item/embossing/"
+      },
+      {
+        "title": "CottonWorks: Mechanical Finishing",
+        "url": "https://cottonworks.com/learning-hub/finishing/mechanical-finishing/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "geometric",
+      "variant": "embossing"
+    }
+  },
+  {
+    "id": "moire",
+    "name": "Moiré finish",
+    "category": "Surface & finish",
+    "aliases": [
+      "Moire",
+      "Watered fabric",
+      "Watered silk"
+    ],
+    "summary": "Moiré describes a rippling, watered appearance on a fabric surface.",
+    "construction": "A traditional route uses pressure during calendering to alter how parts of the fabric reflect light. The finished effect lies over the underlying fabric structure.",
+    "recognize": "Look for irregular flowing bands of light and dark, like watermarks.",
+    "uses": [
+      "Formalwear",
+      "Ribbons",
+      "Decorative furnishings"
+    ],
+    "distinguish": "Moiré is not necessarily silk, and a printed imitation or camera interference pattern does not establish a moiré finish.",
+    "related": [
+      "embossing",
+      "pleating"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Calendering",
+        "url": "https://cottonworks.com/encyclopedia-item/calendering/"
+      },
+      {
+        "title": "Smithsonian: Rayon Taffeta Moire",
+        "url": "https://americanhistory.si.edu/collections/object/nmah_1171556"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "texture",
+      "variant": "moire"
+    }
+  },
+  {
+    "id": "burnout",
+    "name": "Burnout / devoré",
+    "category": "Surface & finish",
+    "aliases": [
+      "Devoré",
+      "Devore",
+      "Burn-out printing"
+    ],
+    "summary": "Burnout creates sheer patterns by selectively removing one fiber component from a fabric.",
+    "construction": "A chemical print acts on a susceptible component in a blend. The remaining component supports the more open areas of the design.",
+    "recognize": "Opaque and translucent areas form a deliberate pattern within the same cloth.",
+    "uses": [
+      "Eveningwear",
+      "Scarves",
+      "Decorative tops"
+    ],
+    "distinguish": "Devoré is a subtractive treatment, not a fiber, weave or ordinary color print.",
+    "related": [
+      "flocking",
+      "embroidery"
+    ],
+    "references": [
+      {
+        "title": "CottonWorks: Burn-Out Printing",
+        "url": "https://cottonworks.com/encyclopedia-item/burn-out-printing/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "burnout"
+    }
+  },
+  {
+    "id": "flocking",
+    "name": "Flocked surface",
+    "category": "Surface & finish",
+    "aliases": [
+      "Flocking",
+      "Flock printing"
+    ],
+    "summary": "Flocking attaches short fibers to a surface to create a soft, raised design.",
+    "construction": "Adhesive is applied in the desired pattern. Short cut fibers are deposited into it, then the adhesive is fixed to hold them in place.",
+    "recognize": "A pile-like motif sits on top of a distinct base fabric.",
+    "uses": [
+      "Decorative apparel",
+      "Lettered textiles",
+      "Furnishing fabrics"
+    ],
+    "distinguish": "Flock is added to a substrate; woven or knitted pile is incorporated while the fabric is formed.",
+    "related": [
+      "burnout",
+      "embossing",
+      "embroidery"
+    ],
+    "references": [
+      {
+        "title": "Cotton Incorporated: Printing Booklet, Flock Printing",
+        "url": "https://www.cottonworks.com/wp-content/uploads/2018/01/Printing_Booklet_-_6-12.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "dot",
+      "variant": "flocking"
+    }
+  },
+  {
+    "id": "bobbin-lace",
+    "name": "Bobbin lace",
+    "category": "Textile technique",
+    "aliases": [
+      "Pillow lace"
+    ],
+    "summary": "Bobbin lace creates openwork by crossing and twisting multiple threads.",
+    "construction": "Threads wound on bobbins are worked around a pattern. Pins on a supporting pillow hold the developing network in place.",
+    "recognize": "Close inspection reveals interlaced thread paths forming the solid and open areas.",
+    "uses": [
+      "Collars",
+      "Decorative edgings",
+      "Lace panels"
+    ],
+    "distinguish": "Needle lace builds its structure with a needle and thread; many machine laces imitate either appearance.",
+    "related": [
+      "needle-lace",
+      "raschel",
+      "crochet"
+    ],
+    "references": [
+      {
+        "title": "The Lace Guild: Origins and History",
+        "url": "https://www.laceguild.org/a-brief-history-of-lace"
+      },
+      {
+        "title": "The Met: Textile Production in Europe, Lace",
+        "url": "https://www.metmuseum.org/essays/textile-production-in-europe-lace-1600-1800"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "bobbin-lace"
+    }
+  },
+  {
+    "id": "needle-lace",
+    "name": "Needle lace",
+    "category": "Textile technique",
+    "aliases": [
+      "Needle-made lace"
+    ],
+    "summary": "Needle lace builds an openwork fabric using a needle and thread.",
+    "construction": "Stitches connect to one another and to supporting outline threads. The resulting network forms lace rather than merely decorating an intact ground cloth.",
+    "recognize": "Look for fine stitched mesh and denser stitched areas joined into a self-supporting design.",
+    "uses": [
+      "Collars",
+      "Lace trims",
+      "Decorative panels"
+    ],
+    "distinguish": "Needle lace, bobbin lace and knitted lace can look related while their thread structures differ.",
+    "related": [
+      "bobbin-lace",
+      "embroidery",
+      "pointelle"
+    ],
+    "references": [
+      {
+        "title": "The Lace Guild: Origins and History",
+        "url": "https://www.laceguild.org/a-brief-history-of-lace"
+      },
+      {
+        "title": "The Met: Gems of European Lace",
+        "url": "https://www.metmuseum.org/exhibitions/listings/2012/european-lace"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "needle-lace"
+    }
+  },
+  {
+    "id": "crochet",
+    "name": "Crochet",
+    "category": "Textile technique",
+    "aliases": [
+      "Hand crochet"
+    ],
+    "summary": "Crochet forms fabric by drawing yarn through loops with a hook.",
+    "construction": "Chains establish a starting structure and stitches build into earlier stitches or spaces. Different stitch heights and placements create dense cloth or open motifs.",
+    "recognize": "Trace the chains and stitch posts; crochet may be worked in rows, rounds or joined motifs.",
+    "uses": [
+      "Garments",
+      "Blankets",
+      "Bags"
+    ],
+    "distinguish": "Hand crochet differs from knitting; industrial machinery also uses the term crochet for some warp-knitted structures.",
+    "related": [
+      "raschel",
+      "pointelle",
+      "macrame"
+    ],
+    "references": [
+      {
+        "title": "Craft Yarn Council: Get Hooked",
+        "url": "https://media.craftyarncouncil.com/files/teach/D003_CYCCrochetLessonPlan_1.pdf"
+      },
+      {
+        "title": "CottonWorks: Crochet in Warp Knitting",
+        "url": "https://cottonworks.com/encyclopedia-item/crochet/"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "loops",
+      "variant": "crochet"
+    }
+  },
+  {
+    "id": "macrame",
+    "name": "Macramé",
+    "category": "Textile technique",
+    "aliases": [
+      "Macrame",
+      "Decorative knotting"
+    ],
+    "summary": "Macramé builds decorative textiles through arrangements of knots.",
+    "construction": "Lengths of cord or thread are knotted together. Repeated knots and deliberately open spaces form the design without a woven warp-and-weft grid.",
+    "recognize": "Visible knots anchor the cord network, often with loose lengths continuing as fringe.",
+    "uses": [
+      "Trimmings",
+      "Wall hangings",
+      "Bags"
+    ],
+    "distinguish": "A knotted textile can resemble open weaving or crochet, but its connections are tied knots.",
+    "related": [
+      "crochet",
+      "bobbin-lace"
+    ],
+    "references": [
+      {
+        "title": "Smithsonian Archives: Macramé",
+        "url": "https://siarchives.si.edu/sites/default/files/forum-pdfs/96-001_box2_TOC_TreeInventory.pdf"
+      },
+      {
+        "title": "Cooper Hewitt: Sample Card of Macramé",
+        "url": "https://www.si.edu/object/sample-card-macrame%3Achndm_1987-61-1"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "diamond",
+      "variant": "macrame"
+    }
+  },
+  {
+    "id": "embroidery",
+    "name": "Embroidery",
+    "category": "Textile technique",
+    "aliases": [
+      "Surface embroidery",
+      "Counted-thread embroidery"
+    ],
+    "summary": "Embroidery creates decoration through stitches worked on or through a supporting material.",
+    "construction": "Threads may follow counted positions in the ground or move freely over a drawn design. Additional techniques attach laid threads or build raised details.",
+    "recognize": "Look for decorative stitches that can be distinguished from the ground fabric's own yarn structure.",
+    "uses": [
+      "Garment decoration",
+      "Household linen",
+      "Decorative panels"
+    ],
+    "distinguish": "This is a broad family of techniques; similar motifs can also be printed or woven.",
+    "related": [
+      "smocking",
+      "quilting",
+      "needle-lace"
+    ],
+    "references": [
+      {
+        "title": "V&A: Embroidery Styles, an Illustrated Guide",
+        "url": "https://www.vam.ac.uk/articles/embroidery-styles-an-illustrated-guide"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "floral",
+      "variant": "embroidery"
+    }
+  },
+  {
+    "id": "quilting",
+    "name": "Quilting",
+    "category": "Textile technique",
+    "aliases": [
+      "Quilted fabric"
+    ],
+    "summary": "Quilting joins fabric layers with lines of stitching that can also form a surface design.",
+    "construction": "Stitches pass through the layers, often including padding between a face and backing. Their layout controls how the layers are held and where raised areas remain.",
+    "recognize": "Follow the stitched channels separating the fuller areas between them.",
+    "uses": [
+      "Bed covers",
+      "Padded jackets",
+      "Cushions"
+    ],
+    "distinguish": "Patchwork joins pieces into a surface; quilting joins layers, and a quilt need not contain patchwork.",
+    "related": [
+      "embroidery",
+      "smocking"
+    ],
+    "references": [
+      {
+        "title": "V&A: An Introduction to Quilting and Patchwork",
+        "url": "https://www.vam.ac.uk/articles/an-introduction-to-quilting-and-patchwork"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "diamond",
+      "variant": "quilting"
+    }
+  },
+  {
+    "id": "smocking",
+    "name": "Smocking",
+    "category": "Textile technique",
+    "aliases": [
+      "Smocked fabric",
+      "Honeycomb smocking"
+    ],
+    "summary": "Smocking gathers cloth into small folds held and decorated by stitches.",
+    "construction": "A wide area of fabric is gathered into regular pleats. Stitches connect selected folds to control fullness and make a textured pattern.",
+    "recognize": "Look for stitch-linked pleats forming compact geometric areas beside looser cloth.",
+    "uses": [
+      "Dress bodices",
+      "Sleeve cuffs",
+      "Decorative garment panels"
+    ],
+    "distinguish": "Honeycomb smocking describes one arrangement; a woven honeycomb texture does not use this gathering technique.",
+    "related": [
+      "embroidery",
+      "pleating",
+      "quilting"
+    ],
+    "references": [
+      {
+        "title": "Textile Research Centre: Smocking",
+        "url": "https://www.trcleiden.trc-leiden.nl/trc-needles/techniques/smocking/smocking"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "diamond",
+      "variant": "smocking"
+    }
+  },
+  {
+    "id": "pleating",
+    "name": "Pleated texture",
+    "category": "Textile technique",
+    "aliases": [
+      "Pleating",
+      "Pleats"
+    ],
+    "summary": "Pleating folds an existing fabric into a repeated three-dimensional shape.",
+    "construction": "Folds may be formed in fabric before cutting or in an already sewn garment. Industrial methods can use heat to set suitable fibers into the desired shape.",
+    "recognize": "Look for repeated folds that change depth or open as the cloth moves.",
+    "uses": [
+      "Skirts",
+      "Pleated tops",
+      "Scarves"
+    ],
+    "distinguish": "Pleats describe fabric shaping, not a weave; their permanence and care requirements depend on the specific product.",
+    "related": [
+      "smocking",
+      "embossing",
+      "rib-knit"
+    ],
+    "references": [
+      {
+        "title": "ISSEY MIYAKE: Pleated Product Care and Construction",
+        "url": "https://uk.isseymiyake.com/pages/product-care"
+      },
+      {
+        "title": "National Art Center, Tokyo: Miyake Issey Exhibition",
+        "url": "https://www.nact.jp/english/pr/media/MIYAKE_ISSEY_press_en_2.pdf"
+      }
+    ],
+    "visual": {
+      "kind": "motif",
+      "motif": "stripe",
+      "variant": "pleating"
+    }
+  }
+]

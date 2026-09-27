@@ -25,11 +25,19 @@ for(const name of ['countries-50m.json','countries-10m.json'])await fs.copyFile(
 const kb=s=>Math.round(Buffer.byteLength(s)/1024)+' KB';
 console.log(`Built dist/index.html (${kb(page)}), ${jsFile} (${kb(js)}), ${cssFile} (${kb(css)}) and dist/offline.html (${kb(offline)})`);
 // Reading editions and sitemap share one canonical base.
-const base=new URL(process.env.SITE_URL||'https://sharpmeow.github.io/FibersOfEarth/');
+const base=new URL(process.env.SITE_URL||'https://chasehendrick.github.io/FibersOfEarth/');
 if(!['http:','https:'].includes(base.protocol)||base.search||base.hash)throw Error('SITE_URL must be an HTTP(S) site URL without a query or fragment');
 if(!base.pathname.endsWith('/'))base.pathname+='/';
 const {buildGlossary}=await import('./glossary-build.mjs'),{buildMaterials}=await import('./materials-build.mjs'),{reviewed}=await import('../src/glossary.js');
-const paths=['',...await buildMaterials(cssFile,base),...await buildGlossary(cssFile,base)];
+const {buildArticles}=await import('./articles-build.mjs');
+const {buildWeaves}=await import('./weaves-build.mjs');
+const {weaveReviewed}=await import('../src/weaves.js');
+const {buildBrands}=await import('./brands-build.mjs');
+const paths=['',...await buildWeaves(cssFile,base),...await buildBrands(cssFile,base),...await buildMaterials(cssFile,base),...await buildGlossary(cssFile,base),...await buildArticles(cssFile,base)];
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-await fs.writeFile('dist/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(p=>`<url><loc>${esc(new URL(p,base).href)}</loc><lastmod>${reviewed}</lastmod></url>`).join('')}</urlset>`);
+const {articles}=await import('../src/data.js');
+const {directoryDate}=await import('../src/brand-directory.js');
+const noteDates=new Map(articles.map(a=>['learn/'+a.id+'/',a.reviewed||reviewed]));
+noteDates.set('learn/',[...noteDates.values()].sort().at(-1)||reviewed);
+await fs.writeFile('dist/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map(p=>`<url><loc>${esc(new URL(p,base).href)}</loc><lastmod>${noteDates.get(p)||(p.startsWith('weaves/')?weaveReviewed:p.startsWith('brands/')?directoryDate:reviewed)}</lastmod></url>`).join('')}</urlset>`);
 console.log(`Sitemap: ${paths.length} URLs for ${base.href}`);

@@ -117,3 +117,31 @@ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 
 ```
+
+## Wikidata brand and textile-company records
+
+The structured catalog statements in `src/data/brand-directory.json` were retrieved
+from Wikidata on September 27, 2026. Wikidata structured data is released under
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/); see
+[Wikidata licensing](https://www.wikidata.org/wiki/Wikidata:Licensing).
+Each imported statement retains a link to its source entity. Source descriptions,
+founding dates, locations, founders and products are catalog statements, not
+independently verified findings. This reuse does not include Wikipedia articles,
+Wikimedia images, brand logos or trademarks licensed for reuse.
+
+Company research notes are original, attributed summaries. Linked company pages
+and brand names remain the property of their respective publishers and owners.
+
+## Weave and pattern references
+
+The entries in `src/data/weaves-woven.json`, `weaves-patterns.json` and
+`weaves-knits.json` contain original editorial summaries with links to technical
+references, museum collections, craft organizations and producers. Referenced
+articles, photographs, stitch charts, textile designs and trademarks remain
+subject to their owners' rights; linking does not license those works for reuse.
+
+Guide illustrations are generated locally as schematic interlacing examples or
+symbolic motif and surface studies. No publisher photographs, scanned diagrams or
+registered tartan images are bundled with these entries. Their simplified colors
+and repeats do not certify a historical design, cultural attribution or product.
+See [WEAVES.md](docs/WEAVES.md) for the research and illustration scope.

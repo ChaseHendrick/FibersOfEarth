@@ -758,6 +758,45 @@
    "evidence": "editorial"
   },
   {
+   "term": "Fresco",
+   "category": "Fabric construction",
+   "aliases": [
+    "tropical fresco",
+    "high-twist fresco",
+    "fresco cloth",
+    "fresco suiting",
+    "open-weave fresco"
+   ],
+   "definition": "Fresco is a high-twist, relatively open suiting cloth, usually worsted wool, made for warm-weather wear with a dry, porous hand.",
+   "explanation": "In mill and tailor language, fresco describes a cloth built from highly twisted worsted yarns set with enough openness that air can move through the fabric. The high twist keeps the yarn springy and helps the cloth resist wrinkling in heat, while an open sett leaves more space between yarns; the finished weight still depends on yarn size and construction. Hardy Minnis historically used Fresco as a trademark for such cloths; the same word is now often used generically for similar high-twist tropical suitings from other mills. Treat a hangtag's fresco claim as a construction hint, then confirm fiber, twist character, sett and weight.",
+   "example": "Compare two swatches of similar stated weight, one an open tropical suiting and the other a compact cloth. Inspect yarn spacing against a light, then compare the surface and recovery after gently folding each sample. This is an observation exercise, not an air-permeability or wearer-comfort test. A lining or close garment fit can change the experience again.",
+   "caution": "Fresco is a cloth construction and trade language, not a fiber grade or a Super S number. A fresco label does not prove Australian merino, a particular micron or Hardy Minnis origin. Because Fresco began as a trademark and later entered loose trade use, ask whether the word is a brand name, a mill style name or only a salesperson's shorthand. Open, high-twist cloths can still pill, shine or bag if the finishing and garment design are poor.",
+   "deeper": "Yarn twist and fabric openness describe different structural levels. Twist binds fibers into yarn; sett describes how closely yarns are placed in the cloth. An open plain weave does not require the crossed warp construction of leno. Evaluate the weave diagram, yarn specification and finished fabric separately. Air permeability, crease recovery and abrasion claims need defined fabric tests, while a cloth name alone supplies none of those measurements. Similar-looking suitings can differ in mass, composition, finishing and lining, so avoid transferring a result between products.",
+   "origins": "Huddersfield Fine Worsteds describes its Fresco collection as continuing fabrics patented in 1907. This is an attributed producer history. Contemporary buyers also use fresco-style as a comparison for other open tropical suitings; that wording does not identify the original producer. Record the mill, collection and cloth reference when provenance matters, and distinguish the collection name from the generic wool content.",
+   "related": [
+    "Twist",
+    "Worsted",
+    "Plain weave",
+    "Twill",
+    "Super S numbers"
+   ],
+   "refs": [
+    {
+     "title": "Huddersfield Fine Worsteds: Fresco collection (producer)",
+     "url": "https://www.hfwltd.com/collection/163"
+    },
+    {
+     "title": "Woolmark: Wool processing and fabric formation",
+     "url": "https://www.woolmark.com/industry/use-wool/wool-processing/"
+    },
+    {
+     "title": "IWTO: Wool textile education resources",
+     "url": "https://iwto.org/"
+    }
+   ],
+   "evidence": "editorial"
+  },
+  {
    "term": "Fulling",
    "category": "Color & finishing",
    "aliases": [
@@ -797,6 +836,49 @@
     }
    ],
    "evidence": "editorial"
+  },
+  {
+   "term": "Gabardine",
+   "category": "Fabric construction",
+   "aliases": [
+    "wool gabardine",
+    "cotton gabardine",
+    "steep twill",
+    "gabardine twill",
+    "suiting gabardine"
+   ],
+   "definition": "Gabardine is a firm, warp-faced steep twill cloth, long used for suits, trousers, uniforms and rainwear, and made in wool, cotton or blends.",
+   "explanation": "In a classic gabardine, warp yarns dominate the face and the twill wale runs at a steep angle, often around 45 to 63 degrees depending on thread counts. The structure packs tightly, so the cloth sheds light rain better than an open plain weave and holds a crease for trousers and jackets. Wool gabardine is a staple of tailored suiting and trench-coat shells; cotton gabardine appears in chinos and workwear. The name identifies a construction family, not a sheep breed or a micron grade, and finishing (piece-dye, stretch, water-repellent coatings) further changes how the cloth behaves.",
+   "example": "Look at the face of wool suit trousers labeled gabardine: fine diagonal wales climb steeply, the face looks smoother and more warp-rich than the back, and the cloth feels compact between the fingers. Compare that with a softer 2/2 wool twill jacket cloth, where the diagonal is shallower and both systems show more equally. The steep, warp-faced geometry is what mill language is naming, before fiber content or Super numbers enter the conversation.",
+   "caution": "Gabardine describes weave and face character, not waterproofing, stretch or fiber quality. A cotton gabardine chino and a Super 120s wool gabardine trouser share a structural idea but not performance. Coatings and membranes, not the twill alone, create truly waterproof rainwear. Do not treat gabardine as a synonym for every twill, and do not read the word as proof of virgin wool or a particular origin.",
+   "deeper": "Steep warp-faced twills such as 2/1 or 3/1 raise warp cover on the face, increasing abrasion resistance along the wearing surface while leaving the back weft-richer. High thread density and fine yarns sharpen the wale and produce the hard, dry hand associated with classic suiting gabardine. Thomas Burberry's late-nineteenth-century gabardine raincoats popularized a tightly woven, yarn-dyed or piece-finished cloth for weatherwear, and the construction later migrated widely into men's trousers and uniforms. Modern stretch gabardines insert elastane in warp or weft, which changes recovery and pressing behavior even when the visual twill remains. Weave notation and measured cover factor still explain more than the marketing noun alone.",
+   "origins": "Burberry dates Thomas Burberry’s development of its gabardine to 1879 and the patent to 1888. These dates belong to the producer’s history of its cloth. In contemporary textile descriptions, gabardine also names a closely constructed twill used in different fibers. A construction name therefore does not identify a Burberry product or establish the weather resistance of an unrelated fabric.",
+   "related": [
+    "Twill",
+    "Warp & weft",
+    "Worsted",
+    "Plain weave",
+    "Weaving"
+   ],
+   "refs": [
+    {
+     "title": "CottonWorks: Weaving basics",
+     "url": "https://cottonworks.com/learning-hub/weaving/weaving-basics/"
+    },
+    {
+     "title": "Heliyon: Effect of cotton-Tencel siro yarn twist multipliers on stiffness of plain, twill and satin fabrics (Afroz et al., 2022)",
+     "url": "https://doi.org/10.1016/j.heliyon.2022.e12498"
+    },
+    {
+     "title": "Encyclopaedia Britannica: Gabardine",
+     "url": "https://www.britannica.com/topic/gabardine"
+    },
+    {
+     "title": "Burberry: company history (producer)",
+     "url": "https://www.burberryplc.com/company/history"
+    }
+   ],
+   "evidence": "verified"
   },
   {
    "term": "Generic fiber name",
@@ -1009,6 +1091,42 @@
     }
    ],
    "evidence": "verified"
+  },
+  {
+   "term": "High-twist",
+   "category": "Yarn formation",
+   "aliases": [
+    "high twist",
+    "high-twist yarn",
+    "crepe twist",
+    "voile twist",
+    "tropical twist",
+    "extra twist yarn"
+   ],
+   "definition": "High-twist describes yarns spun or thrown with more turns than a comparable soft-spun yarn, producing a springy, often drier hand used in crepes, voiles and tropical suitings such as fresco.",
+   "explanation": "Twist level is meaningful only relative to yarn linear density: the same turns per meter that feel high in a coarse yarn may be ordinary in a fine one, which is why mills use twist factors or multipliers. Raising twist packs fibers more tightly, increases yarn liveliness and can improve crease recovery, but it also reduces bulk and can make cloth wiry if overdone. In wool suiting, high-twist worsted singles or two-folds are a common route to fresco-type tropical fabrics. In dress goods, still higher crepe twists create pebble textures after wet finishing. Always read high-twist beside the fiber, count and fabric sett rather than as a free-standing quality grade.",
+   "example": "A tailor compares two navy tropical cloths of similar weight. One uses softly twisted yarns and feels smoother but shows sitting creases quickly; the other uses high-twist yarns, feels drier and more granular, and springs back after a commute. The fiber content line on both labels may say only virgin wool. The twist and sett, not a Super number alone, explain most of the difference you feel.",
+   "caution": "High-twist is not a regulated label and not a substitute for micron, Super S or weave. Excessive twist can hurt tensile efficiency, raise torque and make seams smile if the cloth is not balanced. Marketing that equates high-twist with cooler or more breathable without air-permeability or wearer data is incomplete. Crepe-twist dress fabrics and fresco suitings share the twist idea but are different end products.",
+   "deeper": "As twist rises, fiber helix angles increase and lateral pressure inside the yarn grows, raising fiber-to-fiber friction until an optimum strength point; beyond that, strength falls because fibers lie too oblique to carry axial load. High twist also reduces yarn diameter slightly for a given count and lowers hairiness, changing light scatter and perceived dryness. In woven cloth, pairing high-twist yarns with an open sett is a classic tropical strategy: the yarn supplies spring, the sett supplies porosity. Crepe fabrics instead rely on twist liveliness plus finishing shrinkage to grain the surface. Specifying turns per meter with count, or quoting a twist multiplier, is the only way to compare high-twist claims across suppliers.",
+   "origins": "Spinners have long varied twist for strength, sheerness and texture, from voile and crepe traditions to tropical suitings for warm climates. English and continental mills codified high-twist worsted tropicals in the twentieth-century tailoring trade, including trademarked fresco-type cloths. The everyday phrase high-twist later spread through ready-to-wear as a shorthand for dry, resilient summer cloths. The underlying physics of twist multipliers is older still, rooted in spinning engineering rather than in any single brand story.",
+   "related": [
+    "Twist",
+    "Fresco",
+    "Worsted",
+    "Tex",
+    "Hand"
+   ],
+   "refs": [
+    {
+     "title": "Woolwise: Wool Processing, Yarn formation (educational technical notes)",
+     "url": "https://www.woolwise.com/wp-content/uploads/2017/07/Wool-482-582-08-T-13.pdf"
+    },
+    {
+     "title": "ISO 2061:2015: Determination of twist in yarns, direct counting method",
+     "url": "https://committee.iso.org/standard/65146.html?browse=tc"
+    }
+   ],
+   "evidence": "editorial"
   },
   {
    "term": "Jersey",
@@ -2586,7 +2704,6 @@
     "2/2 twill",
     "3/1 twill",
     "herringbone",
-    "gabardine",
     "drill",
     "chino",
     "serge",
@@ -2600,6 +2717,7 @@
    "deeper": "Twill notation gives the number of picks a warp passes over, then under: 2/1, 2/2, 3/1 and so on, with a minimum repeat of three ends and three picks. The step, usually one yarn per pick, fixes the wale; changing thread density changes the wale angle, which is steep in gabardine. Fewer interlacings per unit area mean lower crimp and greater yarn mobility, so twills often drape more readily than plain weaves and allow higher thread densities. Research comparing weave structures reports that twill and satin fabrics differ from plain weave in stiffness, tensile and tear behavior, and one laundering study associated a cotton twill with lower microfiber release than satin, though fiber content was confounded.",
    "origins": "A twill needs at least three sheds, and therefore at least three shafts on a harness loom, which places it one step beyond plain weave in loom complexity. That extra control produced a large family of named fabrics distinguished by twill ratio, wale angle and finish, including drill, serge, gabardine and denim. Precise first dates for individual fabric names are not established here.",
    "related": [
+    "Gabardine",
     "Plain weave",
     "Satin",
     "Warp & weft",
@@ -2648,7 +2766,8 @@
     "Tex",
     "Yarn count",
     "Texturing",
-    "Hand"
+    "Hand",
+    "High-twist"
    ],
    "refs": [
     {

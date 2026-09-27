@@ -1009,7 +1009,7 @@
   "refs": [
    {
     "title": "Journal of Animal Science: Fiber characteristics of qiviut and guard hair from wild muskoxen (Rowell et al., 2001)",
-    "url": "https://doi.org/10.2527/2001.7971670x"
+    "url": "https://doi.org/10.2527/jas.2001.7971670x"
    },
    {
     "title": "Musk Ox Farm: Qiviut",
@@ -6519,6 +6519,274 @@
    {
     "title": "Sourcing Journal (WWD): The Lycra Company Emerges from Chapter 11 with $1.2 Billion Debt Reduction",
     "url": "https://wwd.com/sourcing-journal/industry-news/the-lycra-company-emerges-from-chapter-11-1238975256/"
+   }
+  ]
+ },
+ "wolf-vs-goat": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public product stories",
+    "event": "Wolf vs Goat publishes garment essays that name mill yarns and fiber grades (for example Cashwool, Afromood, Pecora Nera) as attributed materials education rather than as a proprietary fiber launch.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Wolf vs Goat: official site",
+    "url": "https://www.wolfvsgoat.com/"
+   },
+   {
+    "title": "Zegna Baruffa: Cashwool (mill)",
+    "url": "https://www.baruffa.com/en/product/cashwool-30/"
+   }
+  ]
+ },
+ "canali": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1934",
+    "event": "Canali dates its company foundation to 1934, following the family tailoring workshop in Triuggio.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Canali: The Canali Family (producer history)",
+    "url": "https://anthology.canali.com/en/family/the-canali-family/"
+   }
+  ]
+ },
+ "loro-piana": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Producer finish documentation",
+    "event": "Loro Piana documents Storm System as a weather-resistant cloth finish on specified products; cited here as producer-attributed finish language, not as a generic fiber.",
+    "ref": 1
+   },
+   {
+    "year": "1924",
+    "event": "The present Loro Piana company was founded in Quarona, Piedmont, according to LVMH.",
+    "ref": 2
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Loro Piana: official site",
+    "url": "https://www.loropiana.com/"
+   },
+   {
+    "title": "Loro Piana: Storm System (producer)",
+    "url": "https://www.loropiana.com/en/us/loro-piana-fabrics/storm-system"
+   },
+   {
+    "title": "LVMH: Loro Piana (parent-company history)",
+    "url": "https://www.lvmh.com/our-maisons/fashion-leather-good/loro-piana"
+   }
+  ]
+ },
+ "piacenza-1733": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1733 (producer story)",
+    "event": "Fratelli Piacenza / Piacenza 1733 publicly dates its founding in Pollone in the Biella district; cited as producer heritage narrative for a mill-house reference entry.",
+    "ref": 1
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Piacenza 1733: official site",
+    "url": "https://www.piacenza1733.com/"
+   },
+   {
+    "title": "Piacenza 1733: Our story (producer)",
+    "url": "https://www.piacenza1733.com/en/our-story/"
+   }
+  ]
+ },
+ "paul-smith": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public brand materials",
+    "event": "Paul Smith presents itself as a British designer house with cloth-aware menswear storytelling in public brand materials.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Paul Smith: official site",
+    "url": "https://www.paulsmith.com/"
+   }
+  ]
+ },
+ "yves-salomon": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "Public brand materials",
+    "event": "Yves Salomon presents itself as a French outerwear and furrier house with contemporary collections in public brand materials.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Yves Salomon: official site",
+    "url": "https://www.yves-salomon.com/"
+   }
+  ]
+ },
+ "zegna": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1910",
+    "event": "The group dates its foundation in Trivero to 1910. Its history describes a progression from wool-textile manufacture to a broader apparel and manufacturing business. The mill, garment brand and corporate group should remain distinct when interpreting product descriptions.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Ermenegildo Zegna Group: overview",
+    "url": "https://www.zegnagroup.com/en/overview/"
+   },
+   {
+    "title": "Ermenegildo Zegna Group: history",
+    "url": "https://www.zegnagroup.com/en/overview/history/"
+   }
+  ]
+ },
+ "brunello-cucinelli": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1978",
+    "event": "The company connects its beginnings in 1978 with colored cashmere knitwear. Its founder’s account describes experimenting with dyed women’s sweaters before expanding the business. That history concerns product design and commerce, rather than the discovery of cashmere as a fiber.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Brunello Cucinelli: cashmere",
+    "url": "https://www.brunellocucinelli.com/en/company/cashmere.html"
+   },
+   {
+    "title": "Brunello Cucinelli: origins of the company",
+    "url": "https://www.brunellocucinelli.com/en/company/the-origins-of-the-company.html"
+   }
+  ]
+ },
+ "john-smedley": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1784",
+    "event": "The producer history traces Lea Mills to 1784, initially making muslin and spinning cotton. The later knitwear story is a change in manufacturing activity. An old mill date should therefore be read as industrial heritage, not proof that every present product has been made unchanged since that year.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "John Smedley: company history",
+    "url": "https://beta.johnsmedley.com/uk/discover/company-history/"
+   },
+   {
+    "title": "John Smedley: fibers (official Japanese site)",
+    "url": "https://www.johnsmedley.jp/about/fibre"
+   }
+  ]
+ },
+ "johnstons-of-elgin": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1797",
+    "event": "The house dates its beginnings to 1797.",
+    "ref": 0
+   },
+   {
+    "year": "1980",
+    "event": "The producer dates its Hawick knitting mill to 1980.",
+    "ref": 1
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Johnstons of Elgin: heritage, chapter one",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-1"
+   },
+   {
+    "title": "Johnstons of Elgin: heritage, chapter two",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-2"
+   }
+  ]
+ },
+ "vitale-barberis-canonico": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1663",
+    "event": "The producer chronology cites a document recording family textile activity.",
+    "ref": 0
+   },
+   {
+    "year": "1910",
+    "event": "A complete-cycle factory opened in Pratrivero, according to the producer history.",
+    "ref": 0
+   },
+   {
+    "year": "1936",
+    "event": "The producer dates the named Vitale Barberis Canonico company to this year.",
+    "ref": 0
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Vitale Barberis Canonico: our history",
+    "url": "https://vitalebarberiscanonico.com/who-we-are/our-history/"
+   },
+   {
+    "title": "Vitale Barberis Canonico: official fabric and archive portal",
+    "url": "https://vitalebarberiscanonico.com/"
+   }
+  ]
+ },
+ "reda": {
+  "properties": [],
+  "timeline": [
+   {
+    "year": "1865",
+    "event": "The Biella archive network dates the wool mill founded by Carlo Reda in Valle Mosso to 1865. Reda’s own heritage account describes later manufacturing developments and acquisitions. The year in its branding is a heritage reference, not a fabric weight, wool grade or current production volume.",
+    "ref": 2
+   }
+  ],
+  "production": null,
+  "refs": [
+   {
+    "title": "Reda: heritage",
+    "url": "https://www.reda1865.com/us/heritage"
+   },
+   {
+    "title": "Reda: cloth collections",
+    "url": "https://www.reda1865.com/us/"
+   },
+   {
+    "title": "Rete Archivi Biellesi: Lanificio Successori Reda",
+    "url": "https://www.retearchivibiellesi.it/entita/13-lanificio-successori-reda"
    }
   ]
  }

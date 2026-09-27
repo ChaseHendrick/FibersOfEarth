@@ -1,13 +1,16 @@
 {
   "name": "fibersofearth",
-  "version": "2.2.0",
+  "version": "2.5.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test tests/data.test.mjs",
-    "test:browser": "node scripts/test-browser.mjs"
+    "test:browser": "node scripts/test-browser.mjs",
+    "check:directory": "node scripts/validate-directory.mjs",
+    "babysit": "node scripts/babysit.mjs",
+    "docs:tour": "node scripts/capture-tour.mjs"
   },
   "dependencies": {
     "d3-geo": "3.1.1",

@@ -1,9 +1,12 @@
+import {weaveEntries} from '../src/weaves.js';
+import {brandDirectory} from '../src/brand-directory.js';
+import {escapeHTML} from '../src/glossary-render.js';
 import {chromium} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {glossaryEntries} from '../src/glossary.js';
-import {materials,journeys,networks} from '../src/data.js';
+import {materials,journeys,networks,articles} from '../src/data.js';
 const browser=await chromium.launch({headless:true,...(process.env.BROWSER_CHANNEL?{channel:process.env.BROWSER_CHANNEL}:{}),...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
 const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
 const page=await context.newPage();
@@ -16,10 +19,10 @@ try{
  await go('materials');await page.getByLabel('Search material library').fill('pashmina');assert.equal(await page.locator('.material-card h3').first().textContent(),'Cashmere');assert.ok(await page.getByRole('heading',{name:'Cashmere',exact:true}).count());await page.getByRole('button',{name:'Reset',exact:true}).click();await page.locator('#library-family').selectOption('Plant');await page.locator('#library-sort').selectOption('az');assert.ok(await page.locator('.material-card').count()>1);await page.getByRole('button',{name:'Save Abacá',exact:true}).click();await go('saved');assert.ok(await page.getByRole('heading',{name:'Abacá',exact:true}).count());await page.reload();assert.ok(await page.getByRole('heading',{name:'Abacá',exact:true}).count());results.push('Library: search aliases, filter, sort, save and reload persistence');
  await go('compare');await page.locator('#compare-0').selectOption('cashmere');await page.waitForURL(/cashmere/);assert.ok(await page.locator('table').getByText('Cashmere',{exact:true}).count());results.push('Comparison selects update URL and content');
  await go('science');await page.getByRole('button',{name:'2/2 twill',exact:true}).click();assert.equal(await page.getByRole('button',{name:'2/2 twill',exact:true}).getAttribute('aria-pressed'),'true');await page.locator('#denier').fill('0');assert.match(await page.locator('#diameter').textContent(),/valid/);await page.locator('#denier').fill('5');assert.match(await page.locator('#diameter').textContent(),/22.64/);await page.screenshot({path:'docs/screenshots/science-desktop.png',fullPage:true});results.push('Science: weave switching, invalid values and numeric output');
- await page.getByRole('button',{name:'Search the atlas'}).click();await page.getByRole('searchbox',{name:'Search all materials, glossary terms, journeys and field notes'}).fill('ECONYL');await page.locator('.search-result').first().click();await page.waitForURL(/fiber\/econyl/);assert.equal(await page.locator('dialog[open]').count(),0);results.push('Global search routes and closes its dialog');
- for(const m of (process.env.QUICK_TEST?[]:materials)){await go('fiber/'+m.id);assert.ok(await page.getByRole('heading',{name:m.name,exact:true}).count());}for(const j of (process.env.QUICK_TEST?[]:journeys)){await go('journey/'+j.id);}if(!process.env.QUICK_TEST)results.push('All 100 material profiles and 115 journey detail routes render');
+ await page.getByRole('button',{name:'Search the atlas'}).click();await page.getByRole('searchbox',{name:'Search the full textile atlas'}).fill('ECONYL');await page.locator('.search-result').first().click();await page.waitForURL(/fiber\/econyl/);assert.equal(await page.locator('dialog[open]').count(),0);results.push('Global search routes and closes its dialog');
+ for(const m of (process.env.QUICK_TEST?[]:materials)){await go('fiber/'+m.id);assert.ok(await page.getByRole('heading',{name:m.name,exact:true}).count());}for(const j of (process.env.QUICK_TEST?[]:journeys)){await go('journey/'+j.id);}if(!process.env.QUICK_TEST)results.push(`All ${materials.length} material profiles and ${journeys.length} journey detail routes render`);
  for(const t of ['overview','history','science','journeys','care'])await go('fiber/wool/'+t);
- for(const path of ['atlas/wool','materials','brands','compare','journeys','regions','learn','science','history','glossary','sources','about','privacy']){
+ for(const path of ['atlas/wool','materials','brands','compare','journeys','regions','learn','weaves','science','history','glossary','sources','about','privacy']){
   await go(path);const a=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();const violations=a.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)}));if(violations.length)results.push({accessibility:path,violations});
   for(const width of [1440,768,390]){await page.setViewportSize({width,height:900});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);if(overflow)console.log('OVERFLOW',path,width,await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(x=>x.getBoundingClientRect().right>innerWidth+1).map(x=>({tag:x.tagName,class:x.className,right:x.getBoundingClientRect().right})).slice(0,15)));assert.equal(overflow,false,'Horizontal overflow: '+path+' @ '+width);}
  }
@@ -32,9 +35,90 @@ try{
  for(const t of glossaryEntries){await go('glossary/'+t.id);assert.equal(await page.locator('h1').textContent(),t.term);}
  await go('glossary/denier');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);await page.screenshot({path:'docs/screenshots/glossary-definition.png',fullPage:true});
  const plain=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const reader=await plain.newPage();
- for(const t of glossaryEntries){const response=await reader.goto(base+'glossary/'+t.id+'/');assert.equal(response.status(),200);assert.equal(await reader.locator('h1').textContent(),t.term);assert.ok((await reader.locator('main').textContent()).includes(t.explanation));assert.equal(await reader.locator('link[rel=canonical]').getAttribute('href'),'https://sharpmeow.github.io/FibersOfEarth/glossary/'+t.id+'/');const schema=JSON.parse(await reader.locator('script[type="application/ld+json"]').textContent());assert.equal(schema['@graph'][0].description,t.definition);}
+ for(const t of glossaryEntries){const response=await reader.goto(base+'glossary/'+t.id+'/');assert.equal(response.status(),200);assert.equal(await reader.locator('h1').textContent(),t.term);assert.ok((await reader.locator('main').textContent()).includes(t.explanation));assert.equal(await reader.locator('link[rel=canonical]').getAttribute('href'),'https://chasehendrick.github.io/FibersOfEarth/glossary/'+t.id+'/');const schema=JSON.parse(await reader.locator('script[type="application/ld+json"]').textContent());assert.equal(schema['@graph'][0].description,t.definition);}
  await reader.goto(base+'glossary/');assert.equal(await reader.locator('.glossary-static-list h2 a').count(),glossaryEntries.length);await reader.getByRole('link',{name:'Denier',exact:true}).click();await reader.getByRole('link',{name:'Micron',exact:true}).click();assert.equal(await reader.locator('h1').textContent(),'Micron');await reader.screenshot({path:'docs/screenshots/glossary-mobile.png',fullPage:true});assert.equal(await reader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await plain.close();
- const sitemap=await page.request.get(base+'sitemap.xml');assert.equal(sitemap.status(),200);assert.equal((await sitemap.text()).match(/<loc>/g).length,glossaryEntries.length+materials.length+3);assert.equal((await page.request.get(base+'glossary/missing/')).status(),404);
+ // Field notes must remain complete, navigable and accessible without JavaScript.
+ const notesContext=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
+ const notes=await notesContext.newPage();
+ const localLinks=new Set();
+ for(const a of articles){
+  const response=await notes.goto(base+'learn/'+a.id+'/');assert.equal(response.status(),200,a.id);
+  assert.equal(await notes.locator('h1').textContent(),a.title);
+  const content=await notes.locator('main').textContent();
+  for(const [heading,paragraph] of a.sections){assert.ok(content.includes(heading));assert.ok(content.includes(paragraph));}
+  assert.equal(await notes.locator('link[rel=canonical]').getAttribute('href'),'https://chasehendrick.github.io/FibersOfEarth/learn/'+a.id+'/');
+  const schema=JSON.parse(await notes.locator('script[type="application/ld+json"]').textContent());assert.equal(schema.headline,a.title);assert.equal(schema.citation.length,a.sources.length);
+  for(const href of await notes.locator('a[href]').evaluateAll(els=>els.map(e=>e.href))){const link=new URL(href);if(link.origin===new URL(base).origin){link.hash='';localLinks.add(link.href);}}
+  assert.equal(await notes.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,a.id+' mobile overflow');
+ }
+ for(const href of localLinks)assert.equal((await page.request.get(href)).status(),200,href);
+ await notes.goto(base+'learn/');assert.equal(await notes.locator('.glossary-static-list h2 a').count(),articles.length);
+ await notes.getByRole('link',{name:'Summer cloth: read beyond the fiber label.',exact:true}).click();
+ await notes.getByRole('link',{name:'Fresco',exact:true}).click();assert.equal(await notes.locator('h1').textContent(),'Fresco');
+ await notesContext.close();
+ await go('article/summer-cloth');assert.ok(await page.locator('.term-link').count()>0);
+ await page.getByRole('link',{name:'Reading edition',exact:false}).click();await page.waitForURL(/learn\/summer-cloth\//);
+ assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'docs/screenshots/field-note-mobile.png',fullPage:true});await page.setViewportSize({width:1440,height:1000});
+ await page.goto(base+'learn/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ results.push(`Field notes: ${articles.length} JavaScript-free guides, index, glossary and material links, citations, metadata, mobile layout and accessibility`);
+ // Directory searches, saved brands and exports must work without a server dependency.
+ await go('brands');assert.equal(await page.locator('.brand-card').count(),24);
+ await page.getByRole('button',{name:'Next',exact:true}).click();assert.match(page.url(),/page=2/);
+ await page.getByRole('searchbox',{name:'Search brands',exact:true}).fill('Ermenegildo Zegna');assert.equal(await page.locator('.brand-card').count(),1);
+ await page.getByRole('button',{name:'Save brand ZEGNA',exact:true}).click();await page.reload();await page.getByRole('button',{name:'Unsave brand ZEGNA',exact:true}).waitFor();
+ await page.getByRole('button',{name:'Reset',exact:true}).click();await page.getByLabel('My saved brands on this device').check();assert.equal(await page.locator('.brand-card').count(),1);
+ await page.getByRole('button',{name:'Compare saved brands',exact:true}).click();assert.ok((await page.locator('#brand-comparison').textContent()).includes('ZEGNA'));
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export saved brands',exact:true}).click();const download=await downloadPromise;const exported=JSON.parse(await fs.readFile(await download.path(),'utf8'));assert.deepEqual(exported.entries.map(b=>b.id),['zegna']);
+ await page.getByRole('button',{name:'Reset',exact:true}).click();await page.locator('#brand-country').selectOption('Italy');await page.locator('#brand-depth').selectOption('catalog');assert.ok(await page.locator('.brand-card').count());
+ await go('brands?page=NaN');assert.match(await page.locator('#brand-count').textContent(),/Page 1 of/);
+ await go('brands?q=%3Cimg%20src=x%20onerror=alert(1)%3E');assert.equal(await page.locator('#brand-results img').count(),0);
+ await go('brand/fox-brothers');assert.ok((await page.locator('main').textContent()).includes('1772'));assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ await go('brands');await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:'docs/screenshots/brand-directory-mobile.png',fullPage:true});await page.setViewportSize({width:1440,height:1000});
+ const brandReaderContext=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const brandReader=await brandReaderContext.newPage();
+ await brandReader.goto(base+'brands/');assert.equal(await brandReader.locator('.directory-index a').count(),brandDirectory.length);assert.equal(await brandReader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+ for(const b of [brandDirectory.find(b=>b.id==='fox-brothers'),brandDirectory.find(b=>b.id==='zegna'),brandDirectory.find(b=>b.depth==='catalog'),[...brandDirectory].sort((a,b)=>b.name.length-a.name.length)[0]]){await brandReader.goto(base+'brands/'+b.id+'/');assert.equal(await brandReader.locator('h1').textContent(),b.name);assert.equal(await brandReader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,b.name);}
+ await brandReaderContext.close();
+ // Check every generated record and canonical path directly, then browser-test representative pages.
+ for(const b of brandDirectory){const html=await fs.readFile('dist/brands/'+b.id+'/index.html','utf8');assert.ok(html.includes(`<h1>${escapeHTML(b.name)}</h1>`),b.id);assert.ok(html.includes('https://chasehendrick.github.io/FibersOfEarth/brands/'+b.id+'/'),b.id);assert.ok(html.includes('Open research questions'));}
+ await page.goto(base+'brands/fox-brothers/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ const exportedDirectory=await page.request.get(base+'brands/directory.json');assert.equal((await exportedDirectory.json()).entries.length,brandDirectory.length);
+ results.push(`Brand directory: ${brandDirectory.length} generated pages audited; search, filters, pagination, saved-brand persistence, comparison, JSON exports, representative JavaScript-free pages, mobile layouts and accessibility passed`);
+
+ // Weave and pattern discovery, comparisons, accessible diagrams and reading pages.
+ await go('weaves');assert.equal(await page.locator('.pattern-card').count(),18);
+ await page.getByRole('button',{name:'Next',exact:true}).click();assert.match(page.url(),/page=2/);
+ await page.getByRole('searchbox',{name:'Search weaves and patterns',exact:true}).fill('puppytooth');
+ assert.equal(await page.locator('.pattern-card h2 a').first().textContent(),'Houndstooth');
+ await page.getByRole('button',{name:'Compare Houndstooth',exact:true}).click();assert.match(page.url(),/compare=houndstooth/);
+ await page.reload();assert.equal(await page.locator('.pattern-compare-card').count(),1);
+ await go('weaves?compare=herringbone,houndstooth');assert.equal(await page.locator('.pattern-compare-card').count(),2);
+ await page.getByRole('button',{name:'Remove Houndstooth from comparison',exact:true}).click();assert.equal(await page.locator('.pattern-compare-card').count(),1);
+ await page.getByRole('button',{name:'Clear comparison',exact:true}).click();assert.equal(await page.locator('.pattern-compare-card').count(),0);
+ await page.getByLabel('Category',{exact:true}).selectOption('Knit structure');assert.ok(await page.locator('.pattern-card').count());
+ assert.ok((await page.locator('.pattern-card .eyebrow').allTextContents()).every(text=>text==='Knit structure'));
+ await go('weaves/houndstooth');const colored=await page.locator('#pattern-visual').innerHTML();await page.getByLabel('Warp and weft contrast',{exact:true}).check();assert.notEqual(await page.locator('#pattern-visual').innerHTML(),colored);
+ assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ await page.screenshot({path:'docs/screenshots/houndstooth-desktop.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.screenshot({path:'docs/screenshots/houndstooth-mobile.png',fullPage:true});await page.setViewportSize({width:1440,height:1000});
+ await go('weaves?compare=constructor,herringbone,houndstooth,twill,plain-weave');assert.equal(await page.locator('.pattern-compare-card').count(),3);
+ await page.getByRole('button',{name:'Search the atlas'}).click();await page.getByRole('searchbox',{name:'Search the full textile atlas'}).fill('houndstooth');await page.locator('.search-result[href="#/weaves/houndstooth"]').click();await page.waitForURL(/weaves\/houndstooth/);
+ await go('weaves?q=%3Cimg%20src=x%20onerror=alert(1)%3E');assert.equal(await page.locator('#pattern-results img').count(),0);
+ await go('weaves?page=NaN');assert.match(await page.locator('#pattern-count').textContent(),/Page 1/);await page.screenshot({path:'docs/screenshots/weaves-desktop.png',fullPage:true});
+ const patternContext=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const patternReader=await patternContext.newPage();
+ await patternReader.goto(base+'weaves/');assert.equal(await patternReader.locator('.pattern-static-list a').count(),weaveEntries.length);
+ for(const entry of weaveEntries){
+  await patternReader.goto(base+'weaves/'+entry.id+'/');assert.equal(await patternReader.locator('h1').textContent(),entry.name);
+  assert.equal(await patternReader.locator('link[rel=canonical]').getAttribute('href'),'https://chasehendrick.github.io/FibersOfEarth/weaves/'+entry.id+'/');
+  assert.ok((await patternReader.locator('main').textContent()).includes(entry.construction));
+  assert.equal(await patternReader.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,entry.id);
+  const ld=JSON.parse(await patternReader.locator('script[type="application/ld+json"]').textContent());assert.equal(ld.headline,entry.name);
+ }
+ await patternContext.close();await page.goto(base+'weaves/herringbone/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);
+ const weaveExport=await page.request.get(base+'weaves/directory.json');assert.equal((await weaveExport.json()).entries.length,weaveEntries.length);
+ results.push(`Weaves and patterns: ${weaveEntries.length} source-linked entries and JavaScript-free detail pages; aliases, filters, paging, URL comparisons, global search, contrast diagrams, metadata, mobile layouts and accessibility passed`);
+
+ const sitemap=await page.request.get(base+'sitemap.xml');assert.equal(sitemap.status(),200);assert.equal((await sitemap.text()).match(/<loc>/g).length,glossaryEntries.length+materials.length+articles.length+brandDirectory.length+weaveEntries.length+6);assert.equal((await page.request.get(base+'glossary/missing/')).status(),404);
  await page.goto(base+'glossary/denier/');assert.equal((await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze()).violations.length,0);results.push(`Glossary: aliases, topic/letter filters, ${glossaryEntries.length} detail routes, ${glossaryEntries.length+1} JavaScript-free pages, related links, metadata, structured data, sitemap and accessibility`);
  await context.setOffline(false);await go('fiber/wool/science');assert.ok(await page.getByRole('heading',{name:'Structure & chemistry',exact:true}).count());assert.ok(await page.locator('.key-figures .fact-row').count()>=2);assert.ok(await page.locator('.term-link').count()>0);assert.ok((await page.locator('.cite-text').textContent()).includes('Fibers of Earth'));
  await go('materials');await page.getByLabel('Search material library').fill('cashmer');assert.equal(await page.locator('.material-card h3').first().textContent(),'Cashmere');await page.getByLabel('Search material library').fill('law:cites');assert.ok(await page.locator('.match-snippet mark').count()>0);
@@ -43,7 +127,7 @@ try{
  await page.locator('[data-globe="spin"]').click().catch(()=>{});for(const id of Object.keys(networks)){const j=journeys.find(x=>x.fiber===id);await go('atlas/'+id);const shown=await page.locator('.map-node').evaluateAll(els=>els.map(e=>e.dataset.node));for(const k of new Set(j.keys))assert.ok(shown.includes(k),`${id}: stop ${k} not visible in home view`);}
  results.push('Every mapped fiber opens centered with all route stops visible');
  const readerM=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});const rp=await readerM.newPage();
- for(const m of materials){const res=await rp.goto(base+'materials/'+m.id+'/');assert.equal(res.status(),200,m.id);assert.equal(await rp.locator('h1').textContent(),m.name);assert.equal(await rp.locator('link[rel=canonical]').getAttribute('href'),'https://sharpmeow.github.io/FibersOfEarth/materials/'+m.id+'/');const ld=JSON.parse(await rp.locator('script[type="application/ld+json"]').textContent());assert.equal(ld['@graph'][0].headline,m.name);assert.ok((await rp.locator('main').textContent()).includes(m.composition));}
+ for(const m of materials){const res=await rp.goto(base+'materials/'+m.id+'/');assert.equal(res.status(),200,m.id);assert.equal(await rp.locator('h1').textContent(),m.name);assert.equal(await rp.locator('link[rel=canonical]').getAttribute('href'),'https://chasehendrick.github.io/FibersOfEarth/materials/'+m.id+'/');const ld=JSON.parse(await rp.locator('script[type="application/ld+json"]').textContent());assert.equal(ld['@graph'][0].headline,m.name);assert.ok((await rp.locator('main').textContent()).includes(m.composition));}
  await rp.goto(base+'materials/');assert.equal(await rp.locator('.glossary-static-list h3 a').count(),materials.length);await Promise.all([rp.waitForURL(/materials\/wool\//),rp.getByRole('link',{name:'Merino wool',exact:true}).click()]);assert.equal(await rp.locator('h1').textContent(),'Merino wool');assert.equal(await rp.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
  await readerM.close();await page.goto(base+'materials/cotton/');await page.locator('h1').waitFor();{const a=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();assert.deepEqual(a.violations.map(v=>v.id),[]);}
  results.push(`Material reading edition: ${materials.length} JavaScript-free pages with canonical URLs, structured data, index and accessibility`);
@@ -55,7 +139,9 @@ try{
  results.push('Properties table sorts by column in both directions');
  results.push('Globe scroll zoom, keyboard control with live status, full screen control, and persistent display settings');
  results.push('Research layer: detail sections, key figures, glossary links, citations, ranked typo-tolerant search, converters, raised routes and spin control');
- await context.setOffline(true);await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/materials');await page.locator('h1').waitFor();assert.ok(await page.locator('.material-card').count()>0);results.push('Standalone HTML opens offline with populated library');
+ await context.setOffline(true);await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/materials');await page.locator('h1').waitFor();assert.ok(await page.locator('.material-card').count()>0);results.push('Standalone HTML opens offline with populated library');await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/article/summer-cloth');await page.getByRole('heading',{name:'Summer cloth: read beyond the fiber label.',exact:true}).waitFor();assert.ok((await page.locator('.reading').textContent()).includes('running meter'));results.push('New field note reads offline with glossary links');
+ await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/brands');await page.getByRole('searchbox',{name:'Search brands',exact:true}).fill('fox brothers');await page.locator('.brand-card h2 a').first().click();await page.getByRole('heading',{name:'Fox Brothers',exact:true,level:1}).waitFor();assert.ok((await page.locator('main').textContent()).includes('1772'));results.push('Brand directory search and research notes work fully offline');
+ await page.goto(new URL('../dist/offline.html',import.meta.url).href+'#/weaves/houndstooth');await page.getByRole('heading',{name:'Houndstooth',exact:true,level:1}).waitFor();await page.getByLabel('Warp and weft contrast',{exact:true}).check();assert.ok(await page.locator('#pattern-visual svg').count());results.push('Weave and pattern guide with diagrams works offline');
  assert.deepEqual(errors,[]);results.push('No browser JavaScript errors');
- await fs.writeFile('docs/browser-results.json',JSON.stringify({date:'2026-09-22',browser:'Chromium',results},null,2));console.log(JSON.stringify(results,null,2));assert.equal(results.filter(x=>x.violations?.length).length,0,'Accessibility violations');
+ await fs.writeFile('docs/browser-results.json',JSON.stringify({date:new Date().toISOString().slice(0,10),browser:'Chromium',results},null,2));console.log(JSON.stringify(results,null,2));assert.equal(results.filter(x=>x.violations?.length).length,0,'Accessibility violations');
 }catch(e){await page.screenshot({path:'docs/screenshots/failure.png',fullPage:true});console.error(e);console.log(JSON.stringify(results,null,2));process.exitCode=1;}finally{await browser.close();}

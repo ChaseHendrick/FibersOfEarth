@@ -1,5 +1,30 @@
 # Changelog
 
+## 2.5.0 - Unreleased
+
+- Added a 114-entry weave and pattern guide across seven categories, including herringbone, houndstooth, woven cloth families, knits, motifs and surface techniques. Each entry has original construction and recognition notes, common uses, distinctions and references. Coverage and visual limits are explicit.
+- Added alias search, category filters, 18-card pagination, shareable comparisons of up to three entries, global search results and a warp/weft contrast control for interlacing diagrams. The guide works in the standalone offline application without adding local-storage keys.
+- Added 115 JavaScript-free guide pages, a guide JSON download and sitemap coverage for 2,585 URLs. Expanded unit, mobile, offline, accessibility and reading-page checks, and documented the guide's taxonomy and maintenance.
+
+- Refreshed the README with a 60 fps animated WebP tour, a 60 fps H.264 video, a 50 fps GIF fallback, a motion-free screenshot, current feature and research counts, and a documentation index. Added reproducible media capture tooling with fresh browser frames throughout moving scenes.
+- Updated architecture, privacy, contribution, deployment and testing guidance for the brand directory and on-demand repository checks.
+- Corrected project links and generated canonical URLs to the current GitHub Pages address after the old address stopped resolving.
+
+- Added a 2,241-entry brand, mill and textile-business directory with 10,597 attributed catalog statements and 64 producer-research notes. Evidence depth and historical uncertainty are explicit.
+- Added directory search, country/category/history filters, shareable views, local saved brands, comparison, JSON exports and JavaScript-free reading pages.
+- Added on-demand repository babysitting and manual CI dispatch, with directory provenance validation and expanded offline/mobile/browser coverage. No schedule.
+
+- Glossary: first-class **Fresco**, **Gabardine**, and **High-twist** terms; Gabardine removed from Twill aliases and cross-linked.
+- Wool guide: clearer split between farm micron / superfine classing and IWTO Super S **cloth** numbers; fresco called out as open high-twist tropical suiting language (trademark vs generic).
+- Learn: field note on Italian textile districts (Biella worsted wool, Prato regenerated cardato wool, Como silk), stressing mill name ≠ fiber origin.
+- Initial six reference houses: Wolf vs Goat, Canali, Loro Piana, Piacenza 1733, Paul Smith and Yves Salomon. These profiles add no supplier relationships to the atlas.
+- Added ZEGNA, Brunello Cucinelli, John Smedley, Johnstons of Elgin, Vitale Barberis Canonico and Reda with full editorial profiles, reader guides, cited heritage timelines and search aliases.
+- README: positioning line, micron-scale and Italy-districts SVGs, wider screenshot gallery; catalog counts 112 profiles / 32 linked brand profiles / 102 glossary terms / ten field notes.
+
+- Added a practical summer-cloth field note and JavaScript-free reading pages for all ten notes, with an index, glossary links, source citations and sitemap entries.
+- Corrected Canali and Loro Piana geography using producer histories; added district-specific sources and improved Fresco, gabardine and high-twist references.
+- Consolidated uploaded research fragments into the four canonical JSON datasets and removed temporary upload probes.
+
 ## 2.4.0 - 2026-09-22
 
 - Data sheets: sourced physical properties (density, moisture regain, tenacity, elongation, melting or decomposition, limiting oxygen index and more) with test conditions, a dated timeline of verified milestones, and world production figures with year and scope, each linked to its reference. Shown in the Science, History and Overview tabs and on every material reading page.

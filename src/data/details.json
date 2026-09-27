@@ -5146,5 +5146,489 @@
    }
   ],
   "evidence": "verified"
+ },
+ "wolf-vs-goat": {
+  "origin": "Wolf vs Goat is an apparel brand, not a fiber, sheep breed or mill. Its public materials education discusses merino wool from the domestic sheep, Ovis aries, and named commercial yarns and cloths used in its garments. Fiber still originates on farms; spinning and weaving happen at mills the brand chooses to name in product stories. This atlas entry treats the brand as a teaching reference for materials language. It does not map commercial supply edges or certify any claim.",
+  "structure": "Nothing in the brand name changes keratin chemistry. Merino wool remains alpha-keratin with cuticle scales, cortex and a mean fiber diameter measured in microns. When the brand discusses a mill yarn such as Zegna Baruffa's Cashwool, the yarn specification (for example a stated 19.5 micron extrafine merino in the mill's public description) is a commercial product grade, not a new generic fiber. Blends that add linen, cotton, silk or synthetics follow the chemistry of each component. Always read the garment's fiber content line for the legal composition.",
+  "process": "Garment brands such as Wolf vs Goat typically buy dyed yarn or finished cloth, then cut and sew or fully fashion knitwear. The educational value of its public writing is the habit of naming stages: fiber diameter, spinner or weaver brand, and garment construction. Those stages remain separate. Australian or New Zealand merino may be spun in Biella-district mills and knitted elsewhere; a mill name is not a farm origin. Process claims on a product page should be read as producer-attributed storytelling unless third-party certificates are also provided.",
+  "performance": "Performance belongs to the specified fiber, yarn and fabric, not to the apparel brand name. Fine merino near 19 to 20 microns is commonly comfortable for next-to-skin knitwear for many wearers, while coarser wool may prickle; mill finishing can change hand further. Dense multi-ply knits can improve durability and shape retention compared with lean singles of the same fiber, at the cost of weight. Producer phrases such as cashmere-like hand or zero pilling are marketing comparisons unless tied to a test method and a specific product. Evaluate abrasion, pilling and dimensional change from garment tests or wear, not from the brand alone.",
+  "identify": "No laboratory test identifies Wolf vs Goat as a material. Microscopy and diameter measurement can characterize wool; selective dissolution and microscopy help confirm blends. Hangtags that name Cashwool, Afromood, Pecora Nera or similar mill products identify commercial yarn or cloth lines discussed by the brand, not generic fiber classes. Confusing a mill yarn brand with a species name, or assuming every micron story equals a Super S cloth number, is the common error this reference entry exists to prevent.",
+  "labeling": "Wolf vs Goat is a trademark of an apparel company, not a generic fiber name under US 16 CFR Part 303 or Regulation (EU) No 1007/2011. Labels must still state fibers and percentages, for example wool, or wool with silk and linen. Wool claims fall under the Wool Products Labeling Act and 16 CFR Part 300 in the United States. Mill yarn brands and fabric collection names are additional commercial designations; they do not replace generic fiber disclosure. Marketing education on a website is not a substitute for the sewn-in label.",
+  "past": "Specialty menswear brands that teach fabric grammar in public have a long retail history, from swatch books to blog explainers. Wolf vs Goat's published product stories name mill yarns and talk through micron and construction in that tradition. This atlas records the brand as a reference lens on materials literacy. Corporate founding dates, ownership and factory lists should be taken from the company's current primary disclosures rather than guessed here.",
+  "facts": [
+   [
+    "Type",
+    "Fabric-first apparel brand (trademark), not a fiber"
+   ],
+   [
+    "Underlying fiber focus",
+    "wool, especially merino, plus named mill yarns and cloths"
+   ],
+   [
+    "Public mill examples discussed by the brand",
+    "Cashwool (Zegna Baruffa), Afromood (Filmar), Pecora Nera (Loro Piana) as attributed product stories"
+   ],
+   [
+    "Atlas role",
+    "referenceOnly teaching entry; no map edges added"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Wolf vs Goat: official site (producer)",
+    "url": "https://www.wolfvsgoat.com/"
+   },
+   {
+    "title": "Wolf vs Goat: The 10-Ply Cardigan (Cashwool / Zegna Baruffa, producer story)",
+    "url": "https://www.wolfvsgoat.com/blogs/blog/the-10-ply-cardigan-that-redefines-classic"
+   },
+   {
+    "title": "Zegna Baruffa: Cashwool product page (mill description)",
+    "url": "https://www.baruffa.com/en/product/cashwool-30/"
+   },
+   {
+    "title": "Wolf vs Goat: Afromood Sweaters (Filmar yarn, producer story)",
+    "url": "https://www.wolfvsgoat.com/blogs/blog/afromood-sweaters"
+   },
+   {
+    "title": "Wolf vs Goat: Loro Piana Pecora Nera fabric note (producer story)",
+    "url": "https://www.wolfvsgoat.com/blogs/blog/loro-piana-pecora-nera-fabric-why-it-s-disappearing-and-why-it-matters"
+   },
+   {
+    "title": "eCFR: 16 CFR Part 300, Wool Products Labeling",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-300"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1007/oj/eng"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "canali": {
+  "origin": "Canali is an Italian menswear house with roots in Triuggio, Brianza. Its own history traces a tailoring workshop to 1908 and the company to 1934. A garment-house address identifies a business, not the source of its wool. Fiber production, cloth manufacture and garment assembly remain separate questions.",
+  "structure": "Nothing in the Canali name changes wool chemistry. Suiting cloth remains wool or a stated blend: alpha-keratin fibers, yarn twist, weave (for example warp-faced twills such as gabardine) and finish determine hand. Super S cloth numbers, if quoted on a cloth ticket, are commercial cloth designations rather than a farm micron certificate. Always read the garment fiber-content line for the legal composition.",
+  "process": "A menswear house specifies or buys cloth before cutting and sewing a garment. Keep the farm, spinner, weaver, finisher and garment maker separate when reading a product description. A named mill can document one stage for a particular item; it does not establish a permanent supply relationship across every collection.",
+  "performance": "Performance belongs to the specified cloth and construction, not to the house name alone. Dense wool suiting can drape and crease differently from open tropical weaves; elastane blends change recovery. Weather or stain finishes apply only when documented for that cloth. Evaluate abrasion, seam strength and press retention from the garment and cloth specification, not from brand prestige.",
+  "identify": "A woven label identifies the garment brand, while the composition label describes its fibers. Microscopy can help characterize wool and specialist analysis can investigate blends, but neither establishes the garment house. Purchase records and product documentation answer brand provenance questions separately from laboratory fiber identification.",
+  "labeling": "A house name is a trademark and does not replace a generic fiber disclosure. Wool-content rules and textile-fiber naming rules have their own jurisdictional scope. Consult the cited US and EU texts for the relevant product; country-of-origin and care requirements must be checked separately rather than inferred from a tailoring description.",
+  "past": "The producer chronology distinguishes the earlier family workshop from the company established in 1934. That distinction matters when comparing heritage dates: a workshop opening, company formation and product introduction are different events. This profile uses the house to explain tailoring and cloth vocabulary, without treating its history as evidence of a particular mill contract.",
+  "facts": [
+   [
+    "Type",
+    "Menswear house (trademark), not a fiber"
+   ],
+   [
+    "Underlying fiber focus",
+    "Wool suiting and tailored garment construction"
+   ],
+   [
+    "Atlas role",
+    "Reference profile; no documented supply route"
+   ],
+   [
+    "What not to infer",
+    "No exclusive mill contract or farm origin from the brand name alone"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Canali: The Canali Family (producer history)",
+    "url": "https://anthology.canali.com/en/family/the-canali-family/"
+   },
+   {
+    "title": "Canali: official site (producer)",
+    "url": "https://www.canali.com/"
+   },
+   {
+    "title": "eCFR: 16 CFR Part 300, Wool Products Labeling",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-300"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1007/oj/eng"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "loro-piana": {
+  "origin": "Loro Piana is a Quarona textile maison and cloth brand, not a fiber species. It is widely associated with fine wool and cashmere products. Cashmere still comes from goats (Capra hircus subtypes used for undercoat); wool from sheep. Spinning, weaving and finishing may be described in Piedmont textile language on producer pages. This entry is a teaching reference for mill-maison provenance. It does not invent map edges or certify Storm System or other finishes beyond producer documentation.",
+  "structure": "The maison name does not create a new polymer or keratin. Cashmere remains fine undercoat hair; merino and other wools remain sheep keratin with measurable mean diameter. Branded cloth collections and finishes (for example producer-documented Storm System weather finishes) are commercial product systems layered on those fibers. Read the fiber-content line and any finish care notes for the actual composition.",
+  "process": "A textile maison may comb, spin, weave and finish in-house or with partners, then sell cloth and finished goods. Quarona signals a processing geography often used in marketing; farm geography can be Australia, New Zealand, Mongolia, China or elsewhere depending on the fiber. Storm System and similar names should be checked on the producer’s technical or product pages for the specific cloth, not generalized to every Loro Piana label.",
+  "performance": "Fine cashmere and high Super S wool cloths are valued for hand and drape; they are not automatically more durable. Producer weather finishes claim water and wind resistance on documented fabrics; those claims are producer statements requiring the finish name on the product. Pilling, abrasion and wet strength depend on yarn, weave and finish. Prestige does not replace a care label.",
+  "identify": "No lab test names Loro Piana. Microscopy distinguishes wool and cashmere with limits; DNA or protein methods exist in specialist labs. Labels and selvedge tickets identify the maison. Pecora Nera and other collection names, when used in public stories, are mill-cloth designations rather than generic fiber classes.",
+  "labeling": "Cashmere and wool labeling follow national wool and textile fiber rules (for example US 16 CFR Part 300 and EU 1007/2011). Specialty collection names are trademarks or product names. Finish trademarks such as Storm System are not fiber names and should not replace the generic fiber disclosure.",
+  "past": "LVMH dates the founding of the present Loro Piana company to 1924 in Quarona, Piedmont. The firm developed from wool-textile trading and manufacturing into a broader luxury business. Corporate heritage, mill location and fiber origin describe different parts of that story; a maison name cannot establish the provenance of every product.",
+  "facts": [
+   [
+    "Type",
+    "Textile maison / mill brand (trademark), not a fiber"
+   ],
+   [
+    "Underlying fiber focus",
+    "cashmere and fine wool cloths; producer-named finishes on documented products"
+   ],
+   [
+    "Finish example (attributed)",
+    "Storm System: read only on producer-documented cloths"
+   ],
+   [
+    "Atlas role",
+    "Reference profile; no documented supply route"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "LVMH: Loro Piana (parent-company history)",
+    "url": "https://www.lvmh.com/our-maisons/fashion-leather-good/loro-piana"
+   },
+   {
+    "title": "Loro Piana: official site (producer)",
+    "url": "https://www.loropiana.com/"
+   },
+   {
+    "title": "Loro Piana: Storm System (producer technology page)",
+    "url": "https://www.loropiana.com/en/us/loro-piana-fabrics/storm-system"
+   },
+   {
+    "title": "eCFR: 16 CFR Part 300, Wool Products Labeling",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-300"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1007/oj/eng"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "piacenza-1733": {
+  "origin": "Piacenza 1733 (Fratelli Piacenza) is a historic Biella-area wool mill house based in Pollone, Italy. The producer publicly dates its founding to 1733. It is not a fiber species. Wool still comes from sheep raised in wool-growing regions worldwide; the mill house name marks processing and design heritage in the Biella district. This atlas entry teaches mill-house provenance. It adds no map supplier edges.",
+  "structure": "Mill-house branding does not alter keratin structure. Merino and other wools remain diameter-graded sheep fibers; blends follow each component. Historic mill collections may emphasize noble fibers and seasonal cloth weights. Always separate the mill trademark from the generic fiber name on the label.",
+  "process": "A vertical or semi-vertical wool mill may scour, card or comb, spin, weave and finish under one house identity, or coordinate stages with partners. Biella district clustering historically supported that chain. Producer sustainability and heritage pages describe current practice; treat them as attributed claims. Farm-to-mill logistics are not inferred by this atlas.",
+  "performance": "Cloth performance follows yarn count, weave, weight and finish. A three-century founding date does not guarantee a particular hand or durability on every modern SKU. Compare GSM, weave and care instructions across products. Marketing about authenticity should be read beside measurable cloth specs.",
+  "identify": "No microscopy test identifies Piacenza 1733. Labels, selvedges and swing tickets identify the mill house. Country-of-origin marking may show Italy for weaving or make-up while fiber origin differs. Ask for the fiber content and any mill ticket codes when studying a cloth.",
+  "labeling": "Wool labeling rules still govern fiber names and percentages. The mill-house trademark is additional commercial information. EU and US fiber regulations do not replace care labels. Heritage dates on marketing sites are not legal fiber designations.",
+  "past": "The producer states a 1733 founding in Pollone in the Biella district and membership narratives such as long-lived family business associations on its public story pages. Use those producer pages for heritage claims. The atlas cites them to illustrate how mill houses market continuity, not to audit every historical episode.",
+  "facts": [
+   [
+    "Type",
+    "Historic Biella wool mill house (trademark), not a fiber"
+   ],
+   [
+    "Producer-stated geography",
+    "Pollone (BI), Biella textile district, Italy"
+   ],
+   [
+    "Producer-stated founding",
+    "1733 (Fratelli Piacenza public story)"
+   ],
+   [
+    "Atlas role",
+    "referenceOnly teaching entry; no map edges added"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Piacenza 1733: official site (producer)",
+    "url": "https://www.piacenza1733.com/"
+   },
+   {
+    "title": "Piacenza 1733: Our story (producer)",
+    "url": "https://www.piacenza1733.com/en/our-story/"
+   },
+   {
+    "title": "eCFR: 16 CFR Part 300, Wool Products Labeling",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-300"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/eli/reg/2011/1007/oj/eng"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "paul-smith": {
+  "origin": "Paul Smith is a British designer menswear house, not a fiber, sheep breed or mill trademark for a keratin. Public product stories often name cloth and make details, while the fiber itself still comes from farms and mills named on labels and tickets. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "structure": "Nothing in the Paul Smith name changes wool chemistry. Suiting and shirting remain wool, cotton or stated blends specified per product, with yarn twist, weave and finish set by the cloth supplier rather than by the designer trademark. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "process": "A designer house typically specifies cloth and silhouette, then cuts and sews garments through its manufacturing network. Educational value is reading hangtags for fiber content, mill cloth names and country of make separately from the designer label on the jacket. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "performance": "Performance belongs to the specified cloth and construction, not to the house name alone. Crease recovery, breathability and durability track fiber grade, yarn, weave and finishing choices documented for each SKU. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "identify": "No laboratory test identifies Paul Smith as a material. Microscopy and diameter measurement characterize wool; burning tests and solubility methods help sort cellulosic and synthetic fibers when labels are missing or incomplete. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "labeling": "In the United States, wool products follow 16 CFR Part 300; in the EU, fiber names follow Regulation (EU) No 1007/2011. The designer trademark does not replace generic fiber names on the legal composition panel. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "past": "Paul Smith developed as a British designer brand with a long menswear and cloth-aware retail presence. Exact founding anecdotes belong to producer histories rather than fiber science, so this atlas keeps the chronology light and attributed. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "facts": [
+   [
+    "Type",
+    "Designer menswear house (trademark), not a fiber"
+   ],
+   [
+    "Underlying fiber focus",
+    "wool and other fibers as labeled per garment"
+   ],
+   [
+    "Educational use",
+    "separate designer house, mill cloth and generic fiber"
+   ],
+   [
+    "Atlas stance",
+    "referenceOnly; not an endorsement"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Paul Smith: official site (producer)",
+    "url": "https://www.paulsmith.com/"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R1007"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "yves-salomon": {
+  "origin": "Yves Salomon is a French house associated with fur, shearling and luxury outerwear, not a fiber class. User shorthand Yves Solomon maps to producer spelling Salomon. Fiber or fur still comes from animal sources specified per product rather than from the house name. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "structure": "The house name does not define a single keratin chemistry. Products may use fur, shearling, wool or cashmere cloths depending on the SKU, so learners should read construction and fiber content instead of inferring a house-wide material. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "process": "Furrier and outerwear making traditions sit beside woven and knitted cloth garments. Cutting, sewing and finishing routes differ for shearling coats versus cashmere wraps, which is why composition must be checked on each ticket. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "performance": "Warmth, hand and durability follow the actual material, for example shearling versus cashmere coating, not the house name alone. Treat marketing adjectives as cues to verify rather than as lab results. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "identify": "No test identifies Yves Salomon as a fiber. Identify fur, shearling, wool or cashmere by labeling and, where needed, standard textile methods for fiber type and diameter. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "labeling": "Fur and textile labeling rules differ by jurisdiction. Generic fiber or fur names still matter beside the house trademark, and this atlas does not reinterpret national fur labeling schemes. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "past": "The house is publicly presented as a Paris furrier and outerwear specialist with contemporary ready-to-wear extensions. Atlas inclusion is educational vocabulary for materials literacy, not an endorsement of fur. This atlas treats the trademark as educational vocabulary for reading hangtags, mill cloth names and generic fiber classes without certifying supply chains, performance claims or animal welfare.",
+  "facts": [
+   [
+    "Type",
+    "Outerwear house (trademark), not a fiber"
+   ],
+   [
+    "Spelling",
+    "Yves Salomon (not Solomon)"
+   ],
+   [
+    "Underlying materials",
+    "product-specific; may include cashmere, wool, shearling or fur"
+   ],
+   [
+    "Atlas stance",
+    "referenceOnly; not an endorsement of fur"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Yves Salomon: official site (producer)",
+    "url": "https://www.yves-salomon.com/"
+   },
+   {
+    "title": "EUR-Lex: Regulation (EU) No 1007/2011 on textile fibre names",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R1007"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "zegna": {
+  "origin": "ZEGNA is a menswear brand connected to a textile manufacturing group. Its history begins with a wool mill in Trivero. A Zegna cloth reference and a ZEGNA finished garment describe different products, even when they share a commercial name.",
+  "structure": "In wool cloth, the material is a protein fiber assembled into yarn and then fabric. Fiber diameter, yarn twist, weave and finish describe different levels of structure. A mill or house name supplies none of those measurements by itself; compare the specific cloth specification.",
+  "process": "Use Zegna as an example of the difference between cloth manufacture and garment production. A mill can sell fabric that another business cuts and sews. A garment bearing a cloth maker’s label therefore does not automatically become a garment made by that cloth maker’s apparel brand.",
+  "performance": "For tailoring cloth, evaluate drape, crease behavior and surface durability at the fabric level. A finer fiber grade does not automatically make a harder-wearing suit. Test conditions, weave, yarn construction and finish all matter, and a maker’s reputation is not a substitute for measured results.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The group dates its foundation in Trivero to 1910. Its history describes a progression from wool-textile manufacture to a broader apparel and manufacturing business. The mill, garment brand and corporate group should remain distinct when interpreting product descriptions.",
+  "facts": [
+   [
+    "Entry type",
+    "Textile and menswear house"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Trivero, Piedmont, Italy"
+   ],
+   [
+    "Material link",
+    "wool is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Ermenegildo Zegna Group: overview",
+    "url": "https://www.zegnagroup.com/en/overview/"
+   },
+   {
+    "title": "Ermenegildo Zegna Group: history",
+    "url": "https://www.zegnagroup.com/en/overview/history/"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "brunello-cucinelli": {
+  "origin": "Brunello Cucinelli is an apparel house closely associated with cashmere and Solomeo. The name identifies a designer and business, not a species, cashmere grade or universal fiber recipe. A collection can include many materials; the composition of each garment remains the starting point.",
+  "structure": "In knitwear, fiber chemistry and loop geometry contribute different properties. Wool and cashmere are protein fibers, while cotton is cellulose. Loop length, yarn size and finishing influence stretch, bulk and surface appearance. The maker’s name does not determine those variables, so examine the specified garment.",
+  "process": "Colored knitwear connects yarn selection, knitting, dyeing and finishing. Those stages affect shade, handle and shape independently of the original fiber diameter. A cashmere garment can also include trims, supporting yarns or other fibers, so a general brand story should not replace its product specification.",
+  "performance": "For a knitted item, compare shape recovery, surface change and comfort under its intended use. A soft first touch does not establish resistance to pilling or stretching. Knit density, yarn construction and finishing matter, and numerical performance claims require a named test on the relevant product.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The company connects its beginnings in 1978 with colored cashmere knitwear. Its founder’s account describes experimenting with dyed women’s sweaters before expanding the business. That history concerns product design and commerce, rather than the discovery of cashmere as a fiber.",
+  "facts": [
+   [
+    "Entry type",
+    "Cashmere and apparel house"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Solomeo, Umbria, Italy"
+   ],
+   [
+    "Material link",
+    "cashmere is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Brunello Cucinelli: cashmere",
+    "url": "https://www.brunellocucinelli.com/en/company/cashmere.html"
+   },
+   {
+    "title": "Brunello Cucinelli: origins of the company",
+    "url": "https://www.brunellocucinelli.com/en/company/the-origins-of-the-company.html"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "john-smedley": {
+  "origin": "John Smedley is a knitwear maker associated with Lea Mills in Derbyshire. Its producer material descriptions distinguish extra-fine merino and the house’s Sea Island Cotton range. These are separate fiber stories; the maker’s name alone does not identify the composition of a particular sweater.",
+  "structure": "In knitwear, fiber chemistry and loop geometry contribute different properties. Wool and cashmere are protein fibers, while cotton is cellulose. Loop length, yarn size and finishing influence stretch, bulk and surface appearance. The maker’s name does not determine those variables, so examine the specified garment.",
+  "process": "In fine knitwear, yarn size, stitch length and machine gauge work together. Gauge describes the knitting equipment or construction convention; it is not the same measurement as wool micron or yarn count. Compare the neckline, cuffs, seams and body as a complete knitted garment rather than judging quality by a gauge number alone.",
+  "performance": "For a knitted item, compare shape recovery, surface change and comfort under its intended use. A soft first touch does not establish resistance to pilling or stretching. Knit density, yarn construction and finishing matter, and numerical performance claims require a named test on the relevant product.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The producer history traces Lea Mills to 1784, initially making muslin and spinning cotton. The later knitwear story is a change in manufacturing activity. An old mill date should therefore be read as industrial heritage, not proof that every present product has been made unchanged since that year.",
+  "facts": [
+   [
+    "Entry type",
+    "British knitwear maker"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Lea Mills, Derbyshire, England"
+   ],
+   [
+    "Material link",
+    "wool is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "John Smedley: company history",
+    "url": "https://beta.johnsmedley.com/uk/discover/company-history/"
+   },
+   {
+    "title": "John Smedley: fibers (official Japanese site)",
+    "url": "https://www.johnsmedley.jp/about/fibre"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "johnstons-of-elgin": {
+  "origin": "Johnstons of Elgin is a Scottish textile house with weaving and knitwear traditions. Its history distinguishes the Elgin weaving mill and the Hawick knitting operation. Scottish manufacture describes a processing location; it does not establish that cashmere goats or wool-producing sheep were raised in Scotland.",
+  "structure": "In knitwear, fiber chemistry and loop geometry contribute different properties. Wool and cashmere are protein fibers, while cotton is cellulose. Loop length, yarn size and finishing influence stretch, bulk and surface appearance. The maker’s name does not determine those variables, so examine the specified garment.",
+  "process": "Compare a woven scarf with a knitted sweater to see two routes from yarn to fabric. Woven warp and weft cross on a loom, while knitted loops intermesh. Raising and other finishing treatments can alter the surface, so a soft halo does not tell you which construction lies underneath.",
+  "performance": "For a knitted item, compare shape recovery, surface change and comfort under its intended use. A soft first touch does not establish resistance to pilling or stretching. Knit density, yarn construction and finishing matter, and numerical performance claims require a named test on the relevant product.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The house traces its history to 1797. Its timeline dates the Hawick mill to 1980 and describes that development as a move into knitwear manufacturing. Keeping those dates separate explains why one company name can cover both woven and knitted textile traditions.",
+  "facts": [
+   [
+    "Entry type",
+    "Scottish weaving and knitwear house"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Elgin and Hawick, Scotland"
+   ],
+   [
+    "Material link",
+    "cashmere is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Johnstons of Elgin: heritage, chapter one",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-1"
+   },
+   {
+    "title": "Johnstons of Elgin: heritage, chapter two",
+    "url": "https://discover.johnstonsofelgin.com/227years/chapter-2"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "vitale-barberis-canonico": {
+  "origin": "Vitale Barberis Canonico, often shortened to VBC, is a cloth mill associated with Pratrivero. A fabric carrying its name may be made into a garment by an unrelated tailor or apparel house. The cloth reference is therefore distinct from the identity of the finished garment maker.",
+  "structure": "In wool cloth, the material is a protein fiber assembled into yarn and then fabric. Fiber diameter, yarn twist, weave and finish describe different levels of structure. A mill or house name supplies none of those measurements by itself; compare the specific cloth specification.",
+  "process": "Cloth production connects yarn preparation, weaving, dyeing and finishing before a tailor begins garment assembly. A mill specification can identify the fabric accurately while leaving the finished jacket’s structure undecided. Canvas, lining, seam construction and pressing are garment decisions that cannot be inferred from the selvedge alone.",
+  "performance": "For tailoring cloth, evaluate drape, crease behavior and surface durability at the fabric level. A finer fiber grade does not automatically make a harder-wearing suit. Test conditions, weave, yarn construction and finish all matter, and a maker’s reputation is not a substitute for measured results.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The mill’s chronology cites a 1663 document for family textile activity and dates the named Vitale Barberis Canonico company to 1936. It also records a complete-cycle factory in Pratrivero in 1910. These are different milestones, not interchangeable claims about the age of one unchanged legal entity.",
+  "facts": [
+   [
+    "Entry type",
+    "Italian cloth mill"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Pratrivero, Piedmont, Italy"
+   ],
+   [
+    "Material link",
+    "wool is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Vitale Barberis Canonico: our history",
+    "url": "https://vitalebarberiscanonico.com/who-we-are/our-history/"
+   },
+   {
+    "title": "Vitale Barberis Canonico: official fabric and archive portal",
+    "url": "https://vitalebarberiscanonico.com/"
+   }
+  ],
+  "evidence": "editorial"
+ },
+ "reda": {
+  "origin": "Reda is a wool-textile mill associated with the Biella area. Its range includes cloth collections with distinct names and specifications. Reda, Reda Active and Reda Flexo should be read as company or product-range identities, not as interchangeable generic names for a single fiber.",
+  "structure": "In wool cloth, the material is a protein fiber assembled into yarn and then fabric. Fiber diameter, yarn twist, weave and finish describe different levels of structure. A mill or house name supplies none of those measurements by itself; compare the specific cloth specification.",
+  "process": "A branded fabric range can combine wool selection with spinning, construction and finishing choices. Reda describes different approaches across its collections. Start with the exact article and composition before asking how stretch or washability was achieved; those outcomes cannot be assigned to all fabrics from the mill.",
+  "performance": "For tailoring cloth, evaluate drape, crease behavior and surface durability at the fabric level. A finer fiber grade does not automatically make a harder-wearing suit. Test conditions, weave, yarn construction and finish all matter, and a maker’s reputation is not a substitute for measured results.",
+  "identify": "A logo or cloth label identifies a commercial claim, not a laboratory fiber result. For identification, compare the product reference, composition label and seller documentation. Microscopy or specialist analysis may investigate fiber content, but cannot establish a particular garment maker from the fiber chemistry alone.",
+  "labeling": "A brand name and a fiber-content declaration answer different questions. Check the generic material names and percentages on the particular product, including relevant linings and trims. Claims about origin, a processing treatment or a sourcing program need their own documentation; the brand history supplies none of those measurements.",
+  "past": "The Biella archive network dates the wool mill founded by Carlo Reda in Valle Mosso to 1865. Reda’s own heritage account describes later manufacturing developments and acquisitions. The year in its branding is a heritage reference, not a fabric weight, wool grade or current production volume.",
+  "facts": [
+   [
+    "Entry type",
+    "Italian wool cloth mill"
+   ],
+   [
+    "Historic manufacturing setting",
+    "Valle Mosso / Valdilana, Piedmont, Italy"
+   ],
+   [
+    "Material link",
+    "wool is a reading starting point, not the composition of every product"
+   ]
+  ],
+  "refs": [
+   {
+    "title": "Reda: heritage",
+    "url": "https://www.reda1865.com/us/heritage"
+   },
+   {
+    "title": "Reda: cloth collections",
+    "url": "https://www.reda1865.com/us/"
+   },
+   {
+    "title": "Rete Archivi Biellesi: Lanificio Successori Reda",
+    "url": "https://www.retearchivibiellesi.it/entita/13-lanificio-successori-reda"
+   }
+  ],
+  "evidence": "editorial"
  }
 }
