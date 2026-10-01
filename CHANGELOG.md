@@ -4,6 +4,7 @@
 
 - Restyled the atlas globe as a ball of yarn. Countries are wool patches in six colors chosen so neighbors differ, kept by name across detail levels; the ocean is a denim-blue ground; bands of strands wound in many directions turn with the planet and lie over one another; borders are running stitches, the rim is fuzzy and a loose end trails off the ball. The flat map uses the same wool and strands.
 - The yarn ball is drawn in its own background layer and its strands are projected directly, so the animated routes above it do not force a full redraw each frame. The idle sway repaints at about 30 frames a second. The globe caption shows only when the whole ball is in view.
+- Trade routes stay legible over the yarn: route lines are thicker and sit on a cream casing, direction chevrons and traveling arrows have cream outlines, and the ground track is darker.
 
 - Added a 114-entry weave and pattern guide across seven categories, including herringbone, houndstooth, woven cloth families, knits, motifs and surface techniques. Each entry has original construction and recognition notes, common uses, distinctions and references. Coverage and visual limits are explicit.
 - Added alias search, category filters, 18-card pagination, shareable comparisons of up to three entries, global search results and a warp/weft contrast control for interlacing diagrams. The guide works in the standalone offline application without adding local-storage keys.
