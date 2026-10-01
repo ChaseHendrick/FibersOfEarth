@@ -1,5 +1,5 @@
 import {geoOrthographic,geoNaturalEarth1,geoPath,geoGraticule,geoGraticule10,geoDistance,geoInterpolate,geoRotation,geoCentroid,geoBounds,geoArea} from 'd3-geo';
-import {feature,mesh} from 'topojson-client';
+import {feature,mesh,neighbors} from 'topojson-client';
 import world from 'world-atlas/countries-110m.json' with {type:'json'};
 // Level of detail rises with zoom: Natural Earth 1:110m for the whole globe (bundled, works offline), then
 // 1:50m from 1.8x and 1:10m from 4x, fetched from the same site the first time they are needed. When they
@@ -15,30 +15,76 @@ const DETAIL_ZOOM=TIERS[1].zoom,cache=[];
 // While dragging or swaying, lighter geometry keeps frames fast; 1:50m is used in motion only once the view is small.
 const MOTION_DETAIL_ZOOM=8;
 const tierFor=zoom=>TIERS.reduce((t,d,i)=>zoom>=d.zoom?i:t,0);
+// The globe is drawn as a ball of yarn: every country is a patch of wool in one of a few colors, chosen so
+// neighbors differ, and the ocean is a denim-blue ground. Colors are assigned once on the 1:110m map and
+// carried to the detailed tiers by country name, so a country keeps its color while zooming.
+const OCEAN='#7499b0',WOOLS=['#a7bd8d','#dcc79a','#c99460','#86a473','#bd8b7b','#a996ad'],BASE_COLOR=new Map();
+function colorCountries(o){
+ const geoms=o.geometries,nb=neighbors(geoms),k=geoms.map(g=>BASE_COLOR.get(g.properties?.name)??-1),used=WOOLS.map(()=>0);
+ k.forEach(c=>{if(c>=0)used[c]++;});
+ for(const i of geoms.map((_,i)=>i).sort((a,b)=>nb[b].length-nb[a].length)){if(k[i]>=0)continue;
+  const taken=new Set(nb[i].map(j=>k[j])),free=WOOLS.map((_,c)=>c).filter(c=>!taken.has(c)),pool=free.length?free:WOOLS.map((_,c)=>c);
+  k[i]=pool.reduce((a,b)=>used[b]<used[a]?b:a);used[k[i]]++;}
+ return k;
+}
 // Countries are split into single polygons for culling, so a far-flung territory does not force the whole
 // country to be drawn; the largest polygon keeps the country name for labels.
 function bounded(f,name){const c=geoCentroid(f),[[x0,y0],[x1,y1]]=geoBounds(f),x2=x1<x0?x1+360:x1;
  const wide=x2-x0>180,corners=[[x0,y0],[x2,y0],[x0,y1],[x2,y1],[(x0+x2)/2,y0],[(x0+x2)/2,y1],[x0,(y0+y1)/2],[x2,(y0+y1)/2]];
  return {f,c,name,radius:wide?Math.PI:Math.max(...corners.map(p=>geoDistance(c,p)))};}
+// A ring stored with reversed winding reads as the whole sphere minus the island (a few 1:10m Maldives
+// islets do this), which floods the view with land color; such rings are turned back around.
+function polygons(geometry){
+ const polys=geometry?.type==='MultiPolygon'?geometry.coordinates:geometry?.type==='Polygon'?[geometry.coordinates]:[];
+ return polys.map(poly=>{let g={type:'Polygon',coordinates:poly};if(geoArea(g)>2*Math.PI)g={type:'Polygon',coordinates:poly.map(ring=>[...ring].reverse())};return bounded({type:'Feature',properties:{},geometry:g},'');});
+}
 function layer(i){
- if(cache[i])return cache[i];const w=TIERS[i].topo,o=w.objects.countries;
- const feats=feature(w,o).features.flatMap(f=>{const name=f.properties?.name||'';
-  if(i===0)return [bounded(f,name)];
-  const polys=f.geometry?.type==='MultiPolygon'?f.geometry.coordinates:f.geometry?.type==='Polygon'?[f.geometry.coordinates]:[];
-  if(!polys.length)return [bounded(f,name)];
-  // A ring stored with reversed winding reads as the whole sphere minus the island (a few 1:10m Maldives
-  // islets do this), which floods the view with land color; such rings are turned back around.
-  const parts=polys.map(poly=>{let g={type:'Polygon',coordinates:poly};if(geoArea(g)>2*Math.PI)g={type:'Polygon',coordinates:poly.map(ring=>[...ring].reverse())};return bounded({type:'Feature',properties:{},geometry:g},'');});
-  parts.reduce((a,b)=>b.radius>a.radius&&b.radius<Math.PI?b:a).name=name;return parts;});
- return cache[i]={feats,borders:i===0?mesh(w,o,(a,b)=>a!==b):null};
+ if(cache[i])return cache[i];if(i>0)layer(0);const w=TIERS[i].topo,o=w.objects.countries,colors=colorCountries(o);
+ if(i===0)o.geometries.forEach((g,j)=>BASE_COLOR.set(g.properties?.name,colors[j]));
+ const feats=feature(w,o).features.flatMap((f,j)=>{const name=f.properties?.name||'';
+  if(i===0)return [{...bounded(f,name),k:colors[j]}];
+  const parts=polygons(f.geometry);if(!parts.length)return [];
+  parts.forEach(p=>{p.k=colors[j];});parts.reduce((a,b)=>b.radius>a.radius&&b.radius<Math.PI?b:a).name=name;return parts;});
+ const borders=mesh(w,o,(a,b)=>a!==b);
+ return cache[i]=i===0?{feats,borders}:{feats,borders:borders.coordinates.map(line=>bounded({type:'Feature',properties:{},geometry:{type:'LineString',coordinates:line}},''))};
 }
 // Angular radius of the globe that can appear in the panel at a given screen radius.
 // The panel can be wider than the 700 by 590 viewBox, so clipping and culling cover a wider frame around it.
 const CLIP=[[-360,-160],[1060,750]],VIEW_RADIUS=Math.hypot(710,455);
 const visibleCap=R=>R<=VIEW_RADIUS?Math.PI/2:Math.asin(VIEW_RADIUS/R);
-function geometry(i,center,R){const L=layer(i);if(i===0)return {land:{type:'FeatureCollection',features:L.feats.map(x=>x.f)},borders:L.borders,feats:L.feats};
- const cap=visibleCap(R),feats=L.feats.filter(x=>geoDistance(center,x.c)-x.radius<cap+.03);
- return {land:{type:'FeatureCollection',features:feats.map(x=>x.f)},borders:null,feats};}
+function geometry(i,center,R){const L=layer(i),cap=visibleCap(R),near=list=>i===0?list:list.filter(x=>geoDistance(center,x.c)-x.radius<cap+.03);
+ const feats=near(L.feats),fc=list=>({type:'FeatureCollection',features:list.map(x=>x.f)});
+ return {wool:WOOLS.map((_,k)=>fc(feats.filter(x=>x.k===k))),borders:i===0?L.borders:{type:'MultiLineString',coordinates:near(L.borders).map(x=>x.f.geometry.coordinates)},feats};}
+// Yarn strands. Bands of parallel strands are wound around the ball along great circles in many directions,
+// like a hand-wound ball; later bands lie over earlier ones. Each strand is a small circle around its band's
+// axis, so strands are fixed to the globe and turn with it. Only the arc of each strand facing the viewer is
+// sampled, with steps sized in screen pixels, and strands get finer as the view zooms in so the yarn keeps a
+// similar thickness on screen.
+const RAD=Math.PI/180,YARN_SPACING=1.3;
+const unit=([lon,lat])=>[Math.cos(lat*RAD)*Math.cos(lon*RAD),Math.cos(lat*RAD)*Math.sin(lon*RAD),Math.sin(lat*RAD)];
+const BANDS=(()=>{let s=20261001;const rnd=()=>(s=s*16807%2147483647)/2147483647,n=15,out=[];
+ const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]],norm=v=>{const l=Math.hypot(...v);return v.map(x=>x/l);};
+ for(let i=0;i<n;i++){const z=1-(i+.5)/n,t=i*2.39996+rnd()*.6,r=Math.sqrt(1-z*z),a=[r*Math.cos(t),r*Math.sin(t),z];
+  const u=norm(cross(a,Math.abs(z)<.9?[0,0,1]:[1,0,0]));out.push({a,u,v:cross(a,u),half:8+rnd()*5,order:rnd()});}
+ return out.sort((x,y)=>x.order-y.order);})();
+const yarnLevel=R=>Math.max(0,Math.min(3,Math.round(Math.log2(R/BASE))));
+const strandPx=R=>YARN_SPACING/2**yarnLevel(R)*R*RAD;
+// On the globe the strands are projected directly (an orthographic view of a point on the unit sphere is
+// just two of its coordinates), which is far cheaper per frame than general path projection. The band
+// axes are turned into the view's frame once, where the view center is [1, 0, 0]. The flat map passes
+// its path generator and gets whole circles in longitude and latitude.
+function yarnPaths(rotation,R,cap,flatPath){
+ const rot=geoRotation(rotation),turn=v=>unit(rot([Math.atan2(v[1],v[0])/RAD,Math.asin(Math.max(-1,Math.min(1,v[2])))/RAD]));
+ const spacing=YARN_SPACING/2**yarnLevel(R),pxDeg=R*RAD,step=Math.min(5,Math.max(14,Math.sqrt(8*R*.4))/pxDeg)*RAD,cosCap=Math.cos(Math.min(Math.PI,cap));
+ return BANDS.map(band=>{const a=turn(band.a),u=turn(band.u),v=turn(band.v),B0=Math.hypot(u[0],v[0]),phi=Math.atan2(v[0],u[0]),lines=[];let d='';
+  for(let j=Math.ceil(-band.half/spacing);j*spacing<=band.half;j++){const rho=(90+j*spacing)*RAD,cr=Math.cos(rho),sr=Math.sin(rho),A=cr*a[0],B=sr*B0;
+   if(A+B<=cosCap)continue;const h=A-B>=cosCap?Math.PI:Math.acos(Math.max(-1,Math.min(1,(cosCap-A)/B))),n=Math.max(2,Math.ceil(2*h/step)),pts=[];
+   for(let m=0;m<=n;m++){const t=phi-h+2*h*m/n,ct=Math.cos(t)*sr,st=Math.sin(t)*sr,y=cr*a[1]+ct*u[1]+st*v[1],z=cr*a[2]+ct*u[2]+st*v[2];
+    if(flatPath)pts.push([Math.atan2(y,cr*a[0]+ct*u[0]+st*v[0])/RAD,Math.asin(Math.max(-1,Math.min(1,z)))/RAD]);
+    else d+=(m?'L':'M')+(CX+R*y).toFixed(1)+' '+(CY-R*z).toFixed(1);}
+   if(flatPath)lines.push(pts);}
+  return flatPath?flatPath({type:'MultiLineString',coordinates:lines})||'':d;});
+}
 // Finer grid lines as zoom rises, generated only for the visible patch so close zoom stays fast.
 // Scale bar: a round distance whose length on screen at the globe's center falls between 60 and 140 px.
 const EARTH_KM=6371;
@@ -96,6 +142,8 @@ function homeView(nodes){
  return {rotation:[-lon,Math.max(-70,Math.min(70,-lat)),0],zoom};
 }
 const SWAY_DEG=18,SWAY_MS=40000; // The idle motion sways around the route instead of carrying it out of view.
+// The sway moves at most a few pixels a second, so it repaints the yarn at about 30 frames a second.
+const SWAY_FRAME_MS=32;
 const ease=t=>t<.5?2*t*t:1-2*(1-t)*(1-t);
 // Country names for large enough, front-facing countries, avoiding place labels already placed.
 function countryLabels(feats,proj,center,R,boxes){
@@ -112,6 +160,11 @@ function countryLabels(feats,proj,center,R,boxes){
 function toPath(pts){let d='',pen=false;for(const p of pts){if(!p.visible){pen=false;continue;}d+=(pen?'L':'M')+p.x.toFixed(1)+' '+p.y.toFixed(1);pen=true;}return d;}
 // A chevron at the arc's visible midpoint points in the direction of travel, even without animation.
 function chevron(pts){const i=SAMPLES/2;const a=pts[i-2],b=pts[i+2];if(!pts[i].visible||!a.visible||!b.visible)return null;return {x:pts[i].x,y:pts[i].y,angle:Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI};}
+// Strand widths follow the on-screen spacing of the strands, so neighbors just touch.
+function sizeYarn(svg,R){const px=strandPx(R),y=svg.querySelector('.yarn');y?.setAttribute('style',`--strand:${(px*1.12).toFixed(2)}px;--crest:${(px*.42).toFixed(2)}px`);}
+// The loose end of the yarn, drawn at the default size and scaled with the ball.
+const TAIL='M546 418C578 436 616 426 630 448C644 471 614 488 621 509C626 524 641 528 651 520';
+const tailTransform=r=>`translate(${CX} ${CY}) scale(${(r/BASE).toFixed(4)}) translate(${-CX} ${-CY})`;
 export class Globe{
  constructor(el,network,journey,onSelect,{spin=true,onStatus=()=>{},onSpin=()=>{}}={}){this.el=el;this.onStatus=onStatus;this.onSpin=onSpin;this.pointers=new Map();this.n=network;this.j=journey;this.onSelect=onSelect;this.home=homeView(journey.keys.map(k=>network.nodes[k]).filter(Boolean));this.rotation=[...this.home.rotation];this.zoom=this.home.zoom;this.swayBase=this.rotation[0];this.swayT=0;this.flat=false;this.all=false;this.drag=null;this.hover=false;this.raf=0;this.spinning=false;this.arcs=[];this.uid='g'+(++instances);this.motion=!reducedMotion();this.render();if(spin&&this.motion)this.spinning=true;if(this.motion)this.startLoop();}
  projection(){return this.flat?geoNaturalEarth1().fitExtent([[18,82],[682,500]],{type:'Sphere'}):geoOrthographic().translate([CX,CY]).scale(BASE*this.zoom).rotate(this.rotation).clipAngle(90).clipExtent(CLIP);}
@@ -120,7 +173,7 @@ export class Globe{
  render(){
   if(!this.el.isConnected)return;
   const w=700,h=590,r=BASE*this.zoom,proj=this.projection(),path=geoPath(proj),center=[-this.rotation[0],-this.rotation[1]];
-  const want=this.flat?0:tierFor(this.zoom),tier=loadedTier(want),geo=geometry(tier,center,r),detail=tier>0;
+  const want=this.flat?0:tierFor(this.zoom),tier=loadedTier(want),geo=geometry(tier,center,r),detail=tier>0;const sphere=path({type:'Sphere'}),yarn=this.flat?yarnPaths([0,0,0],proj.scale(),Math.PI,path):yarnPaths(this.rotation,r,visibleCap(r));
   if(tier<want)loadTier(want).then(ok=>{if(ok&&this.el.isConnected&&!this.flat&&tierFor(this.zoom)>=want)this.render();});
   const bar=scaleBar(r),stops=[...new Set(this.j.keys)].map(k=>this.n.nodes[k]).filter(Boolean);
   const summary=`Route: ${stops.map(n=>`${n.name}, ${n.country} (${n.role}${n.sub?', '+n.sub:''})`).join(', then ')}.`;
@@ -135,8 +188,10 @@ export class Globe{
   const dotSVG=nodes.sort((a,b)=>Number(this.j.keys.includes(b.id))-Number(this.j.keys.includes(a.id))).map(n=>{const [x,y]=proj([n.lon,n.lat]);const label=n.name;const left=x>510;const lx=left?x-12:x+12;const width=label.length*6.2+12;let ly=y-12;let box;let show=false;
    for(const off of [-12,24,-30,42]){ly=y+off;box={l:left?lx-width:lx,r:left?lx:lx+width,t:ly-12,b:ly+9};if(box.l>8&&box.r<692&&box.t>70&&box.b<515&&!boxes.some(b=>box.l<b.r+4&&box.r>b.l-4&&box.t<b.b+4&&box.b>b.t-4)){show=true;boxes.push(box);break;}}
    return `<g class="map-node" role="button" tabindex="0" aria-label="Explore ${esc(n.name)}, ${esc(n.sub)}" data-node="${esc(n.id)}"><title>${esc(n.name)} · ${esc(n.sub)}</title><circle cx="${x}" cy="${y}" r="15" fill="transparent"/><circle cx="${x}" cy="${y}" r="7" fill="${colors[n.role]}" fill-opacity=".13"/><circle cx="${x}" cy="${y}" r="3.3" fill="${colors[n.role]}" stroke="#fcfcf5" stroke-width="1.5"/>${show?`<text x="${lx}" y="${ly}" text-anchor="${left?'end':'start'}" class="city-label">${esc(n.name)}${!this.flat&&this.zoom>=DETAIL_ZOOM&&n.sub?`<tspan class="city-sub" x="${lx}" dy="12">${esc(n.sub)}</tspan>`:''}</text>`:''}</g>`;}).join('');
-  this.el.innerHTML=`<svg class="globe-svg" viewBox="0 0 ${w} ${h}" role="application" tabindex="0" aria-roledescription="${this.flat?'world map':'globe'}" aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown + - 0 P" aria-label="${esc(`Interactive ${this.flat?'world map':'globe'} of an illustrative fiber journey. ${summary} Arrow keys rotate, plus and minus zoom, 0 resets, P pauses motion.`)}"><defs><radialGradient id="ocean" cx="36%" cy="30%" r="80%"><stop offset="0" stop-color="#f3f6ed"/><stop offset=".74" stop-color="#e8eee1"/><stop offset="1" stop-color="#d6dfcc"/></radialGradient><radialGradient id="shade" cx="35%" cy="28%" r="75%"><stop offset=".7" stop-color="#173f30" stop-opacity="0"/><stop offset="1" stop-color="#173f30" stop-opacity=".13"/></radialGradient><filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter></defs>${!this.flat?`<ellipse cx="360" cy="536" rx="173" ry="13" fill="#536648" opacity=".12" filter="url(#shadow)"/>${this.zoom<=1.2?`<circle cx="${CX}" cy="${CY}" r="${r+15}" class="orbit"/><circle cx="${CX}" cy="${CY}" r="${r+27}" class="orbit outer"/>`:''}`:''}<path class="sphere" d="${path({type:'Sphere'})}" fill="url(#ocean)" stroke="#c5cfbc" stroke-width=".8"/><path class="graticule" d="${path(this.flat?geoGraticule10():graticuleFor(this.zoom,center))}"/><path class="land" d="${path(geo.land)}" fill="#b7c9ac" stroke="${detail?'#edf2e8':'#aabf9f'}" stroke-width="${detail?.6:.35}"/><path class="borders" d="${geo.borders?path(geo.borders):''}" fill="none" stroke="#edf2e8" stroke-width=".55"/>${detail?countryLabels(geo.feats,proj,center,r,boxes):''}${!this.flat?`<path class="terminator" d="${path({type:'Sphere'})}" fill="url(#shade)" pointer-events="none"/>`:''}${dotSVG}${lineSVG}${this.flat?'':`<g class="scale-bar" aria-hidden="true" transform="translate(24 548)"><path d="M0 -5V0H${bar.px.toFixed(1)}V-5"/><text x="0" y="-9">${bar.km.toLocaleString('en-US')} km</text></g>`}<text class="ocean-label" x="350" y="566" text-anchor="middle">${this.flat?'THE WORLD, CONNECTED':'ONE PLANET. COUNTLESS THREADS.'}</text></svg>`;
-  const svg=this.el.querySelector('svg');
+  // The yarn ball is drawn in its own background SVG, a separate compositing layer, so the animated routes in
+  // the interactive SVG above it do not make the browser redraw every strand on each frame.
+  this.el.innerHTML=`<div class="globe-stack"><svg class="globe-ball-svg" viewBox="0 0 ${w} ${h}" aria-hidden="true" focusable="false"><defs><radialGradient id="shade" cx="35%" cy="28%" r="75%"><stop offset="0" stop-color="#fffdf2" stop-opacity=".3"/><stop offset=".42" stop-color="#fffdf2" stop-opacity="0"/><stop offset=".68" stop-color="#1d2f33" stop-opacity="0"/><stop offset="1" stop-color="#1d2f33" stop-opacity=".42"/></radialGradient><filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter><filter id="${this.uid}-fuzz" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter><clipPath id="${this.uid}-ball"><path class="ball-clip" d="${sphere}"/></clipPath></defs>${!this.flat?`<ellipse cx="360" cy="536" rx="173" ry="13" fill="#536648" opacity=".12" filter="url(#shadow)"/>${this.zoom<=1.2?`<g class="yarn-tail" transform="${tailTransform(r)}"><path class="tail-body" d="${TAIL}"/><path class="tail-crest" d="${TAIL}"/></g>`:''}`:''}<path class="ball-rim" d="${sphere}" filter="url(#${this.uid}-fuzz)"/><g class="yarn-ball" clip-path="url(#${this.uid}-ball)"><path class="sphere" d="${sphere}" fill="${OCEAN}"/>${WOOLS.map((c,k)=>`<path class="wool" d="${path(geo.wool[k])||''}" fill="${c}"/>`).join('')}<g class="yarn"><defs>${yarn.map((d,i)=>`<path id="${this.uid}-band${i}" class="band" d="${d}"/>`).join('')}</defs>${yarn.map((d,i)=>`<use class="strand" href="#${this.uid}-band${i}"/><use class="strand-crest" href="#${this.uid}-band${i}"/>`).join('')}</g><path class="borders" d="${path(geo.borders)||''}"/><path class="graticule" d="${path(this.flat?geoGraticule10():graticuleFor(this.zoom,center))}"/></g>${!this.flat?`<path class="terminator" d="${sphere}" fill="url(#shade)"/>`:''}</svg><svg class="globe-svg" viewBox="0 0 ${w} ${h}" role="application" tabindex="0" aria-roledescription="${this.flat?'world map':'globe'}" aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown + - 0 P" aria-label="${esc(`Interactive ${this.flat?'world map':'globe'} of an illustrative fiber journey. ${summary} Arrow keys rotate, plus and minus zoom, 0 resets, P pauses motion.`)}">${detail?countryLabels(geo.feats,proj,center,r,boxes):''}${dotSVG}${lineSVG}${this.flat?'':`<g class="scale-bar" aria-hidden="true" transform="translate(24 548)"><path d="M0 -5V0H${bar.px.toFixed(1)}V-5"/><text x="0" y="-9">${bar.km.toLocaleString('en-US')} km</text></g>`}${this.flat||this.zoom<=1.2?`<text class="ocean-label" x="350" y="566" text-anchor="middle">${this.flat?'THE WORLD, CONNECTED':'ONE PLANET. COUNTLESS THREADS.'}</text>`:''}</svg></div>`;
+  const svg=this.el.querySelector('.globe-svg');this.sphereD=sphere;sizeYarn(this.el,proj.scale());
   // Routes sit above the markers visually but must not block clicks on them.
   svg.querySelectorAll('.route').forEach(g=>g.setAttribute('pointer-events','none'));
   // One pointer drags to rotate; two pointers pinch to zoom around their midpoint.
@@ -155,19 +210,19 @@ export class Globe{
   svg.addEventListener('keydown',e=>{if(e.target!==svg||e.altKey||e.ctrlKey||e.metaKey)return;const step=12/Math.sqrt(this.zoom);let handled=true;
    switch(e.key){case 'ArrowLeft':this.rotate(step);break;case 'ArrowRight':this.rotate(-step);break;case 'ArrowUp':this.tilt(-step);break;case 'ArrowDown':this.tilt(step);break;
     case '+':case '=':this.scale(1);break;case '-':case '_':this.scale(-1);break;case '0':case 'Home':this.reset();break;case 'p':case 'P':this.toggleSpin();this.onSpin(this.spinning);break;default:handled=false;}
-   if(handled){e.preventDefault();this.status();this.el.querySelector('svg')?.focus({preventScroll:true});}});
+   if(handled){e.preventDefault();this.status();this.el.querySelector('.globe-svg')?.focus({preventScroll:true});}});
   // Pause the spin while the pointer or keyboard focus is on the globe, so markers hold still to be chosen.
   svg.addEventListener('pointerenter',()=>{this.hover=true;});svg.addEventListener('pointerleave',()=>{this.hover=false;});
   svg.addEventListener('focusin',()=>{this.hover=true;});svg.addEventListener('focusout',()=>{this.hover=false;});
   this.el.querySelectorAll('[data-node]').forEach(node=>{const select=()=>this.onSelect(this.n.nodes[node.dataset.node]);node.addEventListener('click',select);node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select();}});});
  }
  paint(){ // Update geometry in place during drags and spin, keeping listeners and animations alive.
-  const svg=this.el.querySelector('svg');if(!svg||this.flat)return;
+  const svg=this.el.querySelector('.globe-svg'),ball=this.el.querySelector('.globe-ball-svg');if(!svg||!ball||this.flat)return;
   const p=this.projection(),path=geoPath(p),center=[-this.rotation[0],-this.rotation[1]];
-  svg.querySelector('.sphere').setAttribute('d',path({type:'Sphere'}));svg.querySelector('.terminator')?.setAttribute('d',path({type:'Sphere'}));
-  svg.querySelector('.graticule').setAttribute('d',path(this.zoom>=MOTION_DETAIL_ZOOM?graticuleFor(this.zoom,center):geoGraticule10()));const g=geometry(this.zoom>=MOTION_DETAIL_ZOOM?loadedTier(1):0,center,BASE*this.zoom);svg.querySelector('.land').setAttribute('d',path(g.land));svg.querySelector('.borders').setAttribute('d',g.borders?path(g.borders):'');svg.querySelector('.country-labels')?.setAttribute('visibility','hidden');
+  const sphere=path({type:'Sphere'});if(this.sphereD!==sphere){this.sphereD=sphere;for(const sel of ['.sphere','.terminator','.ball-clip','.ball-rim'])ball.querySelector(sel)?.setAttribute('d',sphere);sizeYarn(ball,p.scale());ball.querySelector('.yarn-tail')?.setAttribute('transform',tailTransform(BASE*this.zoom));}
+  const bands=yarnPaths(this.rotation,BASE*this.zoom,visibleCap(BASE*this.zoom));ball.querySelectorAll('.yarn .band').forEach((el,i)=>el.setAttribute('d',bands[i]));
+  ball.querySelector('.graticule').setAttribute('d',path(this.zoom>=MOTION_DETAIL_ZOOM?graticuleFor(this.zoom,center):geoGraticule10()));const g=geometry(this.zoom>=MOTION_DETAIL_ZOOM?loadedTier(1):0,center,BASE*this.zoom);ball.querySelectorAll('.wool').forEach((el,k)=>el.setAttribute('d',path(g.wool[k])||''));ball.querySelector('.borders').setAttribute('d',path(g.borders)||'');svg.querySelector('.country-labels')?.setAttribute('visibility','hidden');
   const sb=svg.querySelector('.scale-bar');if(sb){const bar=scaleBar(BASE*this.zoom);sb.querySelector('path').setAttribute('d',`M0 -5V0H${bar.px.toFixed(1)}V-5`);sb.querySelector('text').textContent=bar.km.toLocaleString('en-US')+' km';}
-  svg.querySelectorAll('.orbit').forEach((o,i)=>o.setAttribute('r',BASE*this.zoom+(i?27:15)));
   const routes=svg.querySelectorAll('.route');
   this.arcs=[];
   this.edges().forEach((e,i)=>{const g=routes[i];if(!g)return;const x=this.n.nodes[e.a],y=this.n.nodes[e.b],pts=this.arc(p,e),d=toPath(pts),big=visibleLength(pts)>=MIN_ARC_PX;this.arcs.push(pts);
@@ -180,10 +235,10 @@ export class Globe{
  // current geometry every frame and hidden when its point is behind the globe or the arc is too short.
  startLoop(){if(this.looping)return;this.looping=true;let last=performance.now();
   const tick=now=>{if(!this.el.isConnected||!this.looping){this.looping=false;return;}const dt=Math.min(64,now-last);last=now;
-   if(this.spinning&&!this.flat&&!this.drag&&!this.hover&&this.zoom<DETAIL_ZOOM){this.swayT+=dt;this.rotation[0]=this.swayBase+SWAY_DEG*Math.sin(this.swayT*2*Math.PI/SWAY_MS);this.paint();}
+   if(this.spinning&&!this.flat&&!this.drag&&!this.hover&&this.zoom<DETAIL_ZOOM){this.swayT+=dt;if(now-(this.swayPaint||0)>=SWAY_FRAME_MS){this.swayPaint=now;this.rotation[0]=this.swayBase+SWAY_DEG*Math.sin(this.swayT*2*Math.PI/SWAY_MS);this.paint();}}
    this.moveTravelers(now);this.raf=requestAnimationFrame(tick);};
   this.raf=requestAnimationFrame(tick);}
- moveTravelers(now){const svg=this.el.querySelector('svg');if(!svg)return;const routes=svg.querySelectorAll('.route');
+ moveTravelers(now){const svg=this.el.querySelector('.globe-svg');if(!svg)return;const routes=svg.querySelectorAll('.route');
   routes.forEach((g,i)=>{const t=g.querySelector('.route-traveler');if(!t)return;const pts=this.arcs[i];
    const at=pts&&visibleLength(pts)>=MIN_ARC_PX?pointAt(pts,ease(((now/TRAVEL_MS)+Number(t.dataset.step)*.18)%1)):null;
    if(!at){t.setAttribute('visibility','hidden');return;}t.setAttribute('transform',`translate(${at.x.toFixed(1)} ${at.y.toFixed(1)}) rotate(${at.angle.toFixed(1)})`);t.removeAttribute('visibility');});}
