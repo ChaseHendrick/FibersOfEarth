@@ -137,3 +137,10 @@ test('pattern diagrams distinguish a woven color repeat from its interlacing str
  assert.ok(!escaped.includes('<img'));assert.ok(escaped.includes('&lt;img'));
  assert.match(weaveBody(entry),/What to distinguish/);assert.match(weaveBody(entry),/Sources &amp; further reading/);
 });
+test('brand pages omit empty catalog fields and show related atlas content',async()=>{
+ const {brandBody,relatedBrands}=await import('../src/brand-render.js');const {brandDirectory,directoryById}=await import('../src/brand-directory.js');
+ const opts={materialHref:id=>'m/'+id,brandHref:id=>'b/'+id};
+ for(const b of brandDirectory)assert.ok(!brandBody(b,opts).includes('No imported catalog statement'),b.id);
+ const w=brandBody(directoryById['wolf-vs-goat'],opts);assert.ok(w.includes('href="m/wool"'));assert.ok(!w.includes('reported by Wikidata'));
+ const r=relatedBrands(directoryById['wolf-vs-goat']);assert.ok(r.length>0&&r.length<=10&&r.every(x=>x.category==='Textile houses & apparel'&&x.id!=='wolf-vs-goat'));
+});
